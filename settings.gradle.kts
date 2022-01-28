@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MOIZA"
-include ':app'
+include (":app")
+
