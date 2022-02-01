@@ -47,9 +47,6 @@ dependencies {
     implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL_KTX)
 
     implementation(Dependency.AndroidX.ROOM_KTX)
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.5.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     kapt(Dependency.AndroidX.ROOM_COMPILER)
 
     implementation(Dependency.Kotlin.COROUTINES_CORE)
@@ -63,6 +60,8 @@ dependencies {
     implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)
     implementation(Dependency.Libraries.OKHTTP)
     implementation(Dependency.Libraries.OKHTTP_LOGGING_INTERCEPTOR)
+    implementation(Dependency.Libraries.MOSHI)
+    kapt(Dependency.Libraries.MOSHI_COMPILER)
 
     testImplementation(Dependency.UnitTest.JUNIT)
     testImplementation(Dependency.UnitTest.MOCKITO)

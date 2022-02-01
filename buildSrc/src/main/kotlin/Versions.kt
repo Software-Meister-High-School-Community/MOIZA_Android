@@ -25,6 +25,8 @@ object Versions {
     const val HILT = "2.35.1"
     const val MATERIAL = "1.3.0"
 
+    const val MOSHI = "1.12.0"
+
     const val RETROFIT = "2.7.1"
     const val OKHTTP = "4.3.1"
 
