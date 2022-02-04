@@ -60,4 +60,9 @@ object Dependency {
         const val ANDROID_JUNIT = "androidx.test.ext:junit:${Versions.ANDROID_JUNIT}"
         const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO_CORE}"
     }
+
+    object BottomNav {
+        const val NAV_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:${Versions.NAV}"
+        const val NAV_UI = "androidx.navigation:navigation-ui-ktx:${Versions.NAV}"
+    }
 }

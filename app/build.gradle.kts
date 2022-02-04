@@ -2,6 +2,7 @@ plugins {
     id ("com.android.application")
     kotlin("android")
     kotlin("kapt")
+    id("kotlin-android")
 }
 
 android {
@@ -47,6 +48,7 @@ dependencies {
     implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL_KTX)
 
     implementation(Dependency.AndroidX.ROOM_KTX)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt(Dependency.AndroidX.ROOM_COMPILER)
 
     implementation(Dependency.Kotlin.COROUTINES_CORE)
@@ -68,4 +70,7 @@ dependencies {
 
     androidTestImplementation(Dependency.AndroidTest.ANDROID_JUNIT)
     androidTestImplementation(Dependency.AndroidTest.ESPRESSO_CORE)
+
+    implementation(Dependency.BottomNav.NAV_FRAGMENT)
+    implementation(Dependency.BottomNav.NAV_UI)
 }
