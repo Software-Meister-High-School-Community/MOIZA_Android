@@ -34,4 +34,6 @@ object Versions {
     const val MOCKITO = "4.2.0"
     const val ANDROID_JUNIT = "1.1.2"
     const val ESPRESSO_CORE = "3.3.0"
+
+    const val NAV = "2.3.5"
 }
