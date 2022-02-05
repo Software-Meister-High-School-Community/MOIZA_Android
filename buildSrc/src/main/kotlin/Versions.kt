@@ -5,13 +5,13 @@ object Versions {
     const val GRADLE_KOTLIN = "1.6.10"
 
     val JAVA_VERSION = JavaVersion.VERSION_1_8
-    const val KOTLIN_VERSION = "1.5.0"
+    const val KOTLIN_VERSION = "1.6.10"
+    const val KOTLINX_COROUTINES = "1.6.0"
 
-    const val KOTLINX_COROUTINES = "1.5.0"
     const val BUILD_GRADLE = "4.2.1"
     const val COMPILE_SDK_VERSION = 32
-    const val BUILD_TOOLS_VERSION = "30.0.3"
-    const val MIN_SDK_VERSION = 21
+    const val BUILD_TOOLS_VERSION = "32.0.0"
+    const val MIN_SDK_VERSION = 26
     const val TARGET_SDK_VERSION = 32
 
     const val CONSTRAINT_LAYOUT = "2.1.2"
@@ -22,13 +22,13 @@ object Versions {
     const val LIFECYCLE_KTX = "2.3.1"
     const val ROOM = "2.3.0"
 
-    const val HILT = "2.35.1"
+    const val HILT = "2.38.1"
     const val MATERIAL = "1.3.0"
 
-    const val MOSHI = "1.12.0"
+    const val MOSHI = "1.13.0"
 
     const val RETROFIT = "2.7.1"
-    const val OKHTTP = "4.3.1"
+    const val OKHTTP = "3.14.9"
 
     const val JUNIT = "4.13.2"
     const val MOCKITO = "4.2.0"

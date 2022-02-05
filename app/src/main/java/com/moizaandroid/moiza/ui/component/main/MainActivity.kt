@@ -1,6 +1,7 @@
 package com.moizaandroid.moiza.ui.component.main
 
 
+import android.os.Bundle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -8,11 +9,15 @@ import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.ActivityMainBinding
 import com.moizaandroid.moiza.ui.base.BaseActivity
 
-class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
-    override fun init() {
+class MainActivity : BaseActivity<ActivityMainBinding> (
+    R.layout.activity_main
+) {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
         initBottomNavBar()
     }
-
 
     private fun initBottomNavBar() {
         val navController =
@@ -22,4 +27,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             nav.setupWithNavController(navController)
         }
     }
+
+    override fun initView() {}
+
+    override fun observeEvent() {}
 }
