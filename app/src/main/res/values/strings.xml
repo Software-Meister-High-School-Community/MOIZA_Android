@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MOIZA</string>
 
-<!--      nav     -->
+    <!--      nav     -->
     <string name="home">Home</string>
     <string name="board">Bulletin board</string>
     <string name="notification">Notification</string>
