@@ -99,3 +99,13 @@ buildSrc/build/libs/buildSrc.jar
 buildSrc/build/pluginUnderTestMetadata/plugin-under-test-metadata.properties
 
 buildSrc/build/source-roots/buildSrc/source-roots.txt
+
+buildSrc/build/classes/kotlin/main/Dependency$Google.class
+
+buildSrc/build/classes/kotlin/main/Dependency$GradlePlugin.class
+
+buildSrc/build/classes/kotlin/main/Dependency$Kotlin.class
+
+buildSrc/build/classes/kotlin/main/Dependency$Libraries.class
+
+buildSrc/build/classes/kotlin/main/Versions.class
