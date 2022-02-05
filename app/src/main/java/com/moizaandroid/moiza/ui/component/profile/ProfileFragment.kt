@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component.main.d_profile
+package com.moizaandroid.moiza.ui.component.profile
 
 
 import com.moizaandroid.moiza.R

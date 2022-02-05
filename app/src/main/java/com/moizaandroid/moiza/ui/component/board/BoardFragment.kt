@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component.main.b_board
+package com.moizaandroid.moiza.ui.component.board
 
 
 import com.moizaandroid.moiza.R

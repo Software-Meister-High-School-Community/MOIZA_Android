@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component.main.c_notification
+package com.moizaandroid.moiza.ui.component.notification
 
 
 import com.moizaandroid.moiza.R

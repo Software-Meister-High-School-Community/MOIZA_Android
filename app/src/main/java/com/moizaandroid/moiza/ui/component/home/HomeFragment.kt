@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component.main.a_home
+package com.moizaandroid.moiza.ui.component.home
 
 
 import com.moizaandroid.moiza.R

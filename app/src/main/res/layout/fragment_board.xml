@@ -5,7 +5,7 @@
 
         <variable
             name="board"
-            type="com.moizaandroid.moiza.ui.component.main.b_board.BoardFragment" />
+            type="com.moizaandroid.moiza.ui.component.board.BoardFragment" />
     </data>
 
 
@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.component.main.b_board.BoardFragment">
+        tools:context=".ui.component.board.BoardFragment">
 
         <TextView
             android:layout_width="match_parent"
