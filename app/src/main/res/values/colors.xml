@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="board_top">#f9f9f9</color>
-    <color name="board_background">f8f8fa</color>
+    <color name="board_background">#f8f8fa</color>
 
     <color name="moiza_blue">#0048FF</color>
-    <color name="moiza_yello">#ffb500</color>
+    <color name="moiza_yellow">#ffb500</color>
 </resources>
