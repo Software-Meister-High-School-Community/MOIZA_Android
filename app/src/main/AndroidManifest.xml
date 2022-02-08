@@ -17,7 +17,7 @@
             android:name=".ui.component.register.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.component.login.SignInActivity"
+            android:name=".ui.component.login.activity.SignInActivity"
             android:exported="false" />
         <activity
             android:name=".ui.component.splash.SplashActivity"

@@ -1,8 +1,6 @@
 package com.moizaandroid.moiza.ui.component.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -10,8 +8,7 @@ import androidx.annotation.UiThread
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.ActivitySplashBinding
 import com.moizaandroid.moiza.ui.base.BaseActivity
-import com.moizaandroid.moiza.ui.component.login.SignInActivity
-import com.moizaandroid.moiza.ui.component.main.MainActivity
+import com.moizaandroid.moiza.ui.component.login.activity.SignInActivity
 import com.moizaandroid.moiza.ui.component.register.SignUpActivity
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>(
