@@ -13,4 +13,8 @@
 
     <color name="moiza_blue">#0048FF</color>
     <color name="moiza_yellow">#ffb500</color>
+
+    <color name="search_background">#E5E5E5</color>
+
+    <color name="search_hint_color">#999999</color>
 </resources>
