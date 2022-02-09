@@ -69,7 +69,7 @@
                     android:hint="@string/search_hint"
                     android:paddingStart="10dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
                     android:id="@+id/search_btn"
@@ -116,11 +116,14 @@
                 tools:text="전체삭제" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_search_rv"
+                tools:listitem="@layout/recent_search_item_list"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:layout_editor_absoluteX="20dp" />
 
