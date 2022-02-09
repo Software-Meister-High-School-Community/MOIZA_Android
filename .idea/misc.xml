@@ -17,6 +17,15 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_search.xml" value="0.11157407407407408" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_follow.xml" value="0.4" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_my_content.xml" value="0.22546296296296298" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17827868852459017" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25546448087431695" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.17827868852459017" />
+        <entry key="app/src/main/res/layout/fragment_board.xml" value="0.25546448087431695" />
+        <entry key="app/src/main/res/layout/fragment_category.xml" value="0.25546448087431695" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25546448087431695" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.25546448087431695" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25546448087431695" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25546448087431695" />
       </map>
     </option>
   </component>
