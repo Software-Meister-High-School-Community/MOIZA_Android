@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.36" />
+            app:layout_constraintGuide_percent="0.39" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/school_banner"
@@ -51,7 +51,7 @@
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintTop_toTopOf="@id/guideline3" />
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/dot_pager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,23 +61,22 @@
             app:layout_constraintTop_toBottomOf="@id/school_banner" />
 
         <TextView
-            android:id="@+id/popular_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/rotobo_bold"
             android:text="@string/popular_content"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginBottom="6dp"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline4" />
+            app:layout_constraintBottom_toTopOf="@id/guideline4" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/popular_content_recyclerview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/popular_content" />
+            app:layout_constraintTop_toBottomOf="@id/guideline4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
