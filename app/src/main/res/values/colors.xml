@@ -22,4 +22,27 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- profile edit color -->
+    <color name="dark_red">#932c16</color>
+    <color name="light_red">#ce4b39</color>
+    <color name="red">#eb6439</color>
+    <color name="light_orange">#f1bd6a</color>
+    <color name="orange">#ffb500</color>
+    <color name="yellow">#ffd80c</color>
+    <color name="light_yellow">#ffe199</color>
+    <color name="dark_green">#0b5a0e</color>
+    <color name="green">#728f60</color>
+    <color name="light_green">#8eda43</color>
+    <color name="blue">#99b6ff</color>
+    <color name="dark_blue">#0048ff</color>
+    <color name="light_purple">#ada1f6</color>
+    <color name="purple">#502b8b</color>
+    <color name="light_blue">#99e0ff</color>
+    <color name="pink">#f2b9d6</color>
+    <color name="dark_pink">#e1c3bc</color>
+    <color name="light_grey">#e0e0e0</color>
+    <color name="grey">#b4b4b4</color>
+    <color name="dark_grey">#5f5f5f</color>
+    <color name="light_black">#3a3a3a</color>
 </resources>
