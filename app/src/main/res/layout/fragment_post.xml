@@ -97,19 +97,19 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:background="@drawable/post_category">
+                android:background="@drawable/post_category"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/all"
-                    android:layout_marginBottom="5.5dp"
                     android:layout_gravity="bottom"
+                    android:layout_marginBottom="5.5dp"
                     android:fontFamily="sans-serif"
-                    android:textStyle="bold"
+                    android:text="@string/all"
+                    android:textColor="@color/moiza_blue"
                     android:textSize="16sp"
-                    android:textColor="@color/moiza_blue"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -122,38 +122,40 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:text="@string/question"
                     android:layout_marginBottom="5.5dp"
                     android:fontFamily="sans-serif"
-                    android:textStyle="normal"
+                    android:text="@string/question"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center">
 
                 <TextView
-                    android:layout_gravity="bottom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/normal"
+                    android:layout_gravity="bottom"
                     android:layout_marginBottom="5.5dp"
                     android:fontFamily="sans-serif"
-                    android:textStyle="normal"
+                    android:text="@string/normal"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textStyle="normal" />
             </LinearLayout>
         </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/today_rv"
             android:layout_width="match_parent"
             android:layout_height="221.5dp"
-            android:paddingTop="22.5dp"
-            android:paddingStart="21dp" />
+            android:paddingLeft="21dp"
+            android:paddingTop="22.5dp" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -162,12 +164,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/all_post"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginStart="21dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -176,40 +178,43 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="21dp"
+                android:background="@drawable/post_sort_btn"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="21dp"
-                android:orientation="horizontal"
-                android:background="@drawable/post_sort_btn">
+                app:layout_constraintTop_toTopOf="parent">
+
                 <ImageView
                     android:layout_width="10dp"
                     android:layout_height="12dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="6dp"
-                    android:src="@drawable/post_sort_img"/>
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/post_sort_img" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="7dp"
                     android:fontFamily="sans-serif"
                     android:text="@string/sort"
                     android:textColor="@color/post_sort_color"
                     android:textSize="12sp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="7dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_gravity="center"
                     android:textStyle="normal" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="29dp">
+            android:layout_marginTop="29dp"
+            android:layout_weight="1">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/all_post_rv"
@@ -222,12 +227,13 @@
                 android:id="@+id/post_btn"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="@drawable/post_btn"
-                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:layout_marginEnd="21dp"
                 android:layout_marginBottom="56dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true">
+                android:background="@drawable/post_btn"
+                android:gravity="center">
+
                 <ImageView
                     android:layout_width="23.3dp"
                     android:layout_height="25.8dp"
