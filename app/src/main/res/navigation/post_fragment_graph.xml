@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_fragment_graph"
+    app:startDestination="@id/allPostFragment">
+
+    <fragment
+        android:id="@+id/allPostFragment"
+        android:name="com.moizaandroid.moiza.ui.component.post.all.AllPostFragment"
+        android:label="AllPostFragment"
+        tools:layout="@layout/fragment_all_post"/>
+    <fragment
+        android:id="@+id/questionPostFragment"
+        android:name="com.moizaandroid.moiza.ui.component.post.question.QuestionPostFragment"
+        android:label="QuestionPostFragment"
+        tools:layout="@layout/fragment_question_post"/>
+    <fragment
+        android:id="@+id/normalPostFragment"
+        android:name="com.moizaandroid.moiza.ui.component.post.normal.NormalPostFragment"
+        android:label="NormalPostFragment"
+        tools:layout="@layout/fragment_normal_post"/>
+</navigation>

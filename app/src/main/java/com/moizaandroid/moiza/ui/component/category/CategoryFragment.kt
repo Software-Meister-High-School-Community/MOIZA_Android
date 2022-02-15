@@ -11,7 +11,7 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
     }
 
     fun clickSearchBtn() {
-        binding.searchBtn.setOnClickListener {
+        binding.searchTabBtn.setOnClickListener {
             this.findNavController().navigate(R.id.action_categoryFragment_to_searchFragment)
         }
     }

@@ -11,10 +11,18 @@
     <color name="board_top">#f9f9f9</color>
     <color name="board_background">#f8f8fa</color>
 
+
     <color name="moiza_blue">#0048FF</color>
+    <color name="moiza_blue_two">#0085FF</color>
     <color name="moiza_yellow">#ffb500</color>
+    <color name="moiza_yellow_two">#FF9F47</color>
 
     <color name="search_background">#E5E5E5</color>
 
     <color name="search_hint_color">#999999</color>
+
+    <color name="category_box_line_color">#E0E0E0</color>
+    <color name="category_box_color">#f8f8fa</color>
+
+    <color name="post_sort_color">#555555</color>
 </resources>
