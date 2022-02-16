@@ -14,8 +14,14 @@
         android:theme="@style/Theme.MOIZA"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.component.register.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.component.login.activity.SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.component.splash.SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
