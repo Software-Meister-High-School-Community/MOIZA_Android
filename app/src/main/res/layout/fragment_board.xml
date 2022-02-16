@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -9,18 +9,19 @@
     </data>
 
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.component.board.BoardFragment">
-
-        <TextView
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/boardFragment_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/board"
-            android:textSize="40sp" />
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:navGraph="@navigation/board_fragment_graph"
+            app:defaultNavHost="true"
+            />
 
-    </FrameLayout>
+    </LinearLayout>
 </layout>
