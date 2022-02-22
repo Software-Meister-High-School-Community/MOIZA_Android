@@ -3,37 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1655" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/blue_box.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/bottom_color.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/categoty_box.xml" value="0.2" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/front_android_style.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1655" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_btn.xml" value="0.1655" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_category.xml" value="0.1655" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_sort_btn.xml" value="0.1655" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/search_btn.xml" value="0.1605" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/search_field.xml" value="0.1605" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/white_box.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/yelloew_box.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/activity_splash.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_all_post.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_board.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_category.xml" value="0.264" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_home.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_kategorie.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_nomal_post.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_normal_post.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_notification.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_post.xml" value="0.2" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_profile.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_question_post.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/fragment_search.xml" value="0.264" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/recent_search_item.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/recent_search_item_list.xml" value="0.536" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/menu/post_menu.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_buttin_sort.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/filter_logo.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/follow_delete_button_background.xml" value="0.2199074074074074" />
@@ -44,6 +13,11 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/activity_sign_in.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/activity_sign_up.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/activity_splash.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_bsm_item.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_dgsm_item.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_dsm_item.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_gsm_item.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_mirim_item.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_board.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_detail_follow.xml" value="0.10400000000000001" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_home.xml" value="0.22546296296296298" />
@@ -54,6 +28,7 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_search.xml" value="0.11157407407407408" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_follow.xml" value="0.4" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_my_content.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/recent_search_item_list.xml" value="0.22546296296296298" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17827868852459017" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25546448087431695" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.17827868852459017" />
