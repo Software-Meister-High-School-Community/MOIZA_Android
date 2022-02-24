@@ -18,6 +18,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.045" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner_dgsm_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/school_name"
         android:layout_width="wrap_content"
@@ -92,6 +99,5 @@
         android:textSize="9sp"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/major3" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
