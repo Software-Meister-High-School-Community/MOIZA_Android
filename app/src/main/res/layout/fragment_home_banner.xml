@@ -57,7 +57,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
                 android:contentDescription="@string/logo"
-                android:src="@drawable/ic_app_logo" />
+                android:src="@drawable/moiza_logo" />
 
             <ImageView
                 android:layout_width="51.87dp"
@@ -65,7 +65,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:contentDescription="@string/name"
-                android:src="@drawable/ic_moiza_text" />
+                android:src="@drawable/moiza" />
 
             <ImageView
                 android:id="@+id/search_tab_btn"
@@ -74,7 +74,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="260dp"
                 android:contentDescription="@string/search"
-                android:src="@drawable/ic_search" />
+                android:src="@drawable/search_icon" />
 
         </LinearLayout>
 

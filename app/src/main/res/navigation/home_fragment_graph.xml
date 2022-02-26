@@ -12,9 +12,7 @@
         tools:layout="@layout/fragment_home_banner">
         <action
             android:id="@+id/action_bannerFragment_to_searchFragment"
-            app:destination="@id/searchFragment"
-            app:popUpTo="@id/bannerFragment"
-            app:popUpToInclusive="false"/>
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
