@@ -19,11 +19,12 @@ class HomeBannerAdapter : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view =
             LayoutInflater.from(container.context).inflate(layout[position], container, false)
+        container.addView(view)
         return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        super.destroyItem(container, position, `object`)
+        container.removeView(`object` as View?)
     }
 
     override fun getCount(): Int {
