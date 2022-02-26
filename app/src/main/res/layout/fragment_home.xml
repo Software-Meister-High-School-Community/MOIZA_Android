@@ -8,75 +8,19 @@
             type="com.moizaandroid.moiza.ui.component.home.HomeFragment" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f8f8fa"
-        tools:context=".ui.component.HomeFragment">
+        tools:context=".ui.component.home.HomeFragment">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline1"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bannerFragment_view"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.06" />
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/home_fragment_graph" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.94" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.02" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.39" />
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/schoolBanner"
-            android:layout_width="0dp"
-            android:layout_height="214dp"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toTopOf="@id/guideline3" />
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/dotPager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/schoolBanner" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
-            android:fontFamily="@font/rotobo_bold"
-            android:text="@string/popular_content"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/guideline4"
-            app:layout_constraintStart_toStartOf="@id/guideline1" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/popularContentRv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline4" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>
