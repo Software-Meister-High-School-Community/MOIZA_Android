@@ -86,7 +86,7 @@
             <ImageView
                 android:layout_width="39.59dp"
                 android:layout_height="29dp"
-                android:src="@drawable/ic_logo" />
+                android:src="@drawable/ic_app_logo" />
 
             <TextView
                 android:layout_width="wrap_content"

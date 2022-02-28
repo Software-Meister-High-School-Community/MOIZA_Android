@@ -26,7 +26,7 @@
                 android:layout_height="18.66dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/moiza_logo"
+                android:src="@drawable/ic_app_logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
                 android:layout_height="14.72dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="8.7dp"
-                android:src="@drawable/moiza"
+                android:src="@drawable/ic_moiza_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -48,7 +48,7 @@
                 android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15.5dp"
-                android:background="@drawable/categoty_box"
+                android:background="@drawable/bg_categoty_box"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -73,7 +73,7 @@
                     android:layout_height="3.5dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/category_down" />
+                    android:src="@drawable/ic_category_down" />
 
             </LinearLayout>
 
@@ -82,7 +82,7 @@
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:layout_marginEnd="20.6dp"
-                android:src="@drawable/search_icon"
+                android:src="@drawable/ic_search"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -97,7 +97,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/post_category"
+                android:background="@drawable/bg_post_category"
                 android:gravity="center">
 
                 <TextView
@@ -179,7 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="21dp"
-                android:background="@drawable/post_sort_btn"
+                android:background="@drawable/ic_btn_post_sort"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -193,7 +193,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="6dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/post_sort_img" />
+                    android:src="@drawable/ic_post_sort" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -231,13 +231,13 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="21dp"
                 android:layout_marginBottom="56dp"
-                android:background="@drawable/post_btn"
+                android:background="@drawable/ic_btn_post"
                 android:gravity="center">
 
                 <ImageView
                     android:layout_width="23.3dp"
                     android:layout_height="25.8dp"
-                    android:src="@drawable/post_logo" />
+                    android:src="@drawable/ic_post_logo" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

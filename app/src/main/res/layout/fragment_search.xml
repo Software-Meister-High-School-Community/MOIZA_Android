@@ -26,7 +26,7 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginStart="16dp"
-                android:src="@drawable/back_btn"
+                android:src="@drawable/ic_back"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
                     android:layout_width="0dp"
                     android:layout_height="45dp"
                     android:layout_weight="1"
-                    android:background="@drawable/search_field"
+                    android:background="@drawable/bg_search_field"
                     android:hint="@string/search_hint"
                     android:paddingStart="10dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
                     android:id="@+id/search_btn"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/search_btn"
+                    android:background="@drawable/bg_btn_search_blue"
                     android:gravity="center"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -86,7 +86,7 @@
                     <ImageView
                         android:layout_width="21.31dp"
                         android:layout_height="21.32dp"
-                        android:src="@drawable/search_white_btn" />
+                        android:src="@drawable/ic_search_white" />
                 </LinearLayout>
 
             </LinearLayout>
