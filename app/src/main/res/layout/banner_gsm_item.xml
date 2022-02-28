@@ -21,9 +21,18 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/banner_gsm_bg"
+        android:background="@drawable/bg_banner_gsm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_banner_gsm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="26.1dp"
+        android:layout_marginBottom="18.2dp"/>
 
     <TextView
         android:id="@+id/school_name"
