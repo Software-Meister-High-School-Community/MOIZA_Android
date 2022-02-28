@@ -66,7 +66,7 @@
                 android:layout_height="83.3dp"
                 android:layout_marginStart="18.3dp"
                 android:layout_marginTop="81.3dp"
-                android:background="@drawable/no_user_profile"
+                android:background="@drawable/ic_default_profile"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -241,7 +241,7 @@
                 android:layout_width="63dp"
                 android:layout_height="28dp"
                 android:background="@drawable/bg_button_sort"
-                android:drawableLeft="@drawable/filter_logo"
+                android:drawableLeft="@drawable/ic_filter"
                 android:drawablePadding="-8dp"
                 android:fontFamily="@font/rotobo_regular"
                 android:paddingStart="10dp"
