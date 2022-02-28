@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component.register
+package com.moizaandroid.moiza.ui.component.signup
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

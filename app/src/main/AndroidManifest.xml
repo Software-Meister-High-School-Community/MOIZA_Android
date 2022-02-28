@@ -14,10 +14,10 @@
         android:theme="@style/Theme.MOIZA"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.component.register.SignUpActivity"
+            android:name=".ui.component.signup.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.component.login.activity.SignInActivity"
+            android:name=".ui.component.signin.activity.SignInActivity"
             android:exported="false" />
         <activity
             android:name=".ui.component.splash.SplashActivity"
