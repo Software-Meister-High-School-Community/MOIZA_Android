@@ -59,7 +59,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
                 android:contentDescription="@string/logo"
-                android:src="@drawable/moiza_logo" />
+                android:src="@drawable/ic_app_logo" />
 
             <ImageView
                 android:layout_width="51.87dp"
@@ -67,7 +67,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:contentDescription="@string/name"
-                android:src="@drawable/moiza" />
+                android:src="@drawable/ic_moiza_text" />
 
             <ImageView
                 android:id="@+id/setting_tab_btn"
@@ -76,7 +76,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="260dp"
                 android:contentDescription="@string/search"
-                android:src="@drawable/setting_icon" />
+                android:src="@drawable/ic_setting" />
 
         </LinearLayout>
 
@@ -102,7 +102,7 @@
                 android:layout_height="83.3dp"
                 android:layout_marginStart="18.3dp"
                 android:layout_marginTop="81.3dp"
-                android:background="@drawable/no_user_profile"
+                android:background="@drawable/ic_default_profile"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -279,7 +279,7 @@
                 android:layout_width="63dp"
                 android:layout_height="28dp"
                 android:background="@drawable/bg_button_sort"
-                android:drawableLeft="@drawable/filter_logo"
+                android:drawableLeft="@drawable/ic_filter"
                 android:drawablePadding="-8dp"
                 android:fontFamily="@font/rotobo_regular"
                 android:paddingStart="10dp"
