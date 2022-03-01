@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_banner">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -19,7 +20,7 @@
         app:layout_constraintGuide_percent="0.045" />
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_banner_dsm"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,6 +100,7 @@
         app:layout_constraintTop_toBottomOf="@id/major2" />
 
     <TextView
+        android:id="@+id/homepage_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
@@ -108,5 +110,13 @@
         android:textSize="9sp"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/major3" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#000000"
+        app:layout_constraintTop_toBottomOf="@id/homepage_btn"
+        app:layout_constraintEnd_toEndOf="@id/homepage_btn"
+        app:layout_constraintStart_toStartOf="@id/major1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

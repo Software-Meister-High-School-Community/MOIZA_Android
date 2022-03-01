@@ -2,7 +2,10 @@ package com.moizaandroid.moiza.ui.component.home
 
 import android.graphics.Color
 import android.text.Html
+import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.view.marginStart
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.moizaandroid.moiza.R
@@ -21,7 +24,7 @@ class BannerFragment : BaseFragment<FragmentHomeBannerBinding>(R.layout.fragment
     }
 
     private fun initSchoolBanner() {
-        binding.schoolBanner.adapter = HomeBannerAdapter()
+        binding.schoolBanner.adapter = HomeBannerAdapter(context)
     }
 
     private fun dotselect(position: Int) {
@@ -39,6 +42,7 @@ class BannerFragment : BaseFragment<FragmentHomeBannerBinding>(R.layout.fragment
             dots[i] = TextView(context)
             dots[i]?.setText(Html.fromHtml("&#9679;"))
             dots[i]?.setTextSize(8f)
+            dots[i]?.setPadding(5,0,5,0)
             if (i == 0) {
                 dots[i]?.setTextColor(Color.parseColor("#555555"))
             } else {
