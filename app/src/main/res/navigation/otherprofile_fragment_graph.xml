@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/otherPageFragment"
-        android:name="com.moizaandroid.moiza.ui.component.profile.page.OtherPageFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.OtherPageFragment"
         android:label="OtherPageFragment"
         tools:layout="@layout/fragment_profile_otherpage">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/otherFollowFragment"
-        android:name="com.moizaandroid.moiza.ui.component.profile.follow.OtherFollowFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.OtherFollowFragment"
         android:label="OtherFollowFragment"
         tools:layout="@layout/fragment_profile_otherfollow" />
 </navigation>

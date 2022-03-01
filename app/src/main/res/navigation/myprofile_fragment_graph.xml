@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/myPageFragment"
-        android:name="com.moizaandroid.moiza.ui.component.profile.page.MyPageFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.MyPageFragment"
         android:label="MyPageFragment"
         tools:layout="@layout/fragment_profile_mypage">
         <action
@@ -15,14 +15,7 @@
             app:destination="@id/editFragment" />
         <action
             android:id="@+id/action_myPageFragment_to_myFollowFragment"
-            app:destination="@id/myFollowFragment"
-            app:popUpTo="@id/myPageFragment"
-            app:popUpToInclusive="false"/>
-        <action
-            android:id="@+id/action_myPageFragment_to_settingFragment"
-            app:destination="@id/settingFragment"
-            app:popUpTo="@id/myPageFragment"
-            app:popUpToInclusive="false"/>
+            app:destination="@id/myFollowFragment" />
     </fragment>
     <fragment
         android:id="@+id/editFragment"
@@ -31,13 +24,7 @@
         tools:layout="@layout/fragment_profile_edit" />
     <fragment
         android:id="@+id/myFollowFragment"
-        android:name="com.moizaandroid.moiza.ui.component.profile.follow.MyFollowFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.MyFollowFragment"
         android:label="MyFollowFragment"
-        tools:layout="@layout/fragment_profile_myfollow">
-    </fragment>
-    <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.moizaandroid.moiza.ui.component.profile.setting.SettingFragment"
-        android:label="SettingFragment"
-        tools:layout="@layout/fragment_profile_setting"/>
+        tools:layout="@layout/fragment_profile_myfollow" />
 </navigation>
