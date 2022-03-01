@@ -35,14 +35,14 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.37" />
+            app:layout_constraintGuide_percent="0.38" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline4"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.56" />
+            app:layout_constraintGuide_percent="0.57" />
 
         <LinearLayout
             android:id="@+id/title_layout"
@@ -83,17 +83,19 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/user_profile_layout"
             android:layout_width="0dp"
-            android:layout_height="232dp"
-            android:background="#ffffff"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_profile_mypage_bottom"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/title_layout">
+            app:layout_constraintTop_toBottomOf="@id/title_layout"
+            app:layout_constraintBottom_toBottomOf="@id/guideline3"
+            android:layout_marginBottom="10dp">
 
             <View
                 android:id="@+id/profile_background"
                 android:layout_width="match_parent"
                 android:layout_height="99dp"
-                android:background="@color/orange"
+                android:background="@drawable/bg_profile_mypage_top"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -223,7 +225,7 @@
             android:id="@+id/user_introduce_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
+            android:background="@drawable/bg_profile_introduce"
             android:orientation="vertical"
             android:paddingStart="14dp"
             android:paddingTop="20dp"
