@@ -6,14 +6,17 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_banner.xml" value="0.17175925925925925" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_banner_bsm.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_buttin_sort.xml" value="0.23981481481481481" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_button_setting.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_profile.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_profile_introduce.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_profile_mypage_bottom.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_profile_mypage_top.xml" value="0.1763888888888889" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_search_follow.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/filter_logo.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/follow_delete_button_background.xml" value="0.2199074074074074" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/follow_metoo_button_background.xml" value="0.2199074074074074" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23981481481481481" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/selector_profile_myfollow.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/tab_selector.xml" value="0.1259259259259259" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/activity_main.xml" value="0.11157407407407408" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/activity_sign_in.xml" value="0.22546296296296298" />
@@ -36,7 +39,8 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile.xml" value="0.12631578947368421" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_edit.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_myfollow.xml" value="0.22546296296296298" />
-        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_mypage.xml" value="0.2" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_mypage.xml" value="0.4" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_otherpage.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_search.xml" value="0.11157407407407408" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_follow.xml" value="0.4" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_my_content.xml" value="0.22546296296296298" />
