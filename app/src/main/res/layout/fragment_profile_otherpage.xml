@@ -5,7 +5,7 @@
 
         <variable
             name="profile"
-            type="com.moizaandroid.moiza.ui.component.profile.MyPageFragment" />
+            type="com.moizaandroid.moiza.ui.component.profile.OtherFollowFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f8f8f8"
-        tools:context=".ui.component.profile.MyPageFragment">
+        tools:context=".ui.component.profile.OtherFollowFragment">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline1"
@@ -218,6 +218,25 @@
                         android:textSize="12sp" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_follow_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_background"
+                android:layout_marginEnd="14dp"
+                android:layout_marginTop="14dp"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_unfollow_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_background"
+                android:layout_marginEnd="14dp"
+                android:layout_marginTop="14dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.LinearLayoutCompat
