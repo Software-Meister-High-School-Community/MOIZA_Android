@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component.profile
+package com.moizaandroid.moiza.ui.component.profile.follow
 
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
