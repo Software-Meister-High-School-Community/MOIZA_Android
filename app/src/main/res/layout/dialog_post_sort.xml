@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.component.board.dialog.PostDialog"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="221dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline35"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline37"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline36"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.44" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline40"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline41"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.87" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline38"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline39"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/sort"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/guideline38"
+            app:layout_constraintTop_toTopOf="@+id/guideline35" />
+
+        <TextView
+            android:id="@+id/initialization_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/initialization"
+            android:textColor="@color/search_hint_color"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline39"
+            app:layout_constraintTop_toTopOf="@+id/guideline35" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/guideline36"
+            app:layout_constraintEnd_toStartOf="@+id/guideline39"
+            app:layout_constraintStart_toStartOf="@+id/guideline38"
+            app:layout_constraintTop_toTopOf="@+id/guideline37">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dialog_yellow_btn"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:text="@string/sort_resent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dialog_white_btn"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/search_hint_color"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:text="@string/sort_like" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dialog_white_btn"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/search_hint_color"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:text="@string/sort_old" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dialog_white_btn"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sort_views"
+                        android:textColor="@color/search_hint_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/sort_apply_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_blue_box"
+            android:gravity="center"
+            android:text="@string/apply"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline41"
+            app:layout_constraintEnd_toStartOf="@+id/guideline39"
+            app:layout_constraintStart_toStartOf="@+id/guideline38"
+            app:layout_constraintTop_toTopOf="@+id/guideline40" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -43,7 +43,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/showCategoryBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="28dp"
                 android:layout_gravity="center"
@@ -55,12 +55,13 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
+                    android:id="@+id/category_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="4dp"
                     android:fontFamily="sans-serif"
                     android:gravity="center"
                     android:text="@string/app_name"
@@ -69,11 +70,12 @@
                     android:textStyle="normal" />
 
                 <ImageView
-                    android:layout_width="7dp"
-                    android:layout_height="3.5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:paddingTop="1dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/category_down" />
+                    android:src="@drawable/ic_baseline_arrow_drop_down_24" />
 
             </LinearLayout>
 
@@ -153,7 +155,7 @@
             android:id="@+id/today_rv"
             android:layout_width="match_parent"
             android:layout_height="221.5dp"
-            android:paddingLeft="21dp"
+            android:paddingStart="21dp"
             android:paddingTop="22.5dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -175,7 +177,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout2"
+                android:id="@+id/sort_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="21dp"
@@ -193,7 +195,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="6dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/post_sort_img" />
+                    android:src="@drawable/post_sort_img"
+                    android:clickable="false"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -206,7 +209,8 @@
                     android:text="@string/sort"
                     android:textColor="@color/post_sort_color"
                     android:textSize="12sp"
-                    android:textStyle="normal" />
+                    android:textStyle="normal"
+                    android:clickable="false"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 

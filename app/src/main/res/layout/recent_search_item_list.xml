@@ -24,7 +24,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="12dp"
-        android:src="@drawable/close_btn"
+        android:src="@drawable/ic_baseline_close_24"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
