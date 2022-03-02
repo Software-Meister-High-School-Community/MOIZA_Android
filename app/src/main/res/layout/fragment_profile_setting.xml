@@ -1,15 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
             name="setting"
-            type="com.moizaandroid.moiza.ui.component.profile.SettingFragment" />
+            type="com.moizaandroid.moiza.ui.component.profile.setting.SettingFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/rotobo_regular"
+                android:text="설정"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divide1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/top_layout" />
+
+        <TextView
+            android:id="@+id/terms_of_use"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:paddingStart="32dp"
+            android:paddingTop="17dp"
+            android:text="이용약관"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divide1" />
+
+        <View
+            android:id="@+id/divide2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/terms_of_use" />
+
+        <TextView
+            android:id="@+id/private_information"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:paddingStart="32dp"
+            android:paddingTop="17dp"
+            android:text="개인정보처리방침"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divide2" />
+
+        <View
+            android:id="@+id/divide3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/private_information" />
+
+        <Button
+            android:id="@+id/graduate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:text="졸업생 인증/전환하기"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divide3" />
+
+        <TextView
+            android:id="@+id/graduate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:text="졸업생으로 전환하면 졸업 인증을 하신 후에\n계속 서비스를 이용하실 수 있습니다. 양해 부탁드립니다."
+            android:textColor="@color/gray_5"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/graduate_btn" />
+
+        <View
+            android:id="@+id/divide4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/graduate_txt" />
+
+        <TextView
+            android:id="@+id/public_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:text="공식이메일"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divide4" />
+
+        <TextView
+            android:id="@+id/public_email_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:text="sofmoiza@gmail.com"
+            android:textColor="@color/gray_4"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/public_email" />
+
+        <View
+            android:id="@+id/divide5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/public_email_txt" />
+
+        <TextView
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:paddingStart="32dp"
+            android:paddingTop="17dp"
+            android:text="로그아웃"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divide5" />
+
+        <View
+            android:id="@+id/divide6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/logout_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="22dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:text="©2022. Team Connect. All rights reserved"
+            android:textColor="@color/gray_4"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divide6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
