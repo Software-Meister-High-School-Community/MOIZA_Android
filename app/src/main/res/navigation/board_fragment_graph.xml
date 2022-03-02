@@ -15,7 +15,9 @@
             app:destination="@id/postFragment" />
         <action
             android:id="@+id/action_categoryFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            app:destination="@id/searchFragment"
+            app:popUpTo="@id/categoryFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
