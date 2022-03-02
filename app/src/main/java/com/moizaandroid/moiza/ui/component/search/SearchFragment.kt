@@ -12,11 +12,9 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         clickBackBtn()
     }
 
-
-    private fun clickBackBtn () {
+    private fun clickBackBtn(){
         binding.backBtn.setOnClickListener {
-            this.findNavController().navigate(R.id.action_searchFragment_to_categoryFragment)
+            findNavController().popBackStack()
         }
     }
-
 }
