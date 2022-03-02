@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component.profile
+package com.moizaandroid.moiza.ui.component.profile.follow
 
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.FragmentProfileOtherfollowBinding
