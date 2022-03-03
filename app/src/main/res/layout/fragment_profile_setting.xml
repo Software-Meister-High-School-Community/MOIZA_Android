@@ -92,6 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="17dp"
+            android:background="@drawable/bg_graduate_btn"
             android:fontFamily="@font/rotobo_regular"
             android:paddingStart="16dp"
             android:paddingTop="8dp"
