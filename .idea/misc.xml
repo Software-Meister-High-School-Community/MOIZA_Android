@@ -8,6 +8,7 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_buttin_sort.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_button_setting.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_change_img_btn.xml" value="0.23981481481481481" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_edit_add_link.xml" value="0.1763888888888889" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_edit_color.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_edit_introduce.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/drawable/bg_graduate_btn.xml" value="0.23981481481481481" />
@@ -42,7 +43,7 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_post.xml" value="0.11527777777777778" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profie_setting.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile.xml" value="0.12631578947368421" />
-        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_edit.xml" value="0.24719101123595505" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_edit.xml" value="0.2" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_myfollow.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_mypage.xml" value="0.4" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_otherpage.xml" value="0.16203703703703703" />
