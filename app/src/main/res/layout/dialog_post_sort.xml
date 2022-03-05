@@ -104,6 +104,7 @@
                 android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
                 android:gravity="center"
+                android:textColor="@drawable/sl_post_dialog_text"
                 android:text="@string/sort_resent" />
 
             <RadioButton
@@ -115,6 +116,7 @@
                 android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
                 android:gravity="center"
+                android:textColor="@drawable/sl_post_dialog_text"
                 android:text="@string/sort_like" />
 
             <RadioButton
@@ -125,6 +127,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
+                android:textColor="@drawable/sl_post_dialog_text"
                 android:gravity="center"
                 android:text="@string/sort_old" />
 
@@ -135,6 +138,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
+                android:textColor="@drawable/sl_post_dialog_text"
                 android:gravity="center"
                 android:text="@string/sort_views" />
 
