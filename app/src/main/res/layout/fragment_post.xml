@@ -79,7 +79,7 @@
                 android:layout_height="18.66dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/moiza_logo"
+                android:src="@drawable/ic_moiza_logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -90,7 +90,7 @@
                 android:layout_height="14.72dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="8.7dp"
-                android:src="@drawable/moiza"
+                android:src="@drawable/ic_moiza_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -101,7 +101,7 @@
                 android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15.5dp"
-                android:background="@drawable/category_box"
+                android:background="@drawable/bg_category_box"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -137,7 +137,7 @@
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:layout_marginEnd="20.6dp"
-                android:src="@drawable/search_icon"
+                android:src="@drawable/ic_search_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -157,34 +157,34 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/post_radio_seletor"
+                android:background="@drawable/sl_post_radio_seletor"
                 android:button="@android:color/transparent"
                 android:gravity="center|bottom"
                 android:paddingBottom="12dp"
                 android:text="@string/all_post"
-                android:textColor="@drawable/post_text_color" />
+                android:textColor="@drawable/sl_post_text_color" />
 
             <RadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/post_radio_seletor"
+                android:background="@drawable/sl_post_radio_seletor"
                 android:button="@android:color/transparent"
                 android:gravity="center|bottom"
                 android:paddingBottom="12dp"
                 android:text="@string/question"
-                android:textColor="@drawable/post_text_color" />
+                android:textColor="@drawable/sl_post_text_color" />
 
             <RadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/post_radio_seletor"
+                android:background="@drawable/sl_post_radio_seletor"
                 android:button="@android:color/transparent"
                 android:gravity="center|bottom"
                 android:paddingBottom="12dp"
                 android:text="@string/normal"
-                android:textColor="@drawable/post_text_color" />
+                android:textColor="@drawable/sl_post_text_color" />
         </RadioGroup>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -228,7 +228,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="21dp"
-                android:background="@drawable/post_sort_btn"
+                android:background="@drawable/bg_post_sort_btn"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -241,7 +241,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="6dp"
                     android:clickable="false"
-                    android:src="@drawable/post_sort_img" />
+                    android:src="@drawable/ic_post_sort_img" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -275,7 +275,7 @@
             android:layout_height="48dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/post_btn"
+            android:background="@drawable/bg_post_btn"
             android:gravity="center"
             app:layout_constraintEnd_toStartOf="@+id/guideline23"
             app:layout_constraintTop_toTopOf="@+id/guideline15">
@@ -283,7 +283,7 @@
             <ImageView
                 android:layout_width="23.3dp"
                 android:layout_height="25.8dp"
-                android:src="@drawable/post_logo" />
+                android:src="@drawable/ic_post_logo" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

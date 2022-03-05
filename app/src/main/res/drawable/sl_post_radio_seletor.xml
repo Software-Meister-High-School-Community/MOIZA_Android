@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true"
-        android:drawable="@drawable/selected_post_btn"/>
+        android:drawable="@drawable/bg_selected_post_btn"/>
     <item android:state_checked="false"
-        android:drawable="@drawable/normal_post_btn"/>
+        android:drawable="@drawable/bg_normal_post_btn"/>
 </selector>

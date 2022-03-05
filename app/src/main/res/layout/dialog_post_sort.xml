@@ -101,9 +101,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
                 android:gravity="center"
-                android:background="@drawable/sort_selector"
                 android:text="@string/sort_resent" />
 
             <RadioButton
@@ -112,9 +112,9 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
                 android:gravity="center"
-                android:background="@drawable/sort_selector"
                 android:text="@string/sort_like" />
 
             <RadioButton
@@ -123,9 +123,9 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
                 android:gravity="center"
-                android:background="@drawable/sort_selector"
                 android:text="@string/sort_old" />
 
             <RadioButton
@@ -133,9 +133,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/sl_sort_selector"
                 android:button="@android:color/transparent"
                 android:gravity="center"
-                android:background="@drawable/sort_selector"
                 android:text="@string/sort_views" />
 
         </RadioGroup>

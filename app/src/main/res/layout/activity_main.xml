@@ -31,8 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             app:itemBackground="@color/white"
-            app:itemIconTint="@drawable/bottom_color"
-            app:itemTextColor="@drawable/bottom_color"
+            app:itemIconTint="@drawable/sl_bottom_color"
+            app:itemTextColor="@drawable/sl_bottom_color"
             app:labelVisibilityMode="unlabeled"
             app:menu="@menu/bottom_nav_menu" />
 
