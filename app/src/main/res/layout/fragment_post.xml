@@ -283,7 +283,7 @@
             <ImageView
                 android:layout_width="23.3dp"
                 android:layout_height="25.8dp"
-                android:src="@drawable/ic_post_logo" />
+                android:src="@drawable/ic_white_post_logo" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
