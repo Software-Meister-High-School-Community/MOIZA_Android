@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.component.board.dialog.PostDialog"
-    >
+    tools:context=".ui.component.board.dialog.PostDialog">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -115,10 +114,10 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:gravity="center_horizontal"
+                        android:text="@string/sort_resent"
                         android:textColor="@color/white"
                         android:textSize="13sp"
-                        android:textStyle="normal"
-                        android:text="@string/sort_resent" />
+                        android:textStyle="normal" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -142,10 +141,10 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:gravity="center_horizontal"
+                        android:text="@string/sort_like"
                         android:textColor="@color/search_hint_color"
                         android:textSize="13sp"
-                        android:textStyle="normal"
-                        android:text="@string/sort_like" />
+                        android:textStyle="normal" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -169,10 +168,10 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:gravity="center_horizontal"
+                        android:text="@string/sort_old"
                         android:textColor="@color/search_hint_color"
                         android:textSize="13sp"
-                        android:textStyle="normal"
-                        android:text="@string/sort_old" />
+                        android:textStyle="normal" />
                 </LinearLayout>
 
             </LinearLayout>

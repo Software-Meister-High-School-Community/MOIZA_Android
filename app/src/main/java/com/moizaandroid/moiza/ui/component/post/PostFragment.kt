@@ -1,7 +1,6 @@
 package com.moizaandroid.moiza.ui.component.post
 
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.FragmentPostBinding
@@ -17,6 +16,7 @@ class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post) {
         settingCategory()
     }
 
+
     private fun settingCategory() {
         binding.categoryTv.text = mainViewModel.categoryType.value
     }
@@ -30,5 +30,6 @@ class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post) {
             bottomSheetDialog.show()
         }
     }
+
 
 }

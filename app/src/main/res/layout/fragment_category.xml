@@ -11,7 +11,7 @@
     </data>
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,10 +19,15 @@
         tools:context="com.moizaandroid.moiza.ui.component.category.CategoryFragment">
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:background="@color/board_top"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -30,42 +35,158 @@
                 android:layout_height="18.66dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/ic_app_logo"
-                android:contentDescription="@string/logo" />
+                android:contentDescription="@string/logo"
+                android:src="@drawable/ic_app_logo" />
 
             <ImageView
                 android:layout_width="51.87dp"
                 android:layout_height="14.72dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:src="@drawable/ic_moiza_text"
-                android:contentDescription="@string/name" />
+                android:contentDescription="@string/name"
+                android:src="@drawable/ic_moiza_text" />
 
             <ImageView
-                android:id="@+id/search_tab_btn"
+                android:id="@+id/searchTabBtn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="260dp"
-                android:src="@drawable/ic_search"
-                android:contentDescription="@string/search" />
+                android:contentDescription="@string/search"
+                android:src="@drawable/ic_search" />
 
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline27"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.07" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline28"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.23" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline29"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.24" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline30"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline45"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.41" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline46"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.57" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline47"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.58" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline48"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.7474" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline50"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.76" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline49"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.92" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline17"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline24"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.36" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline25"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.64" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline26"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
 
             <LinearLayout
-                android:id="@+id/front_btn"
-                android:layout_width="107dp"
-                android:layout_height="107dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="48dp"
+                android:id="@+id/frontBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_blue_box"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintBottom_toTopOf="@+id/guideline28"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline27">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -74,23 +195,22 @@
                     android:gravity="end"
                     android:letterSpacing="-0.02"
                     android:padding="10dp"
+                    android:text="Front
+                -End"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="Front
-                -End" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/back_btn"
-                android:layout_width="225dp"
-                android:layout_height="107dp"
-                android:layout_marginStart="139dp"
-                android:layout_marginEnd="20dp"
+                android:id="@+id/backBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_white_box"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/front_btn">
+                app:layout_constraintBottom_toTopOf="@+id/guideline28"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline24"
+                app:layout_constraintTop_toTopOf="@+id/guideline27">
 
                 <TextView
                     android:layout_width="201dp"
@@ -99,21 +219,21 @@
                     android:fontFamily="sans-serif"
                     android:gravity="bottom"
                     android:letterSpacing="-0.02"
+                    android:text="Back-End"
                     android:textColor="#ffb500"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="Back-End" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/design_btn"
-                android:layout_width="107dp"
-                android:layout_height="225dp"
-                android:layout_marginStart="21dp"
-                android:layout_marginTop="11dp"
+                android:id="@+id/designBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_white_box"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/front_btn">
+                app:layout_constraintBottom_toTopOf="@+id/guideline46"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline29">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,21 +242,21 @@
                     android:layout_margin="10dp"
                     android:fontFamily="sans-serif"
                     android:letterSpacing="-0.02"
+                    android:text="Design"
                     android:textColor="#0048ff"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="Design" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ios_btn"
-                android:layout_width="107dp"
-                android:layout_height="107dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:id="@+id/iosBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_yelloew_box"
-                app:layout_constraintStart_toEndOf="@+id/design_btn"
-                app:layout_constraintTop_toBottomOf="@+id/back_btn">
+                app:layout_constraintBottom_toTopOf="@+id/guideline30"
+                app:layout_constraintEnd_toStartOf="@+id/guideline25"
+                app:layout_constraintStart_toStartOf="@+id/guideline24"
+                app:layout_constraintTop_toTopOf="@+id/guideline29">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -146,21 +266,22 @@
                     android:fontFamily="sans-serif"
                     android:gravity="bottom|right"
                     android:letterSpacing="-0.02"
+                    android:text="iOS"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="iOS"
-                    tools:ignore="RtlHardcoded" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:id="@+id/android_btn"
-                android:layout_width="107dp"
-                android:layout_height="107dp"
+                android:id="@+id/androidBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_blue_box"
-                app:layout_constraintEnd_toEndOf="@+id/back_btn"
-                app:layout_constraintTop_toTopOf="@+id/ios_btn">
+                app:layout_constraintBottom_toTopOf="@+id/guideline30"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline26"
+                app:layout_constraintTop_toTopOf="@+id/guideline29">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -169,36 +290,39 @@
                     android:fontFamily="sans-serif"
                     android:gravity="end"
                     android:letterSpacing="-0.02"
+                    android:text="Android"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="Android" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout5"
-                android:layout_width="107dp"
-                android:layout_height="107dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:gravity="center"
-                app:layout_constraintBottom_toBottomOf="@+id/design_btn"
-                app:layout_constraintStart_toStartOf="@+id/ios_btn">
+                app:layout_constraintBottom_toTopOf="@+id/guideline46"
+                app:layout_constraintEnd_toStartOf="@+id/guideline25"
+                app:layout_constraintStart_toStartOf="@+id/guideline24"
+                app:layout_constraintTop_toTopOf="@+id/guideline45">
 
                 <ImageView
                     android:layout_width="52dp"
                     android:layout_height="38.82dp"
-                    android:src="@drawable/ic_app_logo"
-                    android:contentDescription="@string/logo" />
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/ic_app_logo" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/security_btn"
-                android:layout_width="225dp"
-                android:layout_height="107dp"
-                android:layout_marginTop="11dp"
+                android:id="@+id/securityBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_blue_box"
                 android:gravity="bottom|right"
-                app:layout_constraintStart_toStartOf="@+id/design_btn"
-                app:layout_constraintTop_toBottomOf="@+id/design_btn"
+                app:layout_constraintBottom_toTopOf="@+id/guideline48"
+                app:layout_constraintEnd_toStartOf="@+id/guideline25"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline47"
                 tools:ignore="RtlHardcoded">
 
                 <TextView
@@ -208,79 +332,86 @@
                     android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif"
                     android:letterSpacing="-0.02"
+                    android:text="Security"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="Security" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/game_btn"
+                android:id="@+id/gameBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_white_box"
-                android:layout_width="107dp"
-                android:layout_height="225dp"
-                app:layout_constraintEnd_toEndOf="@+id/android_btn"
-                app:layout_constraintTop_toTopOf="@+id/linearLayout5"
                 android:gravity="center_vertical|right"
+                app:layout_constraintBottom_toTopOf="@+id/guideline48"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline26"
+                app:layout_constraintTop_toTopOf="@+id/guideline45"
                 tools:ignore="RtlHardcoded">
+
                 <TextView
-                    android:layout_marginRight="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:fontFamily="sans-serif"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#ffb500"
                     android:letterSpacing="-0.02"
-                    tools:text="Game"/>
+                    android:text="Game"
+                    android:textColor="#ffb500"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/embedde_btn"
-                android:layout_width="107dp"
-                android:layout_height="107dp"
-                android:layout_marginTop="11dp"
+                android:id="@+id/embeddedBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_white_box"
                 android:gravity="bottom"
-                app:layout_constraintStart_toStartOf="@+id/security_btn"
-                app:layout_constraintTop_toBottomOf="@+id/security_btn">
+                app:layout_constraintBottom_toTopOf="@+id/guideline49"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline50">
 
                 <TextView
-                    android:layout_width="83dp"
-                    android:layout_height="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginBottom="4dp"
                     android:fontFamily="sans-serif"
                     android:letterSpacing="-0.02"
+                    android:text="Embedded"
                     android:textColor="#ffb500"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="Embedded" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ai_btn"
-                android:layout_width="225dp"
-                android:layout_height="107dp"
+                android:id="@+id/aiBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/bg_yelloew_box"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
-                app:layout_constraintTop_toTopOf="@+id/embedde_btn"
                 android:gravity="right"
+                app:layout_constraintBottom_toTopOf="@+id/guideline49"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toStartOf="@+id/guideline24"
+                app:layout_constraintTop_toTopOf="@+id/guideline50"
                 tools:ignore="RtlHardcoded">
+
                 <TextView
-                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:fontFamily="sans-serif"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#ffffff"
                     android:letterSpacing="-0.02"
-                    tools:text="AI"/>
+                    android:text="AI"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

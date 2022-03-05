@@ -58,13 +58,13 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recent_search_rv"
-            tools:listitem="@layout/recent_search_item_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline43"
             app:layout_constraintStart_toStartOf="@+id/guideline42"
-            app:layout_constraintTop_toTopOf="@+id/guideline44" />
+            app:layout_constraintTop_toTopOf="@+id/guideline44"
+            tools:listitem="@layout/recent_search_item_list" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

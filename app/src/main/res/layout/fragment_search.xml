@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2"/>
+            app:layout_constraintGuide_percent="0.2" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
@@ -54,7 +54,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/back_btn"
+                android:id="@+id/backBtn"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginStart="16dp"
@@ -73,7 +73,7 @@
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/backBtn"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="@string/search" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -89,7 +89,7 @@
             app:layout_constraintTop_toTopOf="@id/guideline32">
 
             <EditText
-                android:id="@+id/search_et"
+                android:id="@+id/searchEt"
                 android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
@@ -100,7 +100,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/search_btn"
+                android:id="@+id/searchBtn"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background="@drawable/search_btn"
@@ -108,8 +108,8 @@
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/search_et"
-                app:layout_constraintTop_toTopOf="@+id/search_et">
+                app:layout_constraintStart_toEndOf="@+id/searchEt"
+                app:layout_constraintTop_toTopOf="@+id/searchEt">
 
                 <ImageView
                     android:layout_width="21.31dp"
@@ -120,8 +120,8 @@
         </LinearLayout>
 
         <androidx.fragment.app.FragmentContainerView
-            android:name="com.moizaandroid.moiza.ui.component.recent_search.RecentSearchFragment"
             android:id="@+id/search_frag"
+            android:name="com.moizaandroid.moiza.ui.component.recent_search.RecentSearchFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -3,7 +3,6 @@ package com.moizaandroid.moiza.ui.component.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelStore
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView

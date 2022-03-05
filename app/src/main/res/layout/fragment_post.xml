@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -10,15 +9,69 @@
             type="com.moizaandroid.moiza.ui.component.post.PostFragment" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:orientation="horizontal">
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline19"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="44dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline20"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="322dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline22"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline21"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.51" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline15"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.86" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline23"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/guideline19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -48,7 +101,7 @@
                 android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15.5dp"
-                android:background="@drawable/categoty_box"
+                android:background="@drawable/category_box"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -73,8 +126,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="1dp"
                     android:layout_marginEnd="10dp"
+                    android:paddingTop="1dp"
                     android:src="@drawable/ic_baseline_arrow_drop_down_24" />
 
             </LinearLayout>
@@ -90,84 +143,78 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <RadioGroup
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="54.5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/guideline18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline19">
 
-            <LinearLayout
+            <RadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/post_category"
-                android:gravity="center">
+                android:background="@drawable/post_radio_seletor"
+                android:button="@android:color/transparent"
+                android:gravity="center|bottom"
+                android:paddingBottom="12dp"
+                android:text="@string/all_post"
+                android:textColor="@drawable/post_text_color" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="5.5dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/all"
-                    android:textColor="@color/moiza_blue"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
+            <RadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:background="@drawable/post_radio_seletor"
+                android:button="@android:color/transparent"
+                android:gravity="center|bottom"
+                android:paddingBottom="12dp"
+                android:text="@string/question"
+                android:textColor="@drawable/post_text_color" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="5.5dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/question"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="normal" />
-            </LinearLayout>
-
-            <LinearLayout
+            <RadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="5.5dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/normal"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="normal" />
-            </LinearLayout>
-        </LinearLayout>
+                android:background="@drawable/post_radio_seletor"
+                android:button="@android:color/transparent"
+                android:gravity="center|bottom"
+                android:paddingBottom="12dp"
+                android:text="@string/normal"
+                android:textColor="@drawable/post_text_color" />
+        </RadioGroup>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/today_rv"
-            android:layout_width="match_parent"
-            android:layout_height="221.5dp"
+            android:id="@+id/todayRv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:paddingStart="21dp"
-            android:paddingTop="22.5dp" />
+            android:paddingTop="22.5dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/guideline22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline20">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/noto_sans_kr_bold"
                 android:text="@string/all_post"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -177,7 +224,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/sort_btn"
+                android:id="@+id/sortBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="21dp"
@@ -189,60 +236,54 @@
 
                 <ImageView
                     android:layout_width="10dp"
-                    android:layout_height="12dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="6dp"
-                    android:layout_marginBottom="8dp"
-                    android:src="@drawable/post_sort_img"
-                    android:clickable="false"/>
+                    android:clickable="false"
+                    android:src="@drawable/post_sort_img" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="7dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="7dp"
-                    android:fontFamily="sans-serif"
+                    android:clickable="false"
+                    android:fontFamily="@font/noto_sans_kr_bold"
                     android:text="@string/sort"
                     android:textColor="@color/post_sort_color"
                     android:textSize="12sp"
-                    android:textStyle="normal"
-                    android:clickable="false"/>
+                    android:textStyle="normal" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/allPostRv"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="29dp"
-            android:layout_weight="1">
+            android:paddingStart="21dp"
+            android:paddingEnd="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/all_post_rv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingStart="21dp"
-                android:paddingEnd="21dp" />
+        <LinearLayout
+            android:id="@+id/postBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/post_btn"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/guideline23"
+            app:layout_constraintTop_toTopOf="@+id/guideline15">
 
-            <LinearLayout
-                android:id="@+id/post_btn"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="56dp"
-                android:background="@drawable/post_btn"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="23.3dp"
-                    android:layout_height="25.8dp"
-                    android:src="@drawable/post_logo" />
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
+            <ImageView
+                android:layout_width="23.3dp"
+                android:layout_height="25.8dp"
+                android:src="@drawable/post_logo" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

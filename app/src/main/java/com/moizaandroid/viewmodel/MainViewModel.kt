@@ -7,20 +7,20 @@ import com.moizaandroid.moiza.ui.base.BaseViewModel
 
 class MainViewModel : BaseViewModel() {
     private var _categoryType = MutableLiveData<String>()
-    val categoryType : LiveData<String>
+    val categoryType: LiveData<String>
         get() = _categoryType
 
-    fun setCategoryType(type : Int) {
+    fun setCategoryType(type: Int) {
         when (type) {
-            R.id.android_btn -> _categoryType.value = "Android"
-            R.id.ai_btn -> _categoryType.value = "AI"
-            R.id.back_btn -> _categoryType.value = "Back-End"
-            R.id.design_btn -> _categoryType.value = "Design"
-            R.id.embedded_btn -> _categoryType.value = "Embedded"
-            R.id.front_btn -> _categoryType.value = "Front-End"
-            R.id.game_btn -> _categoryType.value = "Game"
-            R.id.ios_btn -> _categoryType.value = "iOS"
-            R.id.security_btn -> _categoryType.value = "Security"
+            R.id.androidBtn -> _categoryType.value = "Android"
+            R.id.aiBtn -> _categoryType.value = "AI"
+            R.id.backBtn -> _categoryType.value = "Back-End"
+            R.id.designBtn -> _categoryType.value = "Design"
+            R.id.embeddedBtn -> _categoryType.value = "Embedded"
+            R.id.frontBtn -> _categoryType.value = "Front-End"
+            R.id.gameBtn -> _categoryType.value = "Game"
+            R.id.iosBtn -> _categoryType.value = "iOS"
+            R.id.securityBtn -> _categoryType.value = "Security"
         }
     }
 }

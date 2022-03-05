@@ -14,21 +14,35 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/bg_login_checkbox.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/blue_box.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/bottom_color.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/category_box.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/categoty_box.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/dialog_white_btn.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/dialog_yellow_btn.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/filter_logo.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/front_android_style.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_back.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_baseline_arrow_drop_up_24.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_baseline_expand_more_24.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_normal_yellow.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_notification.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_post_sort.xml" value="0.124" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_post_sort_img.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/ic_profile.xml" value="0.124" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_btn.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_category.xml" value="0.1655" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_sort_btn.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_clicked_btn.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_logo.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_radio_seletor.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_sort_btn.xml" value="0.176" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_sort_img.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/post_text_color.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/search_btn.xml" value="0.1605" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/search_field.xml" value="0.1605" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/search_icon.xml" value="0.1655" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/selected_post_category.xml" value="0.1655" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/white_box.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/drawable/yelloew_box.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MOIZA_Android/app/src/main/res/layout/activity_main.xml" value="0.2" />
