@@ -1,161 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.component.board.dialog.PostDialog">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+<layout>
+
+    <data>
+        <variable
+            name="sort"
+            type="com.moizaandroid.moiza.ui.component.board.dialog.PostSortDialog" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="221dp">
+        android:layout_height="wrap_content"
+        tools:context=".ui.component.board.dialog.PostSortDialog">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline35"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.11" />
+            android:layout_height="221dp">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline37"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.28" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline35"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.11" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline36"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.44" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline37"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.28" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline40"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.65" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline36"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.44" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline41"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.87" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline40"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline38"
-            android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline41"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline39"
-            android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95" />
-
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/sort"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/guideline38"
-            app:layout_constraintTop_toTopOf="@+id/guideline35" />
-
-        <TextView
-            android:id="@+id/initialization_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/initialization"
-            android:textColor="@color/search_hint_color"
-            android:textSize="12sp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toStartOf="@+id/guideline39"
-            app:layout_constraintTop_toTopOf="@+id/guideline35" />
-
-        <RadioGroup
-            android:id="@+id/linearLayout4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline36"
-            app:layout_constraintEnd_toStartOf="@+id/guideline39"
-            app:layout_constraintStart_toStartOf="@+id/guideline38"
-            app:layout_constraintTop_toTopOf="@+id/guideline37">
-
-            <RadioButton
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline38"
+                android:layout_width="0.5dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/sl_sort_selector"
-                android:button="@android:color/transparent"
-                android:gravity="center"
-                android:textColor="@drawable/sl_post_dialog_text"
-                android:text="@string/sort_resent" />
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
 
-            <RadioButton
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline39"
+                android:layout_width="0.5dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/sl_sort_selector"
-                android:button="@android:color/transparent"
-                android:gravity="center"
-                android:textColor="@drawable/sl_post_dialog_text"
-                android:text="@string/sort_like" />
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
 
-            <RadioButton
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/sort"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/guideline38"
+                app:layout_constraintTop_toTopOf="@+id/guideline35" />
+
+            <TextView
+                android:id="@+id/initialization_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/initialization"
+                android:textColor="@color/search_hint_color"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/guideline39"
+                app:layout_constraintTop_toTopOf="@+id/guideline35" />
+
+            <RadioGroup
+                android:id="@+id/linearLayout4"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/sl_sort_selector"
-                android:button="@android:color/transparent"
-                android:textColor="@drawable/sl_post_dialog_text"
-                android:gravity="center"
-                android:text="@string/sort_old" />
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline36"
+                app:layout_constraintEnd_toStartOf="@+id/guideline39"
+                app:layout_constraintStart_toStartOf="@+id/guideline38"
+                app:layout_constraintTop_toTopOf="@+id/guideline37">
 
-            <RadioButton
+                <RadioButton
+                    android:id="@+id/recentSortBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sl_sort_selector"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/sort_resent"
+                    android:textColor="@drawable/sl_post_dialog_text" />
+
+                <RadioButton
+                    android:id="@+id/likeSortBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sl_sort_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/sort_like"
+                    android:textColor="@drawable/sl_post_dialog_text" />
+
+                <RadioButton
+                    android:id="@+id/oldSortBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sl_sort_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/sort_old"
+                    android:textColor="@drawable/sl_post_dialog_text" />
+
+                <RadioButton
+                    android:id="@+id/viewsSortBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sl_sort_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/sort_views"
+                    android:textColor="@drawable/sl_post_dialog_text" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/sortApplyBtn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/sl_sort_selector"
-                android:button="@android:color/transparent"
-                android:textColor="@drawable/sl_post_dialog_text"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_blue_box"
                 android:gravity="center"
-                android:text="@string/sort_views" />
+                android:text="@string/apply"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/guideline41"
+                app:layout_constraintEnd_toStartOf="@+id/guideline39"
+                app:layout_constraintStart_toStartOf="@+id/guideline38"
+                app:layout_constraintTop_toTopOf="@+id/guideline40" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-        </RadioGroup>
-
-
-        <TextView
-            android:id="@+id/sort_apply_btn"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/bg_blue_box"
-            android:gravity="center"
-            android:text="@string/apply"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/guideline41"
-            app:layout_constraintEnd_toStartOf="@+id/guideline39"
-            app:layout_constraintStart_toStartOf="@+id/guideline38"
-            app:layout_constraintTop_toTopOf="@+id/guideline40" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+</layout>

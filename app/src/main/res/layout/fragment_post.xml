@@ -154,6 +154,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline19">
 
             <RadioButton
+                android:id="@+id/allPostBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -162,9 +163,11 @@
                 android:gravity="center|bottom"
                 android:paddingBottom="12dp"
                 android:text="@string/all_post"
+                android:checked="true"
                 android:textColor="@drawable/sl_post_text_color" />
 
             <RadioButton
+                android:id="@+id/questionPostBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -176,6 +179,7 @@
                 android:textColor="@drawable/sl_post_text_color" />
 
             <RadioButton
+                android:id="@+id/normalPostBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
