@@ -16,8 +16,4 @@ class PostDialog : BottomSheetDialogFragment() {
         return inflater.inflate(R.layout.dialog_search_sort, container, false)
     }
 
-    companion object {
-        const val TAG = "SortBottomSheetFragment"
-    }
-
 }
