@@ -18,7 +18,7 @@
         tools:context=".ui.component.main.MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment_view"
+            android:id="@+id/fragmentView"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -27,7 +27,7 @@
             app:navGraph="@navigation/bottom_nav_graph" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
+            android:id="@+id/bottomNav"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             app:menu="@menu/bottom_nav_menu"

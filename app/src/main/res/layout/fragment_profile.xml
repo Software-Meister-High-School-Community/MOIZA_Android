@@ -15,7 +15,7 @@
         tools:context=".ui.component.profile.ProfileFragment">
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/myPageFragment_view"
+            android:id="@+id/myPageFragmentView"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

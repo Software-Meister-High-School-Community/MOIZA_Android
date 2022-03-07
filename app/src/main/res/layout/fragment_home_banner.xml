@@ -68,7 +68,7 @@
                 android:src="@drawable/ic_moiza_text" />
 
             <ImageView
-                android:id="@+id/search_tab_btn"
+                android:id="@+id/searchTabBtn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
@@ -79,7 +79,7 @@
         </LinearLayout>
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/school_banner"
+            android:id="@+id/schoolBanner"
             android:layout_width="0dp"
             android:layout_height="214dp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -87,13 +87,13 @@
             app:layout_constraintTop_toTopOf="@id/guideline3" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/dot_pager"
+            android:id="@+id/dotPager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
             android:gravity="center_vertical|center_horizontal"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/school_banner" />
+            app:layout_constraintTop_toBottomOf="@id/schoolBanner" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
             app:layout_constraintStart_toStartOf="@id/guideline1" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/popular_content_recyclerview"
+            android:id="@+id/popularContentRecyclerview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@id/guideline2"

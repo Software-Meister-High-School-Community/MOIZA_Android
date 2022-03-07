@@ -44,7 +44,7 @@
             app:layout_constraintGuide_percent="0.57" />
 
         <LinearLayout
-            android:id="@+id/title_layout"
+            android:id="@+id/titleLayout"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:background="@color/board_top"
@@ -69,7 +69,7 @@
                 android:src="@drawable/ic_moiza_text" />
 
             <ImageView
-                android:id="@+id/setting_tab_btn"
+                android:id="@+id/settingTabBtn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
@@ -80,7 +80,7 @@
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/user_profile_layout"
+            android:id="@+id/userProfileLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="10dp"
@@ -88,17 +88,17 @@
             app:layout_constraintBottom_toBottomOf="@id/guideline3"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/title_layout">
+            app:layout_constraintTop_toBottomOf="@id/titleLayout">
 
             <View
-                android:id="@+id/profile_background"
+                android:id="@+id/profileBackground"
                 android:layout_width="match_parent"
                 android:layout_height="99dp"
                 android:background="@drawable/bg_profile_mypage_top"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/profile_image"
+                android:id="@+id/profileImage"
                 android:layout_width="83.3dp"
                 android:layout_height="83.3dp"
                 android:layout_marginStart="18.3dp"
@@ -108,14 +108,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/user_information_layout"
+                android:id="@+id/userInformationLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22.3dp"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical"
-                app:layout_constraintStart_toEndOf="@id/profile_image"
-                app:layout_constraintTop_toBottomOf="@id/profile_background">
+                app:layout_constraintStart_toEndOf="@id/profileImage"
+                app:layout_constraintTop_toBottomOf="@id/profileBackground">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -139,8 +139,8 @@
                 android:layout_marginStart="22.3dp"
                 android:layout_marginTop="21dp"
                 android:orientation="horizontal"
-                app:layout_constraintStart_toEndOf="@id/profile_image"
-                app:layout_constraintTop_toBottomOf="@id/user_information_layout">
+                app:layout_constraintStart_toEndOf="@id/profileImage"
+                app:layout_constraintTop_toBottomOf="@id/userInformationLayout">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="wrap_content"
@@ -167,7 +167,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/follower_layout"
+                    android:id="@+id/followerLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="48dp"
@@ -193,7 +193,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/following_layout"
+                    android:id="@+id/followingLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="48dp"
@@ -221,7 +221,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/user_introduce_layout"
+            android:id="@+id/userIntroduceLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_profile_introduce"
@@ -235,7 +235,7 @@
             app:layout_constraintTop_toBottomOf="@id/guideline3">
 
             <TextView
-                android:id="@+id/user_introduce_txt"
+                android:id="@+id/userIntroduceTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rotobo_regular"
@@ -244,7 +244,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/user_link_txt"
+                android:id="@+id/userLinkTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -276,7 +276,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/user_content_setting_btn"
+                android:id="@+id/userContentSettingBtn"
                 android:layout_width="63dp"
                 android:layout_height="28dp"
                 android:background="@drawable/bg_button_sort"
@@ -291,7 +291,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/user_content_recyclerview"
+            android:id="@+id/userContentRecyclerview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -299,7 +299,7 @@
             app:layout_constraintTop_toBottomOf="@id/guideline4" />
 
         <LinearLayout
-            android:id="@+id/setting_layout"
+            android:id="@+id/settingLayout"
             android:visibility="gone"
             android:layout_width="100dp"
             android:layout_height="86dp"
@@ -308,10 +308,10 @@
             android:background="@drawable/bg_button_setting"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/user_profile_layout">
+            app:layout_constraintTop_toTopOf="@id/userProfileLayout">
 
             <TextView
-                android:id="@+id/edit_profile_btn"
+                android:id="@+id/editProfileBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -329,7 +329,7 @@
                 android:background="@color/light_grey" />
 
             <TextView
-                android:id="@+id/edit_setting_btn"
+                android:id="@+id/editSettingBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
