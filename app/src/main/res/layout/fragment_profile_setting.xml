@@ -14,14 +14,14 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/top_layout"
+            android:id="@+id/topLayout"
             android:layout_width="match_parent"
             android:layout_height="47dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/back_btn"
+                android:id="@+id/backBtn"
                 android:layout_width="16dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -44,10 +44,10 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/light_grey"
-            app:layout_constraintTop_toBottomOf="@id/top_layout" />
+            app:layout_constraintTop_toBottomOf="@id/topLayout" />
 
         <TextView
-            android:id="@+id/terms_of_use"
+            android:id="@+id/termsOfUse"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:fontFamily="@font/rotobo_regular"
@@ -64,10 +64,10 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/light_grey"
-            app:layout_constraintTop_toBottomOf="@id/terms_of_use" />
+            app:layout_constraintTop_toBottomOf="@id/termsOfUse" />
 
         <TextView
-            android:id="@+id/private_information"
+            android:id="@+id/privateInformation"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:fontFamily="@font/rotobo_regular"
@@ -84,10 +84,10 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/light_grey"
-            app:layout_constraintTop_toBottomOf="@id/private_information" />
+            app:layout_constraintTop_toBottomOf="@id/privateInformation" />
 
         <Button
-            android:id="@+id/graduate_btn"
+            android:id="@+id/graduateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -105,7 +105,7 @@
             app:layout_constraintTop_toBottomOf="@id/divide3" />
 
         <TextView
-            android:id="@+id/graduate_txt"
+            android:id="@+id/graduateTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -115,7 +115,7 @@
             android:textColor="@color/gray_5"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/graduate_btn" />
+            app:layout_constraintTop_toBottomOf="@id/graduateBtn" />
 
         <View
             android:id="@+id/divide4"
@@ -123,10 +123,10 @@
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
             android:background="@color/light_grey"
-            app:layout_constraintTop_toBottomOf="@id/graduate_txt" />
+            app:layout_constraintTop_toBottomOf="@id/graduateTxt" />
 
         <TextView
-            android:id="@+id/public_email"
+            android:id="@+id/publicEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -139,7 +139,7 @@
             app:layout_constraintTop_toBottomOf="@id/divide4" />
 
         <TextView
-            android:id="@+id/public_email_txt"
+            android:id="@+id/publicEmailTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -149,7 +149,7 @@
             android:textColor="@color/gray_4"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/public_email" />
+            app:layout_constraintTop_toBottomOf="@id/publicEmail" />
 
         <View
             android:id="@+id/divide5"
@@ -157,10 +157,10 @@
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
             android:background="@color/light_grey"
-            app:layout_constraintTop_toBottomOf="@id/public_email_txt" />
+            app:layout_constraintTop_toBottomOf="@id/publicEmailTxt" />
 
         <TextView
-            android:id="@+id/logout_btn"
+            android:id="@+id/logoutBtn"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:fontFamily="@font/rotobo_regular"
@@ -177,7 +177,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/light_grey"
-            app:layout_constraintTop_toBottomOf="@id/logout_btn" />
+            app:layout_constraintTop_toBottomOf="@id/logoutBtn" />
 
         <TextView
             android:layout_width="wrap_content"

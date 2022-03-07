@@ -29,7 +29,7 @@
             app:layout_constraintGuide_percent="0.95"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/title_layout"
+            android:id="@+id/titleLayout"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:background="@color/board_top"
@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/back_btn"
+                android:id="@+id/backBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -63,10 +63,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/follow_tab_layout"
+            android:id="@+id/followTabLayout"
             android:layout_width="match_parent"
             android:layout_height="54.5dp"
-            app:layout_constraintTop_toBottomOf="@id/title_layout"
+            app:layout_constraintTop_toBottomOf="@id/titleLayout"
             android:background="@color/board_top"
             app:tabIndicatorHeight="1dp"
             app:tabTextColor="@color/dark_grey"
@@ -86,7 +86,7 @@
         </com.google.android.material.tabs.TabLayout>
 
         <LinearLayout
-            android:id="@+id/follow_search_layout"
+            android:id="@+id/followSearchLayout"
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_marginTop="14dp"
@@ -95,7 +95,7 @@
             android:weightSum="10"
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintTop_toBottomOf="@id/follow_tab_layout">
+            app:layout_constraintTop_toBottomOf="@id/followTabLayout">
 
             <EditText
                 android:layout_width="0dp"
@@ -117,7 +117,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintTop_toBottomOf="@id/follow_search_layout"
+            app:layout_constraintTop_toBottomOf="@id/followSearchLayout"
             app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
