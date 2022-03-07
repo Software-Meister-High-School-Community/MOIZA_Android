@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/other_profile_fragment_graph"
+    app:startDestination="@id/otherPageFragment">
+
+    <fragment
+        android:id="@+id/otherPageFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.page.OtherPageFragment"
+        android:label="OtherPageFragment"
+        tools:layout="@layout/fragment_profile_otherpage">
+        <action
+            android:id="@+id/action_otherPageFragment_to_otherFollowFragment"
+            app:destination="@id/otherFollowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherFollowFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.follow.OtherFollowFragment"
+        android:label="OtherFollowFragment"
+        tools:layout="@layout/fragment_profile_otherfollow" />
+</navigation>

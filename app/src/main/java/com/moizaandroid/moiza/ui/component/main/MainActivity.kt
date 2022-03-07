@@ -24,7 +24,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 
     private fun initBottomNavBar() {
         val navController =
-            supportFragmentManager.findFragmentById(R.id.fragment_view)?.findNavController()
+            supportFragmentManager.findFragmentById(R.id.fragmentView)?.findNavController()
         val nav = binding.bottomNav as BottomNavigationView
         navController?.let {
             nav.setupWithNavController(navController)

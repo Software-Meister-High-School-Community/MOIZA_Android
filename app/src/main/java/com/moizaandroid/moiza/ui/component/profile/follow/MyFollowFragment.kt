@@ -1,13 +1,13 @@
-package com.moizaandroid.moiza.ui.component.search
+package com.moizaandroid.moiza.ui.component.profile.follow
 
-
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.databinding.FragmentSearchBinding
+import com.moizaandroid.moiza.databinding.FragmentProfileMyfollowBinding
 import com.moizaandroid.moiza.ui.base.BaseFragment
 
-
-class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_search) {
+class MyFollowFragment :
+    BaseFragment<FragmentProfileMyfollowBinding>(R.layout.fragment_profile_myfollow) {
     override fun init() {
         clickBackBtn()
     }

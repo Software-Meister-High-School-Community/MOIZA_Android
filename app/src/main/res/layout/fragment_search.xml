@@ -120,7 +120,7 @@
         </LinearLayout>
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/search_frag"
+            android:id="@+id/searchFrag"
             android:name="com.moizaandroid.moiza.ui.component.recent_search.RecentSearchFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
