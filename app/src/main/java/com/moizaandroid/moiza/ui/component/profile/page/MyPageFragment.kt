@@ -7,42 +7,28 @@ import com.moizaandroid.moiza.databinding.FragmentProfileMypageBinding
 import com.moizaandroid.moiza.ui.base.BaseFragment
 
 class MyPageFragment :
-    BaseFragment<FragmentProfileMypageBinding>(R.layout.fragment_profile_mypage) {
+    BaseFragment<FragmentProfileMypageBinding>(R.layout.fragment_profile_mypage), View.OnClickListener {
     override fun init() {
-        clickSettingDetailBtn()
-        clickFollowerBtn()
-        clickFollowingBtn()
-        clickEditBtn()
-        clickSettingBtn()
+        initClick()
     }
 
-    private fun clickSettingDetailBtn() {
-        binding.settingTabBtn.setOnClickListener {
-            binding.settingLayout.visibility = View.VISIBLE
+    private fun initClick(){
+        binding.apply {
+            settingTabBtn.setOnClickListener(this@MyPageFragment)
+            followerLayout.setOnClickListener(this@MyPageFragment)
+            followingLayout.setOnClickListener(this@MyPageFragment)
+            editProfileBtn.setOnClickListener(this@MyPageFragment)
+            editSettingBtn.setOnClickListener(this@MyPageFragment)
         }
     }
 
-    private fun clickFollowerBtn() {
-        binding.followerLayout.setOnClickListener {
-            this.findNavController().navigate(R.id.action_myPageFragment_to_myFollowFragment)
-        }
-    }
-
-    private fun clickFollowingBtn() {
-        binding.followingLayout.setOnClickListener {
-            this.findNavController().navigate(R.id.action_myPageFragment_to_myFollowFragment)
-        }
-    }
-
-    private fun clickEditBtn() {
-        binding.editProfileBtn.setOnClickListener {
-            this.findNavController().navigate(R.id.action_myPageFragment_to_editFragment)
-        }
-    }
-
-    private fun clickSettingBtn(){
-        binding.editSettingBtn.setOnClickListener {
-            this.findNavController().navigate(R.id.action_myPageFragment_to_settingFragment)
+    override fun onClick(widget: View){
+        when(widget.id){
+            R.id.settingTabBtn -> binding.settingLayout.visibility = View.VISIBLE
+            R.id.followerLayout -> this.findNavController().navigate(R.id.action_myPageFragment_to_myFollowFragment)
+            R.id.followingLayout -> this.findNavController().navigate(R.id.action_myPageFragment_to_myFollowFragment)
+            R.id.editProfileBtn -> this.findNavController().navigate(R.id.action_myPageFragment_to_editFragment)
+            R.id.editSettingBtn -> this.findNavController().navigate(R.id.action_myPageFragment_to_settingFragment)
         }
     }
 }
