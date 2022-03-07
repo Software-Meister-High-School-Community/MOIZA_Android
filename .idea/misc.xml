@@ -32,6 +32,9 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_dsm_item.xml" value="0.2" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_gsm_item.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/banner_mirim_item.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/dialog_post_sort.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/dialog_search_sort.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_all_post.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_board.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_category.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_detail_follow.xml" value="0.10400000000000001" />
@@ -39,6 +42,7 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_home_banner.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_main.xml" value="0.11157407407407408" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_mypage.xml" value="0.176" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_normal_post.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_notification.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_post.xml" value="0.11527777777777778" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profie_setting.xml" value="0.22546296296296298" />
@@ -48,10 +52,14 @@
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_mypage.xml" value="0.4" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_otherpage.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_profile_setting.xml" value="0.2" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_question_post.xml" value="0.16203703703703703" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_recent_search.xml" value="0.16203703703703703" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_result.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/fragment_search.xml" value="0.11157407407407408" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_follow.xml" value="0.4" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/item_my_content.xml" value="0.22546296296296298" />
         <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/layout/recent_search_item_list.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/user/Documents/GitHub/MOIZA_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14027777777777778" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17827868852459017" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25546448087431695" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.17827868852459017" />

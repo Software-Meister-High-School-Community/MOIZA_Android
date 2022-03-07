@@ -32,7 +32,7 @@ class HomeBannerAdapter(val context: Context?) : PagerAdapter() {
         val view =
             LayoutInflater.from(container.context).inflate(layout[position], container, false)
         container.addView(view)
-        view.findViewById<TextView>(R.id.homepage_btn).setOnClickListener {
+        view.findViewById<TextView>(R.id.homepageBtn).setOnClickListener {
             goHomepage(position)
         }
         return view

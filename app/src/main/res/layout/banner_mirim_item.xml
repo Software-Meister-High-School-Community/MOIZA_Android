@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@id/major2" />
 
     <TextView
-        android:id="@+id/homepage_btn"
+        android:id="@+id/homepageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
@@ -115,8 +115,8 @@
         android:layout_width="0dp"
         android:layout_height="0.5dp"
         android:background="#000000"
-        app:layout_constraintEnd_toEndOf="@id/homepage_btn"
+        app:layout_constraintEnd_toEndOf="@id/homepageBtn"
         app:layout_constraintStart_toStartOf="@id/major1"
-        app:layout_constraintTop_toBottomOf="@id/homepage_btn" />
+        app:layout_constraintTop_toBottomOf="@id/homepageBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
