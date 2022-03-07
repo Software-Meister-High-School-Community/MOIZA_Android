@@ -26,4 +26,24 @@
     <string name="all_post">모든 게시물</string>
 
     <string name="sort">정렬</string>
+    <string name="sort_resent">최신순</string>
+    <string name="sort_views">조회순</string>
+    <string name="sort_like">좋아요순</string>
+    <string name="sort_old">오래된순</string>
+
+    <string name="initialization">초기화</string>
+    
+    <string name="apply">적용하기</string>
+
+    <string name="all_delete">전체삭제</string>
+
+<!--    <string name="front">Front-End</string>-->
+<!--    <string name="back">Back-End</string>-->
+<!--    <string name="iOS">iOS</string>-->
+<!--    <string name="android">Android</string>-->
+<!--    <string name="design">Design</string>-->
+<!--    <string name="game">Game</string>-->
+<!--    <string name="security">Security</string>-->
+<!--    <string name="embedded">Embedded</string>-->
+<!--    <string name="ai">AI</string>-->
 </resources>

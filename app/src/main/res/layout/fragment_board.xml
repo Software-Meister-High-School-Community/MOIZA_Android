@@ -14,14 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.component.board.BoardFragment">
+
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/boardFragment_view"
+            android:id="@+id/boardFragmentView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            app:navGraph="@navigation/board_fragment_graph"
             app:defaultNavHost="true"
-            />
+            app:navGraph="@navigation/board_fragment_graph" />
 
     </LinearLayout>
 </layout>

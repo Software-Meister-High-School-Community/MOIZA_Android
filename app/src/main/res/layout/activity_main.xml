@@ -27,14 +27,14 @@
             app:navGraph="@navigation/bottom_nav_graph" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
+            android:id="@+id/bottomNav"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            app:menu="@menu/bottom_nav_menu"
             app:itemBackground="@color/white"
-            app:itemTextColor="@drawable/bottom_color"
-            app:itemIconTint="@drawable/bottom_color"
-            app:labelVisibilityMode="unlabeled"/>
+            app:itemIconTint="@drawable/sl_bottom_color"
+            app:itemTextColor="@drawable/sl_bottom_color"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu" />
 
 
     </LinearLayout>
