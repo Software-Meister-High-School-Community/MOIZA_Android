@@ -41,14 +41,50 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.64" />
+            app:layout_constraintGuide_percent="0.43" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.78" />
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.54" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.61" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.74" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.84" />
+
 
         <LinearLayout
             android:id="@+id/titleLayout"
@@ -81,7 +117,6 @@
             android:id="@+id/userProfileLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/bg_profile_mypage_bottom"
             app:layout_constraintBottom_toBottomOf="@id/guideline3"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -234,19 +269,38 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/backgroundColorTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:fontFamily="@font/rotobo_regular"
             android:text="배경 컬러 변경"
             android:textColor="@color/gray_5"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline3" />
+            app:layout_constraintTop_toBottomOf="@id/guideline4" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_dark_red"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/guideline5" />
+
+        <View
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_dark_red"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/guideline6" />
+
+        <View
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_dark_red"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/guideline7" />
 
         <TextView
-            android:id="@+id/editIntroduceTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/rotobo_regular"
@@ -254,16 +308,16 @@
             android:textColor="@color/gray_5"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline4" />
+            app:layout_constraintTop_toBottomOf="@id/guideline8" />
 
         <EditText
+            android:id="@+id/editIntroduce"
             android:layout_width="0dp"
             android:layout_height="38dp"
-            android:layout_marginTop="10dp"
             android:background="@drawable/bg_edit_introduce"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/editIntroduceTxt" />
+            app:layout_constraintTop_toBottomOf="@id/guideline9" />
 
         <TextView
             android:id="@+id/websiteTxt"
@@ -274,7 +328,7 @@
             android:textColor="@color/gray_5"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline5" />
+            app:layout_constraintTop_toBottomOf="@id/guideline10" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -284,7 +338,7 @@
             android:textColor="@color/gray_4"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/websiteTxt"
-            app:layout_constraintTop_toBottomOf="@id/guideline5" />
+            app:layout_constraintTop_toBottomOf="@id/guideline10" />
 
         <LinearLayout
             android:id="@+id/editAddLinkFirst"
