@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,415 +9,653 @@
             type="com.moizaandroid.moiza.ui.component.profile.EditFragment" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#f8f8f8"
-        tools:context=".ui.component.profile.EditFragment">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline1"
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.06" />
+            android:layout_height="match_parent"
+            android:background="#f8f8f8"
+            tools:context=".ui.component.profile.EditFragment">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.94" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.06" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.38" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.43" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline5"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.47" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.19" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline6"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.54" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.28" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline7"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.61" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.32" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline8"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.7" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.41" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline9"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.74" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline10"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.84" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.54" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.58" />
 
-        <LinearLayout
-            android:id="@+id/titleLayout"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:background="@color/board_top"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline11"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="25dp"
-                android:layout_height="18.66dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="20dp"
-                android:contentDescription="@string/logo"
-                android:src="@drawable/ic_app_logo" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.71" />
 
-            <ImageView
-                android:layout_width="51.87dp"
-                android:layout_height="14.72dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:contentDescription="@string/name"
-                android:src="@drawable/ic_moiza_text" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
 
-        </LinearLayout>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.84" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/userProfileLayout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/bg_profile_mypage_bottom"
-            app:layout_constraintBottom_toBottomOf="@id/guideline3"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/titleLayout">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline15"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.93" />
 
-            <Button
-                android:layout_width="80dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/bg_change_img_btn"
+            <LinearLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/board_top"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="18.66dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/ic_app_logo" />
+
+                <ImageView
+                    android:layout_width="51.87dp"
+                    android:layout_height="14.72dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/name"
+                    android:src="@drawable/ic_moiza_text" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userProfileLayout"
+                android:layout_width="0dp"
+                android:layout_height="252dp"
+                android:background="@drawable/bg_profile_mypage_bottom"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/titleLayout">
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_change_img_btn"
+                    android:fontFamily="@font/rotobo_regular"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="8dp"
+                    android:text="사진 바꾸기"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+                <View
+                    android:id="@+id/profileBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:background="@drawable/bg_profile_mypage_top"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="83.3dp"
+                    android:layout_height="83.3dp"
+                    android:layout_marginStart="18.3dp"
+                    android:layout_marginTop="81.3dp"
+                    android:background="@drawable/ic_default_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/userInformationLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22.3dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@id/profileImage"
+                    app:layout_constraintTop_toBottomOf="@id/profileBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rotobo_regular"
+                        android:text="name"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/rotobo_regular"
+                        android:text="school"
+                        android:textSize="13sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22.3dp"
+                    android:layout_marginTop="21dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@id/profileImage"
+                    app:layout_constraintTop_toBottomOf="@id/userInformationLayout">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rotobo_regular"
+                            android:text="게시물"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/rotobo_bold"
+                            android:text="999"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/followerLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rotobo_regular"
+                            android:text="팔로워"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/rotobo_bold"
+                            android:text="999"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/followingLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rotobo_regular"
+                            android:text="팔로잉"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/rotobo_bold"
+                            android:text="999"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/changeColorTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:fontFamily="@font/rotobo_regular"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="8dp"
-                android:text="사진 바꾸기"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profileImage" />
+                android:text="배경 컬러 변경"
+                android:textColor="@color/gray_5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/userProfileLayout" />
 
             <View
-                android:id="@+id/profileBackground"
-                android:layout_width="match_parent"
-                android:layout_height="99dp"
-                android:background="@drawable/bg_profile_mypage_top"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline3"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/changeColorTxt" />
 
-            <ImageView
-                android:id="@+id/profileImage"
-                android:layout_width="83.3dp"
-                android:layout_height="83.3dp"
-                android:layout_marginStart="18.3dp"
-                android:layout_marginTop="81.3dp"
-                android:background="@drawable/ic_default_profile"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@id/changeColorTxt" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/userInformationLayout"
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline7"
+                app:layout_constraintStart_toStartOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/changeColorTxt" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/changeColorTxt" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline11"
+                app:layout_constraintStart_toStartOf="@id/guideline10"
+                app:layout_constraintTop_toBottomOf="@id/changeColorTxt" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline13"
+                app:layout_constraintStart_toStartOf="@id/guideline12"
+                app:layout_constraintTop_toBottomOf="@id/changeColorTxt" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline15"
+                app:layout_constraintStart_toStartOf="@id/guideline14"
+                app:layout_constraintTop_toBottomOf="@id/changeColorTxt" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline3"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline7"
+                app:layout_constraintStart_toStartOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline11"
+                app:layout_constraintStart_toStartOf="@id/guideline10"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline13"
+                app:layout_constraintStart_toStartOf="@id/guideline12"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view14"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline15"
+                app:layout_constraintStart_toStartOf="@id/guideline14"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view15"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline3"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view16"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline5"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view17"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline7"
+                app:layout_constraintStart_toStartOf="@id/guideline6"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view18"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view19"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline11"
+                app:layout_constraintStart_toStartOf="@id/guideline10"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view20"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline13"
+                app:layout_constraintStart_toStartOf="@id/guideline12"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view21"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dark_red"
+                app:layout_constraintEnd_toEndOf="@id/guideline15"
+                app:layout_constraintStart_toStartOf="@id/guideline14"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <TextView
+                android:id="@+id/introduceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22.3dp"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical"
-                app:layout_constraintStart_toEndOf="@id/profileImage"
-                app:layout_constraintTop_toBottomOf="@id/profileBackground">
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rotobo_regular"
+                android:text="소개"
+                android:textColor="@color/gray_5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/view15" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/rotobo_regular"
-                    android:text="name"
-                    android:textSize="18sp" />
+            <EditText
+                android:id="@+id/editIntroduce"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edit_introduce"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/introduceTxt" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/rotobo_regular"
-                    android:text="school"
-                    android:textSize="13sp" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <TextView
+                android:id="@+id/websiteTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22.3dp"
-                android:layout_marginTop="21dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rotobo_regular"
+                android:text="웹사이트 "
+                android:textColor="@color/gray_5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/editIntroduce" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rotobo_regular"
+                android:text="(최대 3개)"
+                android:textColor="@color/gray_4"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/websiteTxt"
+                app:layout_constraintTop_toBottomOf="@id/editIntroduce" />
+
+            <LinearLayout
+                android:id="@+id/editAddLinkFirst"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edit_add_link"
+                android:gravity="center"
                 android:orientation="horizontal"
-                app:layout_constraintStart_toEndOf="@id/profileImage"
-                app:layout_constraintTop_toBottomOf="@id/userInformationLayout">
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/websiteTxt">
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:background="@drawable/ic_plus" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rotobo_regular"
-                        android:text="게시물"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="6dp"
-                        android:fontFamily="@font/rotobo_bold"
-                        android:text="999"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/followerLayout"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="48dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="4dp"
+                    android:text="링크 추가"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rotobo_regular"
-                        android:text="팔로워"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+            <LinearLayout
+                android:id="@+id/editAddLinkSecond"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_edit_add_link"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/editAddLinkFirst">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="6dp"
-                        android:fontFamily="@font/rotobo_bold"
-                        android:text="999"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/followingLayout"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="48dp"
-                    android:orientation="vertical">
+                    android:background="@drawable/ic_plus" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/rotobo_regular"
-                        android:text="팔로잉"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="링크 추가"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="6dp"
-                        android:fontFamily="@font/rotobo_bold"
-                        android:text="999"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <LinearLayout
+                android:id="@+id/editAddLinkThird"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_edit_add_link"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/editAddLinkSecond">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_plus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="링크 추가"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rotobo_regular"
-            android:text="배경 컬러 변경"
-            android:textColor="@color/gray_5"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline4" />
-
-        <View
-            android:id="@+id/view1"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:background="@drawable/bg_dark_red"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline5" />
-
-        <View
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:background="@drawable/bg_dark_red"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline6" />
-
-        <View
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:background="@drawable/bg_dark_red"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline7" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rotobo_regular"
-            android:text="소개"
-            android:textColor="@color/gray_5"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline8" />
-
-        <EditText
-            android:id="@+id/editIntroduce"
-            android:layout_width="0dp"
-            android:layout_height="38dp"
-            android:background="@drawable/bg_edit_introduce"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline9" />
-
-        <TextView
-            android:id="@+id/websiteTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rotobo_regular"
-            android:text="웹사이트 "
-            android:textColor="@color/gray_5"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/guideline10" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rotobo_regular"
-            android:text="(최대 3개)"
-            android:textColor="@color/gray_4"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/websiteTxt"
-            app:layout_constraintTop_toBottomOf="@id/guideline10" />
-
-        <LinearLayout
-            android:id="@+id/editAddLinkFirst"
-            android:layout_width="0dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_edit_add_link"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/websiteTxt">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_plus" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="링크 추가"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/editAddLinkSecond"
-            android:layout_width="0dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_edit_add_link"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/editAddLinkFirst">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_plus" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="링크 추가"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/editAddLinkThird"
-            android:layout_width="0dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_edit_add_link"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toBottomOf="@id/editAddLinkSecond">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_plus" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="링크 추가"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    
 </layout>
