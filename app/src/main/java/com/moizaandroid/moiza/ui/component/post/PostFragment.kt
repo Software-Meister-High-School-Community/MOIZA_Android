@@ -8,7 +8,8 @@ import com.moizaandroid.moiza.databinding.FragmentPostBinding
 import com.moizaandroid.moiza.ui.base.BaseFragment
 import com.moizaandroid.viewmodel.MainViewModel
 
-class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post), View.OnClickListener {
+class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post),
+    View.OnClickListener {
 
     private val mainViewModel by activityViewModels<MainViewModel>()
 
@@ -42,29 +43,9 @@ class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post), 
     }
 
     override fun onClick(v: View?) {
-        when(v!!.id) {
-            R.id.allPostBtn -> {
-                binding.apply{
-                    allPostBtn.isChecked = true
-                    questionPostBtn.isChecked = false
-                    normalPostBtn.isChecked = false
-                }
-            }
-            R.id.questionPostBtn -> {
-                binding.apply {
-                    allPostBtn.isChecked = false
-                    questionPostBtn.isChecked = true
-                    normalPostBtn.isChecked = false
-                }
-            }
-            R.id.normalPostBtn -> {
-                binding.apply {
-                    allPostBtn.isChecked = false
-                    questionPostBtn.isChecked = false
-                    normalPostBtn.isChecked = true
-                }
-            }
-        }
+        binding.allPostBtn.isChecked = binding.allPostBtn.id == v!!.id
+        binding.questionPostBtn.isChecked = binding.questionPostBtn.id == v.id
+        binding.normalPostBtn.isChecked = binding.normalPostBtn.id == v.id
     }
 
 }
