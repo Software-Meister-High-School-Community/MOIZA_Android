@@ -36,34 +36,9 @@ class PostSortDialog : BottomSheetDialogFragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when (v!!.id) {
-            R.id.recentSortBtn -> {
-                binding.recentSortBtn.isChecked = true
-                binding.likeSortBtn.isChecked = false
-                binding.oldSortBtn.isChecked = false
-                binding.viewsSortBtn.isChecked = false
-            }
-            R.id.likeSortBtn -> {
-                binding.recentSortBtn.isChecked = false
-                binding.likeSortBtn.isChecked = true
-                binding.oldSortBtn.isChecked = false
-                binding.viewsSortBtn.isChecked = false
-            }
-            R.id.oldSortBtn -> {
-                binding.recentSortBtn.isChecked = false
-                binding.likeSortBtn.isChecked = false
-                binding.oldSortBtn.isChecked = true
-                binding.viewsSortBtn.isChecked = false
-            }
-            R.id.viewsSortBtn -> {
-                binding.recentSortBtn.isChecked = false
-                binding.likeSortBtn.isChecked = false
-                binding.oldSortBtn.isChecked = false
-                binding.viewsSortBtn.isChecked = true
-            }
-            R.id.sortApplyBtn -> {
-                dismiss()
-            }
-        }
+        binding.recentSortBtn.isChecked = binding.recentSortBtn.id == v!!.id
+        binding.likeSortBtn.isChecked = binding.likeSortBtn.id == v.id
+        binding.oldSortBtn.isChecked = binding.oldSortBtn.id == v.id
+        binding.viewsSortBtn.isChecked = binding.viewsSortBtn.id == v.id
     }
 }
