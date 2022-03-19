@@ -26,9 +26,20 @@
     </fragment>
     <fragment
         android:id="@+id/editFragment"
-        android:name="com.moizaandroid.moiza.ui.component.profile.EditFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.edit.EditFragment"
         android:label="EditFragment"
-        tools:layout="@layout/fragment_profile_edit" />
+        tools:layout="@layout/fragment_profile_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_editTextFragment"
+            app:destination="@id/editTextFragment"
+            app:popUpTo="@id/editFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editTextFragment"
+        android:name="com.moizaandroid.moiza.ui.component.profile.edit.EditTextFragment"
+        android:label="EditTextFragment"
+        tools:layout="@layout/fragment_edit_text" />
     <fragment
         android:id="@+id/myFollowFragment"
         android:name="com.moizaandroid.moiza.ui.component.profile.follow.MyFollowFragment"

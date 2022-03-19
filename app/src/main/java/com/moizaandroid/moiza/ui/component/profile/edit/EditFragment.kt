@@ -1,6 +1,7 @@
-package com.moizaandroid.moiza.ui.component.profile
+package com.moizaandroid.moiza.ui.component.profile.edit
 
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.FragmentProfileEditBinding
 import com.moizaandroid.moiza.ui.base.BaseFragment
@@ -88,6 +89,7 @@ class EditFragment : BaseFragment<FragmentProfileEditBinding>(R.layout.fragment_
             view19.setOnClickListener(this@EditFragment)
             view20.setOnClickListener(this@EditFragment)
             view21.setOnClickListener(this@EditFragment)
+            editIntroduce.setOnClickListener { findNavController().navigate(R.id.action_editFragment_to_editTextFragment) }
         }
     }
 }

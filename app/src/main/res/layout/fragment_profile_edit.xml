@@ -5,7 +5,7 @@
 
         <variable
             name="edit"
-            type="com.moizaandroid.moiza.ui.component.profile.EditFragment" />
+            type="com.moizaandroid.moiza.ui.component.profile.edit.EditFragment" />
     </data>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#f8f8f8"
-            tools:context=".ui.component.profile.EditFragment">
+            tools:context=".ui.component.profile.edit.EditFragment">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline1"
@@ -539,11 +539,14 @@
                 app:layout_constraintStart_toStartOf="@id/guideline1"
                 app:layout_constraintTop_toBottomOf="@id/view15" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editIntroduce"
                 android:layout_width="0dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="10dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rotobo_regular"
                 android:background="@drawable/bg_edit_introduce"
                 app:layout_constraintEnd_toEndOf="@id/guideline2"
                 app:layout_constraintStart_toStartOf="@id/guideline1"

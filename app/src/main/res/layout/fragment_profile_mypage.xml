@@ -228,15 +228,11 @@
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/userLinkTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/rotobo_regular"
-                android:text="https://www.instagram.com/won_0o0/"
-                android:textColor="#0048ff"
-                android:textSize="12sp" />
+                android:layout_marginTop="8dp"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat

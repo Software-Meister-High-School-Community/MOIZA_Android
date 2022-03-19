@@ -10,6 +10,7 @@ class MyPageFragment :
     BaseFragment<FragmentProfileMypageBinding>(R.layout.fragment_profile_mypage), View.OnClickListener {
     override fun init() {
         initClick()
+        println("안녕")
     }
 
     private fun initClick(){
