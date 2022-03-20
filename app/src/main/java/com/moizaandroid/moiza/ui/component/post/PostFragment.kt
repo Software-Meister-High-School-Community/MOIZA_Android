@@ -6,7 +6,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.FragmentPostBinding
 import com.moizaandroid.moiza.ui.base.BaseFragment
-import com.moizaandroid.viewmodel.MainViewModel
+import com.moizaandroid.moiza.viewmodel.MainViewModel
 
 class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post),
     View.OnClickListener {

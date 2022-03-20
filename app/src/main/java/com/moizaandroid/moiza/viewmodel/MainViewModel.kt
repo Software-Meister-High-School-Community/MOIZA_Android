@@ -1,4 +1,4 @@
-package com.moizaandroid.viewmodel
+package com.moizaandroid.moiza.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

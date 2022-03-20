@@ -9,7 +9,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.ActivityMainBinding
 import com.moizaandroid.moiza.ui.base.BaseActivity
-import com.moizaandroid.viewmodel.MainViewModel
+import com.moizaandroid.moiza.viewmodel.MainViewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding>(
     R.layout.activity_main

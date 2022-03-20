@@ -74,4 +74,12 @@ dependencies {
 
     implementation(Dependency.BottomNav.NAV_FRAGMENT)
     implementation(Dependency.BottomNav.NAV_UI)
+
+    implementation(Dependency.Google.COMPOSE_ACTIVITY)
+    implementation(Dependency.Google.COMPOSE_MATERIAL)
+    implementation(Dependency.Google.COMPOSE_PREVIEW)
+    implementation(Dependency.Google.COMPOSE_UI)
+    
+    androidTestImplementation(Dependency.Google.COMPOSE_TEST)
+    debugImplementation(Dependency.Google.COMPOSE_UI_TOOL)
 }
