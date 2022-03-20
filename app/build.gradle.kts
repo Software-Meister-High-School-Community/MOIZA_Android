@@ -16,6 +16,9 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -33,10 +36,19 @@ android {
         targetCompatibility = Versions.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = Versions.JAVA_VERSION.toString()
+        jvmTarget = "1.8"
     }
     buildFeatures {
         dataBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = rootProject.extra["compose_version"] as String
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }
 
@@ -50,6 +62,13 @@ dependencies {
 
     implementation(Dependency.AndroidX.ROOM_KTX)
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.compose.ui:ui:${rootProject.extra["compose_version"]}")
+    implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
+    implementation("androidx.compose.ui:ui-tooling-preview:${rootProject.extra["compose_version"]}")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.activity:activity-compose:1.3.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${rootProject.extra["compose_version"]}")
+    debugImplementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
     kapt(Dependency.AndroidX.ROOM_COMPILER)
 
     implementation(Dependency.Kotlin.COROUTINES_CORE)
@@ -79,7 +98,8 @@ dependencies {
     implementation(Dependency.Google.COMPOSE_MATERIAL)
     implementation(Dependency.Google.COMPOSE_PREVIEW)
     implementation(Dependency.Google.COMPOSE_UI)
-    
+    implementation(Dependency.Google.COMPOSE_NAV)
+
     androidTestImplementation(Dependency.Google.COMPOSE_TEST)
     debugImplementation(Dependency.Google.COMPOSE_UI_TOOL)
 }

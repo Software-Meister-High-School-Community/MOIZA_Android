@@ -12,11 +12,11 @@
     <string name="logo">로고</string>
     <string name="search">검색</string>
     <string name="name">이름</string>
-    
+
     <string name="search_hint">분야 내 검색</string>
-    
+
     <string name="recent_search">최근 검색어</string>
-    
+
     <string name="illustrator">일러스트레이터</string>
 
     <string name="all">전체</string>
@@ -32,18 +32,19 @@
     <string name="sort_old">오래된순</string>
 
     <string name="initialization">초기화</string>
-    
+
     <string name="apply">적용하기</string>
 
     <string name="all_delete">전체삭제</string>
+    <string name="title_activity_sign_in_activity">SignInScreen</string>
 
-<!--    <string name="front">Front-End</string>-->
-<!--    <string name="back">Back-End</string>-->
-<!--    <string name="iOS">iOS</string>-->
-<!--    <string name="android">Android</string>-->
-<!--    <string name="design">Design</string>-->
-<!--    <string name="game">Game</string>-->
-<!--    <string name="security">Security</string>-->
-<!--    <string name="embedded">Embedded</string>-->
-<!--    <string name="ai">AI</string>-->
+    <!--    <string name="front">Front-End</string>-->
+    <!--    <string name="back">Back-End</string>-->
+    <!--    <string name="iOS">iOS</string>-->
+    <!--    <string name="android">Android</string>-->
+    <!--    <string name="design">Design</string>-->
+    <!--    <string name="game">Game</string>-->
+    <!--    <string name="security">Security</string>-->
+    <!--    <string name="embedded">Embedded</string>-->
+    <!--    <string name="ai">AI</string>-->
 </resources>
