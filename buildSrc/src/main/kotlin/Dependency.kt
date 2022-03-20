@@ -38,6 +38,13 @@ object Dependency {
         const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
 
         const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
+
+        const val COMPOSE_UI = "androidx.compose.ui:ui:${Versions.COMPOSE}"
+        const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.COMPOSE}"
+        const val COMPOSE_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE}"
+        const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${Versions.ACTIVITY_COMPOSE}"
+        const val COMPOSE_TEST = "androidx.compose.ui:ui-test-junit4:${Versions.COMPOSE}"
+        const val COMPOSE_UI_TOOL = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
     }
 
     object Libraries {

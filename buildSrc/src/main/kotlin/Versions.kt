@@ -36,4 +36,7 @@ object Versions {
     const val ESPRESSO_CORE = "3.3.0"
 
     const val NAV = "2.3.5"
+
+    const val COMPOSE = "1.0.1"
+    const val ACTIVITY_COMPOSE = "1.4.0"
 }
