@@ -8,7 +8,7 @@ import androidx.annotation.UiThread
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.ActivitySplashBinding
 import com.moizaandroid.moiza.ui.base.BaseActivity
-import com.moizaandroid.moiza.ui.component.login.activity.SignInActivity
+import com.moizaandroid.moiza.ui.component.login.SignInActivity
 import com.moizaandroid.moiza.ui.component.register.SignUpActivity
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>(
