@@ -37,6 +37,6 @@ object Versions {
 
     const val NAV = "2.4.1"
 
-    const val COMPOSE = "1.0.1"
+    const val COMPOSE = "1.2.0-alpha03"
     const val ACTIVITY_COMPOSE = "1.4.0"
 }

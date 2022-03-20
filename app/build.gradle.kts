@@ -36,14 +36,15 @@ android {
         targetCompatibility = Versions.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Versions.JAVA_VERSION.toString()
     }
     buildFeatures {
         dataBinding = true
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = rootProject.extra["compose_version"] as String
+        kotlinCompilerExtensionVersion = Versions.COMPOSE
+        kotlinCompilerVersion = Versions.KOTLIN_VERSION
     }
     packagingOptions {
         resources {
@@ -61,14 +62,6 @@ dependencies {
     implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL_KTX)
 
     implementation(Dependency.AndroidX.ROOM_KTX)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.compose.ui:ui:${rootProject.extra["compose_version"]}")
-    implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
-    implementation("androidx.compose.ui:ui-tooling-preview:${rootProject.extra["compose_version"]}")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
-    implementation("androidx.activity:activity-compose:1.3.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${rootProject.extra["compose_version"]}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
     kapt(Dependency.AndroidX.ROOM_COMPILER)
 
     implementation(Dependency.Kotlin.COROUTINES_CORE)
