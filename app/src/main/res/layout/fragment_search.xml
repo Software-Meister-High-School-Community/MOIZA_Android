@@ -7,14 +7,14 @@
 
         <variable
             name="search"
-            type="com.moizaandroid.moiza.ui.component.search.SearchFragment" />
+            type="com.moizaandroid.moiza.ui.search.SearchFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/search_background"
-        tools:context=".ui.component.search.SearchFragment">
+        tools:context=".ui.search.SearchFragment">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline31"
@@ -121,7 +121,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/searchFrag"
-            android:name="com.moizaandroid.moiza.ui.component.recent_search.RecentSearchFragment"
+            android:name="com.moizaandroid.moiza.ui.recent_search.RecentSearchFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"

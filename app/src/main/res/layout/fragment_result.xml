@@ -5,7 +5,7 @@
 
         <variable
             name="result"
-            type="com.moizaandroid.moiza.ui.component.result.ResultFragment" />
+            type="com.moizaandroid.moiza.ui.result.ResultFragment" />
     </data>
 
 
