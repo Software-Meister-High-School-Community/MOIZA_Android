@@ -5,14 +5,14 @@
 
         <variable
             name="home"
-            type="com.moizaandroid.moiza.ui.component.home.HomeFragment" />
+            type="com.moizaandroid.moiza.ui.home.HomeFragment" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.component.home.HomeFragment">
+        tools:context=".ui.home.HomeFragment">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/bannerFragmentView"

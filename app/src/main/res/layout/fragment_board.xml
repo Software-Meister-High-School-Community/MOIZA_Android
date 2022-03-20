@@ -5,7 +5,7 @@
 
         <variable
             name="board"
-            type="com.moizaandroid.moiza.ui.component.board.BoardFragment" />
+            type="com.moizaandroid.moiza.ui.board.BoardFragment" />
     </data>
 
 
@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.component.board.BoardFragment">
+        tools:context=".ui.board.BoardFragment">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/boardFragmentView"

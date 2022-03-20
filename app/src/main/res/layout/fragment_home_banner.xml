@@ -5,7 +5,7 @@
 
         <variable
             name="banner"
-            type="com.moizaandroid.moiza.ui.component.home.BannerFragment" />
+            type="com.moizaandroid.moiza.ui.home.BannerFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f8f8fa"
-        tools:context=".ui.component.home.BannerFragment">
+        tools:context=".ui.home.BannerFragment">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline1"
