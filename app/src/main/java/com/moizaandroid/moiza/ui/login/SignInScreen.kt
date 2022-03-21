@@ -38,26 +38,21 @@ fun SignInScreen(
         var loginBtnState by rememberSaveable { mutableStateOf(false) }
 
         AppBar(text = "로그인", onBackButtonClick = onBackButtonClick)
-
         Spacer(modifier = Modifier.size(56.dp))
 
         SignInScreenLogo()
-
         Spacer(modifier = Modifier.size(40.dp))
 
         SignInScreenEditText(
             buttonOn = { loginBtnState = true },
             buttonOff = { loginBtnState = false }
         )
-
         Spacer(modifier = Modifier.size(24.dp))
 
         SignInScreenCheckBox()
-
         Spacer(modifier = Modifier.size(45.dp))
 
         YellowButton(text = "로그인", satisfy = loginBtnState, onClick = onLoginButtonClick)
-
         Spacer(modifier = Modifier.size(40.dp))
 
         SignInScreenBottomMenu(
@@ -182,7 +177,6 @@ fun SignInScreenEditText(
         )
 
         Spacer(modifier = Modifier.size(12.dp))
-
         OutlinedTextField(
             value = pw,
             onValueChange = { pw = it },
