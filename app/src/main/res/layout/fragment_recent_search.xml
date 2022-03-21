@@ -7,7 +7,7 @@
 
         <variable
             name="recent_search"
-            type="com.moizaandroid.moiza.ui.component.recent_search.RecentSearchFragment" />
+            type="com.moizaandroid.moiza.ui.recent_search.RecentSearchFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

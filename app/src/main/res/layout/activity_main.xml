@@ -5,7 +5,7 @@
 
         <variable
             name="main"
-            type="com.moizaandroid.moiza.ui.component.main.MainActivity" />
+            type="com.moizaandroid.moiza.ui.main.MainActivity" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1"
-        tools:context=".ui.component.main.MainActivity">
+        tools:context=".ui.main.MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentView"

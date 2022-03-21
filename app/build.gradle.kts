@@ -16,6 +16,9 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -37,6 +40,16 @@ android {
     }
     buildFeatures {
         dataBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.COMPOSE
+        kotlinCompilerVersion = Versions.KOTLIN_VERSION
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }
 
@@ -49,7 +62,6 @@ dependencies {
     implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL_KTX)
 
     implementation(Dependency.AndroidX.ROOM_KTX)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt(Dependency.AndroidX.ROOM_COMPILER)
 
     implementation(Dependency.Kotlin.COROUTINES_CORE)
@@ -79,7 +91,8 @@ dependencies {
     implementation(Dependency.Google.COMPOSE_MATERIAL)
     implementation(Dependency.Google.COMPOSE_PREVIEW)
     implementation(Dependency.Google.COMPOSE_UI)
-    
+    implementation(Dependency.Google.COMPOSE_NAV)
+
     androidTestImplementation(Dependency.Google.COMPOSE_TEST)
     debugImplementation(Dependency.Google.COMPOSE_UI_TOOL)
 }

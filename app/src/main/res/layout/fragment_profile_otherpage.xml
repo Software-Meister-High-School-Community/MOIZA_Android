@@ -5,7 +5,7 @@
 
         <variable
             name="profile"
-            type="com.moizaandroid.moiza.ui.component.profile.follow.OtherFollowFragment" />
+            type="com.moizaandroid.moiza.ui.profile.follow.OtherFollowFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f8f8f8"
-        tools:context=".ui.component.profile.follow.OtherFollowFragment">
+        tools:context=".ui.profile.follow.OtherFollowFragment">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline1"

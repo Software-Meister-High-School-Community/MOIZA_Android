@@ -5,7 +5,7 @@
 
         <variable
             name="question"
-            type="com.moizaandroid.moiza.ui.component.post.question.QuestionPostFragment" />
+            type="com.moizaandroid.moiza.ui.post.question.QuestionPostFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
