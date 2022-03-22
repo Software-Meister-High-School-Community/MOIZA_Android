@@ -2,12 +2,12 @@ package com.moizaandroid.moiza.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Yellow = Color(0xFFFFB500)
+val Orange = Color(0xFFFFB500)
 val Red = Color(0xFFEB4D3D)
 val Blue = Color(0xFF0048FF)
 val Black = Color(0xFF000000)
 
-val HalfYellow = Color(0xFFFFE199)
+val HalfOrange = Color(0xFFFFE199)
 val HalfBlue = Color(0xFF99B6FF)
 
 val Gray100 = Color(0xFFFFFFFF)

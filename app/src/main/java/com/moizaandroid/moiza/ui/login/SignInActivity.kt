@@ -8,7 +8,17 @@ class SignInActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SignInScreen()
+            SignInScreen(
+                onBackButtonClick = { onBackButtonClick() },
+                onLoginButtonClick = { },
+                onSignUpClick = { },
+                onFindIdClick = { },
+                onFindPasswordClick = { },
+            )
         }
+    }
+
+    private fun onBackButtonClick() {
+        finish()
     }
 }
