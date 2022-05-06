@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = Versions.COMPILE_SDK_VERSION
 
     defaultConfig {
-        minSdk = 29
-        targetSdk = 32
+        minSdk = Versions.MIN_SDK_VERSION
+        targetSdk = Versions.TARGET_SDK_VERSION
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -28,7 +28,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
