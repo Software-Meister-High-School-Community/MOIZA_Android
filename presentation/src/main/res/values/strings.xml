@@ -6,6 +6,8 @@
     <string name="board">Bulletin board</string>
     <string name="notification">Notification</string>
     <string name="profile">Profile</string>
+    
+    <string name="agreed">약관 동의</string>
 
     <string name="popular_content">인기 게시물</string>
 
