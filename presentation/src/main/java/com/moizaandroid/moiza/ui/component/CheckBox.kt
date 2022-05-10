@@ -1,41 +1,45 @@
 package com.moizaandroid.moiza.ui.component
 
-import android.graphics.Paint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Checkbox
-import androidx.compose.material.CheckboxDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.moizaandroid.moiza.ui.theme.Gray300
 import com.moizaandroid.moiza.ui.theme.Orange
-import com.moizaandroid.moiza.ui.theme.Typography
+import com.moizaandroid.moiza.ui.theme.roboto
 
 @Composable
 fun MoizaCheckBox(
     text: String,
     onCheckOn: () -> Unit,
-    onCheckOff: () -> Unit
+    onCheckOff: () -> Unit,
+    checkBoxSize: Dp = 24.dp,
+    textSize: TextUnit = 14.sp,
+    textColor: Color = Color.Black
+
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
-    Row{
-        if(isChecked) {
+    Row {
+        if (isChecked) {
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
-                    .size(24.dp)
+                    .size(checkBoxSize)
                     .border(
                         width = 1.dp,
                         shape = CircleShape,
@@ -52,7 +56,7 @@ fun MoizaCheckBox(
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
-                    .size(24.dp)
+                    .size(checkBoxSize)
                     .border(
                         width = 1.dp,
                         shape = CircleShape,
@@ -66,7 +70,16 @@ fun MoizaCheckBox(
 
         Spacer(modifier = Modifier.size(10.dp))
 
-        Text(text = text, style = Typography.body1, modifier = Modifier.align(CenterVertically))
+        Text(
+            text = text,
+            style = TextStyle(
+                fontSize = textSize,
+                fontFamily = roboto,
+                fontWeight = FontWeight.Normal,
+                color = textColor
+            ),
+            modifier = Modifier.align(CenterVertically)
+        )
     }
 
 }
@@ -74,5 +87,5 @@ fun MoizaCheckBox(
 @Preview(showBackground = true)
 @Composable
 fun PreviewCheckBox() {
-    MoizaCheckBox("hello", {}) {}
+    MoizaCheckBox("hello", {}, {})
 }
