@@ -148,7 +148,6 @@
                 android:id="@+id/userProfileLayout"
                 android:layout_width="0dp"
                 android:layout_height="233dp"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/bg_profile_mypage_bottom"
                 app:layout_constraintEnd_toEndOf="@id/guideline2"
                 app:layout_constraintStart_toStartOf="@id/guideline1"
