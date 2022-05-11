@@ -5,8 +5,10 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -24,17 +26,20 @@ import com.moizaandroid.moiza.ui.theme.roboto
 
 @Composable
 fun MoizaCheckBox(
+    modifier: Modifier = Modifier,
     text: String,
     onCheckOn: () -> Unit,
     onCheckOff: () -> Unit,
     checkBoxSize: Dp = 24.dp,
     textSize: TextUnit = 14.sp,
-    textColor: Color = Color.Black
-
+    textColor: Color = Color.Black,
+    backgroundColor: Color = Color.White
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
-    Row {
+    Row(
+        modifier = modifier.background(color = backgroundColor)
+    ) {
         if (isChecked) {
             Box(
                 modifier = Modifier
@@ -63,6 +68,7 @@ fun MoizaCheckBox(
                         color = Gray300
                     )
                     .clickable { isChecked = !isChecked }
+                    .align(CenterVertically)
             ) {
                 onCheckOff()
             }
@@ -81,11 +87,10 @@ fun MoizaCheckBox(
             modifier = Modifier.align(CenterVertically)
         )
     }
-
 }
 
 @Preview(showBackground = true)
 @Composable
 fun PreviewCheckBox() {
-    MoizaCheckBox("hello", {}, {})
+    MoizaCheckBox(text = "", onCheckOn = { }, onCheckOff = { })
 }
