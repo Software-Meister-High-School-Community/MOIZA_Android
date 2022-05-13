@@ -4,8 +4,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Surface
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.padding
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -23,8 +23,10 @@ fun Agreed(
     backgroundColor: Color = Color.White,
     onValueChange: ((Boolean) -> Unit)?,
     clickDetailBtn: () -> Unit = {},
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    checkState: Boolean = false
 ) {
+
     Box(
         modifier = modifier
             .background(color = backgroundColor)
@@ -39,7 +41,9 @@ fun Agreed(
                     Alignment.CenterStart
                 ),
                 textSize = 14.sp,
-                checkBoxSize = 20.dp
+                checkBoxSize = 20.dp,
+                backgroundColor = backgroundColor,
+                checkState = checkState
             )
 
             Body3(
@@ -56,5 +60,12 @@ fun Agreed(
 @Preview
 @Composable
 fun PreviewAgreed() {
-    Agreed(text = "개인정보 취급 방침", onValueChange = {}, backgroundColor = Gray200)
+    Agreed(
+        backgroundColor = Gray200,
+        text = "개인정보 취급방침",
+        onValueChange = {  },
+        required = true,
+        clickDetailBtn = {},
+        modifier = Modifier.padding(vertical = 12.dp)
+    )
 }
