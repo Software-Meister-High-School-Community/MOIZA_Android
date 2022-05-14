@@ -49,7 +49,12 @@ fun SignInScreen(
         SignInScreenCheckBox()
         Spacer(modifier = Modifier.size(45.dp))
 
-        YellowButton(text = "로그인", satisfy = loginBtnState, onClick = onLoginButtonClick)
+        YellowButton(
+            text = "로그인",
+            satisfy = loginBtnState,
+            onClick = onLoginButtonClick,
+            modifier = Modifier.padding(horizontal = 20.dp)
+        )
         Spacer(modifier = Modifier.size(40.dp))
 
         SignInScreenBottomMenu(

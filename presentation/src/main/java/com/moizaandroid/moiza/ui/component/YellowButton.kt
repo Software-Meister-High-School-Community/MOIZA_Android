@@ -20,12 +20,12 @@ import com.moizaandroid.moiza.ui.theme.body3
 fun YellowButton(
     text: String,
     satisfy: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .height(50.dp)
-            .padding(start = 20.dp, end = 20.dp)
             .fillMaxWidth()
             .clip(RoundedCornerShape(5.dp))
             .background(if (satisfy) Orange else HalfOrange)
