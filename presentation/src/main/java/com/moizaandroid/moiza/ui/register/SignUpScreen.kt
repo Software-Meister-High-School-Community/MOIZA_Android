@@ -3,14 +3,18 @@ package com.moizaandroid.moiza.ui.register
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Divider
+import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.component.Agreed
 import com.moizaandroid.moiza.ui.component.AppBar
@@ -23,7 +27,7 @@ fun SignUpScreen(
     isBackBtnClick: () -> Unit
 ) {
     val currentStep by remember {
-        mutableStateOf(1)
+        mutableStateOf(2)
     }
 
     Column(
@@ -74,16 +78,34 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
                 Gray200
             )
             .padding(horizontal = 22.dp)
+            .fillMaxHeight(fraction = 0.8f)
     ) {
-        var agree1 by remember { mutableStateOf(true) }
-        var agree2 by remember { mutableStateOf(true) }
-        var agree3 by remember { mutableStateOf(true) }
-        var agree4 by remember { mutableStateOf(true) }
+        var agree1 by rememberSaveable{ mutableStateOf(false) }
+        var agree2 by remember { mutableStateOf(false) }
+        var agree3 by remember { mutableStateOf(false) }
+        var agree4 by remember { mutableStateOf(false) }
+
+        var emailBtnState by remember {
+            mutableStateOf(
+                false
+            )
+        }
 
         MoizaCheckBox(
             text = "전체 약관 동의",
-            onCheckOn = { agree1 = true },
-            onCheckOff = { agree2 = false },
+            onCheckOn = {
+                agree1 = true
+                agree2 = true
+                agree3 = true
+                agree4 = true
+            },
+            onCheckOff = {
+                agree1 = false
+                agree2 = false
+                agree3 = false
+                agree4 = false
+            },
+            checkState = (agree1 && agree2 && agree3 && agree4),
             modifier = Modifier.padding(vertical = 22.dp),
             backgroundColor = Gray200
         )
@@ -92,7 +114,7 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
             color = Gray300,
             thickness = 1.dp
         )
-        
+
         Spacer(modifier = Modifier.height(12.dp))
 
         Agreed(
@@ -101,7 +123,8 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
             onValueChange = { agree1 = it },
             required = true,
             clickDetailBtn = {},
-            modifier = Modifier.padding(vertical = 12.dp)
+            modifier = Modifier.padding(vertical = 12.dp),
+            checkState = agree1
         )
 
         Agreed(
@@ -110,7 +133,8 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
             onValueChange = { agree2 = it },
             required = true,
             clickDetailBtn = {},
-            modifier = Modifier.padding(vertical = 12.dp)
+            modifier = Modifier.padding(vertical = 12.dp),
+            checkState = agree2
         )
 
         Agreed(
@@ -119,7 +143,8 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
             onValueChange = { agree3 = it },
             required = true,
             clickDetailBtn = {},
-            modifier = Modifier.padding(vertical = 12.dp)
+            modifier = Modifier.padding(vertical = 12.dp),
+            checkState = agree3
         )
 
         Agreed(
@@ -128,8 +153,37 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
             onValueChange = { agree4 = it },
             required = true,
             clickDetailBtn = {},
-            modifier = Modifier.padding(vertical = 12.dp)
+            modifier = Modifier.padding(vertical = 12.dp),
+            checkState = agree4
         )
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        OutlinedButton(
+            onClick = {
+
+            },
+            colors = ButtonDefaults.outlinedButtonColors(
+                backgroundColor = Color.White,
+                contentColor = Color.Black,
+                disabledContentColor = Gray300
+            ),
+            enabled = (agree1 && agree2 && agree3 && agree4),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(52.dp)
+        ) {
+            Text(
+                text = "동의하고 계속",
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontFamily = roboto,
+                    fontWeight = FontWeight.Bold
+                )
+            )
+        }
+
+        Spacer(modifier = Modifier.height(30.dp))
     }
 }
 
@@ -139,7 +193,7 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
 )
 @Composable
 fun PreviewSignUpScreen() {
-    SignUpScreen() {
+    SignUpScreen {
 
     }
 }
