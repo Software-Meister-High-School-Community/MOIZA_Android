@@ -19,10 +19,7 @@ import androidx.compose.ui.unit.dp
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.component.MoizaCheckBox
 import com.moizaandroid.moiza.ui.component.YellowButton
-import com.moizaandroid.moiza.ui.theme.Gray400
-import com.moizaandroid.moiza.ui.theme.MoizaTheme
-import com.moizaandroid.moiza.ui.theme.Typography
-import com.moizaandroid.moiza.ui.theme.body4
+import com.moizaandroid.moiza.ui.theme.*
 
 @Composable
 fun SignInScreen(
@@ -52,7 +49,12 @@ fun SignInScreen(
         SignInScreenCheckBox()
         Spacer(modifier = Modifier.size(45.dp))
 
-        YellowButton(text = "로그인", satisfy = loginBtnState, onClick = onLoginButtonClick)
+        YellowButton(
+            text = "로그인",
+            satisfy = loginBtnState,
+            onClick = onLoginButtonClick,
+            modifier = Modifier.padding(horizontal = 20.dp)
+        )
         Spacer(modifier = Modifier.size(40.dp))
 
         SignInScreenBottomMenu(
@@ -77,40 +79,36 @@ fun SignInScreenBottomMenu(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(
-            text = "회원가입",
-            style = body4,
-            modifier = Modifier
-                .clickable { onSignUpClick() }
-        )
+        Body4(text = "회원가입", color = Gray400, modifier = Modifier.clickable { onSignUpClick() })
+
         Spacer(modifier = Modifier.size(16.dp))
+
         Divider(
             color = Gray400,
             modifier = Modifier
                 .fillMaxHeight()
                 .width(1.dp)
         )
+
         Spacer(modifier = Modifier.size(16.dp))
-        Text(
-            text = "아이디 찾기",
-            style = body4,
-            modifier = Modifier
-                .clickable { onFindIdClick() }
-        )
+
+        Body4(text = "아이디 찾기", color = Gray400, modifier = Modifier.clickable { onFindIdClick() })
+
         Spacer(modifier = Modifier.size(16.dp))
+
         Divider(
             color = Gray400,
             modifier = Modifier
                 .fillMaxHeight()
                 .width(1.dp)
         )
+
         Spacer(modifier = Modifier.size(16.dp))
-        Text(
+
+        Body4(
             text = "비밀번호 찾기",
-            style = body4,
-            modifier = Modifier
-                .clickable { onFindPasswordClick() }
-        )
+            color = Gray400,
+            modifier = Modifier.clickable { onFindPasswordClick() })
     }
 }
 
@@ -119,11 +117,13 @@ fun SignInScreenCheckBox() {
     Row {
         Spacer(modifier = Modifier.size(20.dp))
 
-        MoizaCheckBox(text = "자동 로그인", onCheckOn = {}, onCheckOff = {})
+        var autoLoginState by remember { mutableStateOf(false) }
+        MoizaCheckBox(text = "자동 로그인", checked = autoLoginState, onCheckedChange = { autoLoginState = it })
 
         Spacer(modifier = Modifier.size(30.dp))
 
-        MoizaCheckBox(text = "아이디 저장", onCheckOn = {}, onCheckOff = {})
+        var saveAccountState by remember { mutableStateOf(false) }
+        MoizaCheckBox(text = "아이디 저장", checked = saveAccountState, onCheckedChange = { saveAccountState = it })
     }
 }
 
