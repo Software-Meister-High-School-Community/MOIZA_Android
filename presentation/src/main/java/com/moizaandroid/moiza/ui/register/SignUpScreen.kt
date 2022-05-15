@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -80,39 +79,28 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
             .padding(horizontal = 22.dp)
             .fillMaxHeight(fraction = 0.8f)
     ) {
-        var agree1 by rememberSaveable{ mutableStateOf(false) }
+        var agree1 by remember { mutableStateOf(false) }
         var agree2 by remember { mutableStateOf(false) }
         var agree3 by remember { mutableStateOf(false) }
         var agree4 by remember { mutableStateOf(false) }
 
-        var emailBtnState by remember {
-            mutableStateOf(
-                false
-            )
-        }
-
         MoizaCheckBox(
             text = "전체 약관 동의",
-            onCheckOn = {
-                agree1 = true
-                agree2 = true
-                agree3 = true
-                agree4 = true
-            },
-            onCheckOff = {
-                agree1 = false
-                agree2 = false
-                agree3 = false
-                agree4 = false
-            },
-            checkState = (agree1 && agree2 && agree3 && agree4),
+            checked = (agree1 && agree2 && agree3 && agree4),
             modifier = Modifier.padding(vertical = 22.dp),
-            backgroundColor = Gray200
+            backgroundColor = Gray200,
+            onCheckedChange = {
+                if (it) {
+                    agree1 = true; agree2 = true; agree3 = true; agree4 = true
+                } else {
+                    agree1 = false; agree2 = false; agree3 = false; agree4 = false
+                }
+            }
         )
 
         Divider(
             color = Gray300,
-            thickness = 1.dp
+            thickness = 0.5.dp
         )
 
         Spacer(modifier = Modifier.height(12.dp))
@@ -120,41 +108,41 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
         Agreed(
             backgroundColor = Gray200,
             text = "개인정보 취급방침",
-            onValueChange = { agree1 = it },
+            checked = agree1,
+            onCheckedChange = { agree1 = it },
             required = true,
             clickDetailBtn = {},
             modifier = Modifier.padding(vertical = 12.dp),
-            checkState = agree1
         )
 
         Agreed(
             backgroundColor = Gray200,
             text = "사용자 이용 약관",
-            onValueChange = { agree2 = it },
+            checked = agree2,
+            onCheckedChange = { agree2 = it },
             required = true,
             clickDetailBtn = {},
             modifier = Modifier.padding(vertical = 12.dp),
-            checkState = agree2
         )
 
         Agreed(
             backgroundColor = Gray200,
             text = "개읹정보 취급방침",
-            onValueChange = { agree3 = it },
+            checked = agree3,
+            onCheckedChange = { agree3 = it },
             required = true,
             clickDetailBtn = {},
             modifier = Modifier.padding(vertical = 12.dp),
-            checkState = agree3
         )
 
         Agreed(
             backgroundColor = Gray200,
             text = "사용자 이용약관",
-            onValueChange = { agree4 = it },
+            checked = agree4,
+            onCheckedChange = { agree4 = it },
             required = true,
             clickDetailBtn = {},
             modifier = Modifier.padding(vertical = 12.dp),
-            checkState = agree4
         )
 
         Spacer(modifier = Modifier.weight(1f))

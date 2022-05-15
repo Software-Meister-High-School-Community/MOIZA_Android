@@ -21,10 +21,10 @@ fun Agreed(
     text: String,
     required: Boolean = false,
     backgroundColor: Color = Color.White,
-    onValueChange: ((Boolean) -> Unit)?,
+    checked: Boolean,
+    onCheckedChange: ((Boolean) -> Unit)?,
     clickDetailBtn: () -> Unit = {},
     modifier: Modifier = Modifier,
-    checkState: Boolean = false
 ) {
 
     Box(
@@ -32,27 +32,24 @@ fun Agreed(
             .background(color = backgroundColor)
             .fillMaxWidth()
     ) {
-        if (onValueChange != null) {
-            MoizaCheckBox(
-                text = if (required) "$text (필수)" else text,
-                onCheckOn = { onValueChange(true) },
-                onCheckOff = { onValueChange(false) },
-                modifier = Modifier.align(
-                    Alignment.CenterStart
-                ),
-                textSize = 14.sp,
-                checkBoxSize = 20.dp,
-                backgroundColor = backgroundColor,
-                checkState = checkState
-            )
+        MoizaCheckBox(
+            text = if (required) "$text (필수)" else text,
+            checked = checked,
+            modifier = Modifier.align(
+                Alignment.CenterStart
+            ),
+            textSize = 14.sp,
+            checkBoxSize = 20.dp,
+            backgroundColor = backgroundColor,
+            onCheckedChange = onCheckedChange
+        )
 
-            Body3(
-                text = "보기",
-                color = Gray400,
-                modifier = Modifier
-                    .align(Alignment.CenterEnd)
-                    .clickable { clickDetailBtn() })
-        }
+        Body3(
+            text = "보기",
+            color = Gray400,
+            modifier = Modifier
+                .align(Alignment.CenterEnd)
+                .clickable { clickDetailBtn() })
     }
 
 }
@@ -63,7 +60,8 @@ fun PreviewAgreed() {
     Agreed(
         backgroundColor = Gray200,
         text = "개인정보 취급방침",
-        onValueChange = {  },
+        checked = true,
+        onCheckedChange = {},
         required = true,
         clickDetailBtn = {},
         modifier = Modifier.padding(vertical = 12.dp)

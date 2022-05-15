@@ -117,11 +117,13 @@ fun SignInScreenCheckBox() {
     Row {
         Spacer(modifier = Modifier.size(20.dp))
 
-        MoizaCheckBox(text = "자동 로그인", onCheckOn = {}, onCheckOff = {})
+        var autoLoginState by remember { mutableStateOf(false) }
+        MoizaCheckBox(text = "자동 로그인", checked = autoLoginState, onCheckedChange = { autoLoginState = it })
 
         Spacer(modifier = Modifier.size(30.dp))
 
-        MoizaCheckBox(text = "아이디 저장", onCheckOn = {}, onCheckOff = {})
+        var saveAccountState by remember { mutableStateOf(false) }
+        MoizaCheckBox(text = "아이디 저장", checked = saveAccountState, onCheckedChange = { saveAccountState = it })
     }
 }
 

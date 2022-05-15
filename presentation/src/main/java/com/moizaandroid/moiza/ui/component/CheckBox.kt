@@ -1,13 +1,16 @@
 package com.moizaandroid.moiza.ui.component
 
+import android.widget.CheckBox
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Checkbox
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
@@ -28,19 +31,17 @@ import com.moizaandroid.moiza.ui.theme.roboto
 fun MoizaCheckBox(
     modifier: Modifier = Modifier,
     text: String,
-    onCheckOn: () -> Unit,
-    onCheckOff: () -> Unit,
+    checked: Boolean,
+    onCheckedChange: ((Boolean) -> Unit)?,
     checkBoxSize: Dp = 24.dp,
     textSize: TextUnit = 14.sp,
     textColor: Color = Color.Black,
-    backgroundColor: Color = Color.White
+    backgroundColor: Color = Color.White,
 ) {
-    var isChecked by remember { mutableStateOf(false) }
-
     Row(
         modifier = modifier.background(color = backgroundColor)
     ) {
-        if (isChecked) {
+        if (checked) {
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
@@ -53,10 +54,12 @@ fun MoizaCheckBox(
                     .padding(4.8.dp)
                     .clip(CircleShape)
                     .background(Orange)
-                    .clickable { isChecked = !isChecked }
-            ) {
-                onCheckOn()
-            }
+                    .clickable {
+                        if (onCheckedChange != null) {
+                            onCheckedChange(!checked)
+                        } else null
+                    }
+            )
         } else {
             Box(
                 modifier = Modifier
@@ -67,11 +70,13 @@ fun MoizaCheckBox(
                         shape = CircleShape,
                         color = Gray300
                     )
-                    .clickable { isChecked = !isChecked }
+                    .clickable {
+                        if (onCheckedChange != null) {
+                            onCheckedChange(!checked)
+                        } else null
+                    }
                     .align(CenterVertically)
-            ) {
-                onCheckOff()
-            }
+            )
         }
 
         Spacer(modifier = Modifier.size(10.dp))
@@ -87,10 +92,11 @@ fun MoizaCheckBox(
             modifier = Modifier.align(CenterVertically)
         )
     }
+
 }
 
 @Preview(showBackground = true)
 @Composable
 fun PreviewCheckBox() {
-    MoizaCheckBox(text = "", onCheckOn = { }, onCheckOff = { })
+    MoizaCheckBox(text = "체크 박스", checked = true, onCheckedChange = {})
 }
