@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.recent_search
+package com.moizaandroid.moiza.ui.search.recent
 
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.FragmentRecentSearchBinding
