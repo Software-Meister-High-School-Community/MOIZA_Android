@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="result_search"
+            type="com.moizaandroid.moiza.ui.search.result.ResultSearchFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/resultExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="에 대한 검색결과는 총 0건입니다."/>
+
+        <Button
+            android:id="@+id/contentSettingBtn"
+            android:layout_width="63dp"
+            android:layout_height="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_button_sort"
+            android:drawableLeft="@drawable/ic_filter"
+            android:drawablePadding="-8dp"
+            android:fontFamily="@font/rotobo_regular"
+            android:paddingStart="10dp"
+            android:text="정렬"
+            android:textColor="@color/gray_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="20dp"
+            android:text="유저"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rotobo_bold"
+            app:layout_constraintTop_toBottomOf="@id/resultExplain"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/user"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:layout_marginStart="20dp"
+            android:text="게시물"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rotobo_bold"
+            app:layout_constraintTop_toBottomOf="@id/userRecycler"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
