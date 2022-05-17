@@ -1,7 +1,6 @@
 package com.moizaandroid.moiza.ui.search
 
 
-import android.util.Log
 import androidx.navigation.fragment.findNavController
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.FragmentSearchBinding
