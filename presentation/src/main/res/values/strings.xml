@@ -8,6 +8,13 @@
     <string name="profile">Profile</string>
     
     <string name="agreed">약관 동의</string>
+    <string name="input_info">정보 입력</string>
+
+    <string name="male">남</string>
+    <string name="female">여</string>
+
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">회원가입</string>
 
     <string name="popular_content">인기 게시물</string>
 

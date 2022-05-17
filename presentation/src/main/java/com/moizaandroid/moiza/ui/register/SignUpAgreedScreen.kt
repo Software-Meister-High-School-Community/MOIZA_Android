@@ -25,14 +25,14 @@ import com.moizaandroid.moiza.ui.theme.*
 fun SignUpScreen(
     isBackBtnClick: () -> Unit
 ) {
-    val currentStep by remember {
-        mutableStateOf(2)
+    val currentStep: SignUpStep by remember {
+        mutableStateOf(SignUpStep.AGREED)
     }
 
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        AppBar(text = "회원가입", isSignUp = true) {
+        AppBar(text = stringResource(id = R.string.sign_up), isSignUp = true) {
             isBackBtnClick()
         }
 
@@ -40,7 +40,7 @@ fun SignUpScreen(
 
         StepsProgressBar(
             numberOfSteps = 3,
-            currentStep = currentStep,
+            currentStep = currentStep.step,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 20.dp)
