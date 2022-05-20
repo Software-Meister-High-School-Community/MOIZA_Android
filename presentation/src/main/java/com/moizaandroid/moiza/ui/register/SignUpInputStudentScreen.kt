@@ -1,8 +1,6 @@
 package com.moizaandroid.moiza.ui.register
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
@@ -12,9 +10,12 @@ import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.component.AppBar
 import com.moizaandroid.moiza.ui.component.MoizaCheckBox
@@ -30,10 +31,13 @@ fun SignUpInputStudentScreen(
         mutableStateOf(SignUpStep.INPUT_STUDENT_INFO)
     }
 
+    val verticalScroll = rememberScrollState()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 20.dp)
+            .verticalScroll(verticalScroll)
     ) {
         AppBar(text = stringResource(id = R.string.sign_up), isSignUp = true) {
             isBackBtnClick()
@@ -104,7 +108,12 @@ fun SignUpInputStudentScreen(
                 onValueChange = { name = it },
                 singleLine = true,
                 isError = false,
-                textStyle = Typography.body2,
+                textStyle = TextStyle(
+                    fontSize = 14.sp,
+                    color = Gray500,
+                    fontWeight = FontWeight.Normal,
+                    fontFamily = roboto
+                ),
                 modifier = Modifier.weight(1f)
             )
 
@@ -169,21 +178,31 @@ fun SignUpInputStudentScreen(
             onValueChange = { birthDay = it },
             singleLine = true,
             isError = false,
-            textStyle = Typography.body2,
-            modifier = Modifier.fillMaxWidth()
+            textStyle = TextStyle(
+                fontSize = 14.sp,
+                color = Gray500,
+                fontWeight = FontWeight.Normal,
+                fontFamily = roboto
+            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(44.dp)
         )
 
         Spacer(modifier = Modifier.height(50.dp))
 
         Body3(text = "학교 선택")
+        
+        Spacer(modifier = Modifier.height(15.dp ))
 
         val menus = listOf(
-            "대덕소프트웨어마이스터고등학교",
-            "대구소프트웨어마이스터고등학교",
-            "부산소프트웨어마이스터고등학교",
-            "광주소프트웨어마이스터고등학교",
-            "미림마이스터고등학교"
+            stringResource(id = R.string.dsm),
+            stringResource(id = R.string.dgsm),
+            stringResource(id = R.string.bsm),
+            stringResource(id = R.string.gsm),
+            stringResource(id = R.string.mirim)
         )
+
         var menu = "no data"
         MoizaVerticalMenus(onMenuClicked = { menu = it }, menus = menus)
 
@@ -192,7 +211,7 @@ fun SignUpInputStudentScreen(
 
 @Preview(
     showBackground = true,
-    showSystemUi = true
+    heightDp = 1500
 )
 @Composable
 fun PreviewSignUpInputStudentScreen() {

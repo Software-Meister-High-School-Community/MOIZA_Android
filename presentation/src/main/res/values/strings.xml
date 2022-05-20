@@ -56,4 +56,11 @@
     <!--    <string name="security">Security</string>-->
     <!--    <string name="embedded">Embedded</string>-->
     <!--    <string name="ai">AI</string>-->
+
+    <!--    school-->
+    <string name="dsm">대덕소프트웨어마이스터고등학교</string>
+    <string name="dgsm">대구소프트웨어마이스터고등학교</string>
+    <string name="gsm">광주소프트웨어마이스터고등학교</string>
+    <string name="bsm">부산소프트웨어마이스터고등학교</string>
+    <string name="mirim">미림여가정보과학고등학교</string>
 </resources>
