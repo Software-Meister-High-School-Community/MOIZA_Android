@@ -3,24 +3,21 @@ package com.moizaandroid.moiza.ui.register
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
+import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.component.AppBar
-import com.moizaandroid.moiza.ui.component.MoizaCheckBox
-import com.moizaandroid.moiza.ui.component.MoizaVerticalMenus
-import com.moizaandroid.moiza.ui.component.StepsProgressBar
+import com.moizaandroid.moiza.ui.component.*
 import com.moizaandroid.moiza.ui.theme.*
 
 @Composable
@@ -61,7 +58,7 @@ fun SignUpInputStudentScreen(
 
         Spacer(modifier = Modifier.height(43.dp))
 
-        Body3(text = "구분")
+        Body3(text = stringResource(id = R.string.sortation))
 
         Spacer(modifier = Modifier.height(15.dp))
 
@@ -73,7 +70,7 @@ fun SignUpInputStudentScreen(
         ) {
             MoizaCheckBox(
                 modifier = Modifier.fillMaxWidth(0.5f),
-                text = "재학생",
+                text = stringResource(id = R.string.ungraduate),
                 checked = ungraduate,
                 onCheckedChange = {
                     ungraduate = it
@@ -81,7 +78,7 @@ fun SignUpInputStudentScreen(
                 }
             )
             MoizaCheckBox(
-                text = "졸업생",
+                text = stringResource(id = R.string.graduate),
                 checked = graduate,
                 onCheckedChange = {
                     graduate = it
@@ -92,7 +89,7 @@ fun SignUpInputStudentScreen(
 
         Spacer(modifier = Modifier.height(50.dp))
 
-        Body3(text = "이름")
+        Body3(text = stringResource(id = R.string.name))
 
         Spacer(modifier = Modifier.height(15.dp))
 
@@ -103,18 +100,10 @@ fun SignUpInputStudentScreen(
                 .fillMaxWidth()
                 .height(44.dp)
         ) {
-            OutlinedTextField(
+            MoizaTextField(
                 value = name,
                 onValueChange = { name = it },
-                singleLine = true,
-                isError = false,
-                textStyle = TextStyle(
-                    fontSize = 14.sp,
-                    color = Gray500,
-                    fontWeight = FontWeight.Normal,
-                    fontFamily = roboto
-                ),
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.fillMaxWidth(0.7f)
             )
 
             Spacer(modifier = Modifier.width(10.dp))
@@ -167,35 +156,21 @@ fun SignUpInputStudentScreen(
 
         Spacer(modifier = Modifier.height(50.dp))
 
-        Body3(text = "생년월일 8자리")
+        Body3(text = stringResource(id = R.string.yyyyddmm))
 
         Spacer(modifier = Modifier.height(15.dp))
 
         var birthDay by remember { mutableStateOf(String()) }
 
-        OutlinedTextField(
-            value = birthDay,
-            onValueChange = { birthDay = it },
-            singleLine = true,
-            isError = false,
-            textStyle = TextStyle(
-                fontSize = 14.sp,
-                color = Gray500,
-                fontWeight = FontWeight.Normal,
-                fontFamily = roboto
-            ),
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(44.dp)
-        )
+        MoizaTextField(value = birthDay, onValueChange = { birthDay = it })
 
         Spacer(modifier = Modifier.height(50.dp))
 
-        Body3(text = "학교 선택")
-        
-        Spacer(modifier = Modifier.height(15.dp ))
+        Body3(text = stringResource(id = R.string.select_school))
 
-        val menus = listOf(
+        Spacer(modifier = Modifier.height(15.dp))
+
+        val schools = listOf(
             stringResource(id = R.string.dsm),
             stringResource(id = R.string.dgsm),
             stringResource(id = R.string.bsm),
@@ -203,11 +178,77 @@ fun SignUpInputStudentScreen(
             stringResource(id = R.string.mirim)
         )
 
-        var menu = "no data"
-        MoizaVerticalMenus(onMenuClicked = { menu = it }, menus = menus)
+        var school = ""
 
+        MoizaVerticalMenus(onMenuClicked = { school = it }, menus = schools)
+
+        Spacer(modifier = Modifier.height(32.dp))
+
+        Body3(text = stringResource(id = R.string.school_email))
+
+        Spacer(modifier = Modifier.height(15.dp))
+
+        var userId by remember { mutableStateOf(String()) }
+        var schoolEmail: String = "e-mirin.hs.kr"
+
+        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            MoizaTextField(
+                value = userId,
+                onValueChange = { userId = it },
+                modifier = Modifier.width(140.dp)
+            )
+
+            Spacer(modifier = Modifier.weight(0.5f))
+
+            Body3(text = "@ $schoolEmail")
+
+            Spacer(modifier = Modifier.weight(0.5f))
+
+            OutlinedButton(
+                onClick = { /*TODO*/ }, colors = ButtonDefaults.buttonColors(
+                    backgroundColor = Gray200,
+                    contentColor = Gray600
+                )
+            ) {
+                Body3(text = stringResource(id = R.string.request_verity))
+            }
+        }
+
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        Body3(text = stringResource(id = R.string.verification_code))
+        
+        Spacer(modifier = Modifier.height(15.dp))
+
+        var verificationCode by remember { mutableStateOf(String()) }
+        MoizaTextField(value = verificationCode, onValueChange = { verificationCode = it })
+
+        Spacer(Modifier.height(75.dp))
+
+        Button(
+            onClick = { /*TODO*/ },
+            modifier = Modifier
+                .size(88.dp, 36.dp)
+                .align(End),
+            shape = RoundedCornerShape(25.dp),
+            colors = ButtonDefaults.buttonColors(
+                contentColor = Color.White,
+                backgroundColor = Blue
+            )
+        ) {
+            Text(
+                text = stringResource(id = R.string.next_step),
+                style = TextStyle(
+                    fontFamily = roboto,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
+                    color = Color.White
+                )
+            )
+        }
     }
 }
+
 
 @Preview(
     showBackground = true,
