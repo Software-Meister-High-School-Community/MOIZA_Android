@@ -1,22 +1,25 @@
 package com.moizaandroid.moiza.ui.component
 
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Divider
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.material.LinearProgressIndicator
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterStart
+import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.moizaandroid.moiza.ui.theme.Blue
 import com.moizaandroid.moiza.ui.theme.Gray300
+import kotlinx.coroutines.delay
 
 @Composable
 fun StepsProgressBar(modifier: Modifier = Modifier, numberOfSteps: Int, currentStep: Int) {
@@ -50,12 +53,38 @@ fun Step(modifier: Modifier = Modifier, isCompete: Boolean, isCurrent: Boolean, 
     } else {
         Box(modifier = modifier) {
 
-            //Line
-            Divider(
-                modifier = Modifier.align(Alignment.CenterStart),
-                color = color,
-                thickness = 2.dp
+            var progress by remember { mutableStateOf(0.1f) }
+
+            val animatedProgress by animateFloatAsState(
+                targetValue = progress,
             )
+
+            LaunchedEffect(true) {
+                while ((progress < 1)) {
+                    progress += 0.03f
+                    delay(10)
+                }
+            }
+
+            //Line
+            if(isCurrent) {
+                LinearProgressIndicator(
+                    progress = animatedProgress,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(2.dp)
+                        .align(CenterStart),
+                    color = color
+                )
+            } else {
+                Divider(
+                    modifier = Modifier
+                        .align(Alignment.CenterStart)
+                        .animateContentSize(),
+                    color = color,
+                    thickness = 2.dp
+                )
+            }
 
             //Circle
             Box(
@@ -72,10 +101,10 @@ fun Step(modifier: Modifier = Modifier, isCompete: Boolean, isCurrent: Boolean, 
 @Preview
 @Composable
 fun StepsProgressBarPreview() {
-    val currentStep = remember { mutableStateOf(2) }
+    val currentStep = remember { mutableStateOf(3) }
     StepsProgressBar(
         modifier = Modifier.fillMaxWidth(),
-        numberOfSteps = 3,
+        numberOfSteps = 5,
         currentStep = currentStep.value
     )
 }
