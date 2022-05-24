@@ -7,7 +7,6 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.material.Icon
-import androidx.compose.material.Surface
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
@@ -19,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.theme.Body3
+import com.moizaandroid.moiza.ui.theme.Gray200
 import com.moizaandroid.moiza.ui.theme.Gray300
 
 @Composable
@@ -28,58 +28,54 @@ fun AppBar(
     isSignUp: Boolean = false,
     onBackButtonClick: () -> Unit
 ) {
-    Surface(
+    Column(
         modifier = modifier
+            .fillMaxWidth()
+            .background(Color.Transparent)
     ) {
-        Column(
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
+                .height(56.dp)
                 .background(Color.Transparent)
         ) {
-            Box(
+            Icon(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(56.dp)
-                    .background(Color.Transparent)
-            ) {
-                Icon(
-                    modifier = Modifier
-                        .padding(16.dp)
-                        .size(24.dp)
-                        .clickable(
-                            interactionSource = MutableInteractionSource(),
-                            indication = null
-                        ) {
-                            onBackButtonClick()
-                        },
-                    imageVector = Icons.Default.ArrowBack,
-                    contentDescription = null
-                )
-
-                Body3(
-                    text = text,
-                    modifier = Modifier
-                        .fillMaxHeight()
-                        .wrapContentWidth(Alignment.CenterHorizontally)
-                        .wrapContentHeight(Alignment.CenterVertically)
-                        .padding(start = 54.dp),
-                )
-
-                if (isSignUp) {
-                    Image(
-                        painter = painterResource(id = R.drawable.ic_moiza_logo),
-                        contentDescription = "moiza logo",
-                        modifier = Modifier
-                            .align(Alignment.CenterEnd)
-                            .padding(end = 21.dp)
-                    )
-                }
-            }
-            Divider(
-                color = Gray300,
-                thickness = 1.dp
+                    .padding(16.dp)
+                    .size(24.dp)
+                    .clickable(
+                        interactionSource = MutableInteractionSource(),
+                        indication = null
+                    ) {
+                        onBackButtonClick()
+                    },
+                imageVector = Icons.Default.ArrowBack,
+                contentDescription = null
             )
+
+            Body3(
+                text = text,
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .wrapContentWidth(Alignment.CenterHorizontally)
+                    .wrapContentHeight(Alignment.CenterVertically)
+                    .padding(start = 54.dp),
+            )
+
+            if (isSignUp) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_moiza_logo),
+                    contentDescription = "moiza logo",
+                    modifier = Modifier
+                        .align(Alignment.CenterEnd)
+                        .padding(end = 21.dp)
+                )
+            }
         }
+        Divider(
+            color = Gray300,
+            thickness = 1.dp
+        )
     }
 }
 
