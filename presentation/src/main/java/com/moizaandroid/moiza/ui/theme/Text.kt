@@ -271,3 +271,33 @@ fun Body4(
         onTextLayout = onTextLayout,
     )
 }
+
+@Composable
+fun Error1(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Red,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        fontSize = 14.sp,
+        fontFamily = roboto,
+        fontWeight = FontWeight.Normal,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
