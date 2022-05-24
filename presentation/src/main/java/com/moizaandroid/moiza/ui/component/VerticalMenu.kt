@@ -56,12 +56,12 @@ fun MoizaVerticalMenu(
             modifier = modifier
                 .fillMaxWidth()
                 .height(44.dp)
+                .background(color = Orange, shape = RoundedCornerShape(5.dp))
                 .border(
                     shape = RoundedCornerShape(5.dp),
                     color = Gray300,
                     width = 1.dp
                 )
-                .background(color = Orange)
                 .clickable {
                     clicked = !clicked
                     if (onMenuClicked != null) {
@@ -93,6 +93,10 @@ fun MoizaVerticalMenu(
             modifier = modifier
                 .fillMaxWidth()
                 .height(44.dp)
+                .background(
+                    shape = RoundedCornerShape(5.dp),
+                    color = Color.Transparent
+                )
                 .border(
                     shape = RoundedCornerShape(5.dp),
                     color = Gray300,
