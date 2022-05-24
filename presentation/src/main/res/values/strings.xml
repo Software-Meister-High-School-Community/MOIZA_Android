@@ -47,6 +47,26 @@
     <string name="all_delete">전체삭제</string>
     <string name="title_activity_sign_in_activity">SignInScreen</string>
 
+    <string name="input_close">내용 초기화</string>
+
+    <string name="password_visible">비밀번호 보기</string>
+    <string name="password_invisible">비밀번호 숨기기</string>
+
+    <string name="sortation">구분</string>
+
+    <string name="graduate">졸업생</string>
+    <string name="ungraduate">재학생</string>
+
+    <string name="yyyyddmm">생년월일 8자리</string>
+
+    <string name="select_school">학교 선택</string>
+    <string name="school_email">학교 이메일</string>
+
+    <string name="request_verity">인증 요창</string>
+    <string name="verification_code">인증번호</string>
+
+    <string name="next_step">다음 단계</string>
+
     <!--    <string name="front">Front-End</string>-->
     <!--    <string name="back">Back-End</string>-->
     <!--    <string name="iOS">iOS</string>-->
