@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -164,7 +165,7 @@ fun SignUpInputStudentScreen(
 
             var birthDay by remember { mutableStateOf(String()) }
 
-            MoizaTextField(value = birthDay, onValueChange = { birthDay = it })
+            MoizaTextField(value = birthDay, onValueChange = { birthDay = it }, keyboardType = KeyboardType.Number)
 
             Spacer(modifier = Modifier.height(50.dp))
 
@@ -172,17 +173,26 @@ fun SignUpInputStudentScreen(
 
             Spacer(modifier = Modifier.height(15.dp))
 
-            val schools = listOf(
-                stringResource(id = R.string.dsm),
-                stringResource(id = R.string.dgsm),
-                stringResource(id = R.string.bsm),
-                stringResource(id = R.string.gsm),
-                stringResource(id = R.string.mirim)
+            val schoolName = listOf(
+                Schools.BSM.schoolName,
+                Schools.DGSM.schoolName,
+                Schools.DSM.schoolName,
+                Schools.GSM.schoolName,
+                Schools.MIRIN.schoolName
             )
 
-            var school = ""
+            var school: String by remember { mutableStateOf(String())}
 
-            MoizaVerticalMenus(onMenuClicked = { school = it }, menus = schools)
+            val schoolEmail = when (school) {
+                Schools.BSM.schoolName -> Schools.BSM.schoolEmail
+                Schools.DGSM.schoolName -> Schools.DGSM.schoolEmail
+                Schools.DSM.schoolName -> Schools.DSM.schoolEmail
+                Schools.GSM.schoolName -> Schools.GSM.schoolEmail
+                Schools.MIRIN.schoolName -> Schools.MIRIN.schoolEmail
+                else -> ""
+            }
+
+            MoizaVerticalMenus(onMenuClicked = { school = it }, menus = schoolName)
 
             Spacer(modifier = Modifier.height(32.dp))
 
@@ -191,7 +201,6 @@ fun SignUpInputStudentScreen(
             Spacer(modifier = Modifier.height(15.dp))
 
             var userId by remember { mutableStateOf(String()) }
-            var schoolEmail: String = "e-mirin.hs.kr"
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -200,7 +209,7 @@ fun SignUpInputStudentScreen(
                 MoizaTextField(
                     value = userId,
                     onValueChange = { userId = it },
-                    modifier = Modifier.width(140.dp)
+                    modifier = Modifier.fillMaxWidth(0.35f)
                 )
 
                 Spacer(modifier = Modifier.weight(0.5f))
@@ -213,7 +222,8 @@ fun SignUpInputStudentScreen(
                     onClick = { /*TODO*/ }, colors = ButtonDefaults.buttonColors(
                         backgroundColor = Gray200,
                         contentColor = Gray600
-                    )
+                    ),
+                    modifier = Modifier.fillMaxHeight()
                 ) {
                     Body3(text = stringResource(id = R.string.request_verity))
                 }

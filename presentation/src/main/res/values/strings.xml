@@ -62,7 +62,7 @@
     <string name="select_school">학교 선택</string>
     <string name="school_email">학교 이메일</string>
 
-    <string name="request_verity">인증 요창</string>
+    <string name="request_verity">인증 요청</string>
     <string name="verification_code">인증번호</string>
 
     <string name="next_step">다음 단계</string>
