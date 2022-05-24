@@ -22,7 +22,7 @@ import com.moizaandroid.moiza.ui.component.YellowButton
 import com.moizaandroid.moiza.ui.theme.*
 
 @Composable
-fun SignInScreen(
+fun SignUpAgreedScreen(
     onBackButtonClick: () -> Unit,
     onLoginButtonClick: () -> Unit,
     onSignUpClick: () -> Unit,
@@ -205,6 +205,6 @@ fun SignInScreenEditText(
 @Composable
 fun DefaultPreview() {
     MoizaTheme {
-        SignInScreen({}, {}, {}, {}, {})
+        SignUpAgreedScreen({}, {}, {}, {}, {})
     }
 }
