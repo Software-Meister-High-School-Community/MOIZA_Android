@@ -22,12 +22,9 @@ import com.moizaandroid.moiza.ui.theme.*
 
 @Composable
 fun SignUpInputStudentScreen(
-    isBackBtnClick: () -> Unit
+    toPrevious: () -> Unit,
+    toNextStep: () -> Unit
 ) {
-    val currentStep: SignUpStep by remember {
-        mutableStateOf(SignUpStep.INPUT_STUDENT_INFO)
-    }
-
     val verticalScroll = rememberScrollState()
 
     Column(
@@ -35,7 +32,7 @@ fun SignUpInputStudentScreen(
             .fillMaxSize()
     ) {
         AppBar(text = stringResource(id = R.string.sign_up), isSignUp = true) {
-            isBackBtnClick()
+            toPrevious()
         }
 
         Column(
@@ -49,7 +46,7 @@ fun SignUpInputStudentScreen(
 
             StepsProgressBar(
                 numberOfSteps = 3,
-                currentStep = currentStep.step,
+                currentStep = 2,
                 modifier = Modifier
                     .fillMaxWidth()
             )
@@ -234,7 +231,7 @@ fun SignUpInputStudentScreen(
             Spacer(Modifier.height(75.dp))
 
             Button(
-                onClick = { /*TODO*/ },
+                onClick = toNextStep,
                 modifier = Modifier
                     .size(88.dp, 36.dp)
                     .align(End),
@@ -267,5 +264,5 @@ fun SignUpInputStudentScreen(
 )
 @Composable
 fun PreviewSignUpInputStudentScreen() {
-    SignUpInputStudentScreen() {}
+    SignUpInputStudentScreen({}) {}
 }

@@ -61,7 +61,7 @@ fun Step(modifier: Modifier = Modifier, isCompete: Boolean, isCurrent: Boolean, 
 
             LaunchedEffect(true) {
                 while ((progress < 1)) {
-                    progress += 0.03f
+                    progress += 0.01f
                     delay(10)
                 }
             }

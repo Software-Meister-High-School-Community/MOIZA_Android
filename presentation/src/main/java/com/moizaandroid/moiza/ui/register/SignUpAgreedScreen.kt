@@ -22,25 +22,22 @@ import com.moizaandroid.moiza.ui.component.StepsProgressBar
 import com.moizaandroid.moiza.ui.theme.*
 
 @Composable
-fun SignUpScreen(
-    isBackBtnClick: () -> Unit
+fun SignUpAgreedScreen(
+    toPrevious: () -> Unit,
+    toNextStep: () -> Unit
 ) {
-    val currentStep: SignUpStep by remember {
-        mutableStateOf(SignUpStep.AGREED)
-    }
-
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         AppBar(text = stringResource(id = R.string.sign_up), isSignUp = true) {
-            isBackBtnClick()
+            toPrevious()
         }
 
         Spacer(modifier = Modifier.height(12.dp))
 
         StepsProgressBar(
             numberOfSteps = 3,
-            currentStep = currentStep.step,
+            currentStep = 1,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 20.dp)
@@ -64,12 +61,12 @@ fun SignUpScreen(
 
         Spacer(modifier = Modifier.weight(1f))
 
-        BottomAgreed()
+        BottomAgreed(toNextStep = toNextStep)
     }
 }
 
 @Composable
-fun BottomAgreed(modifier: Modifier = Modifier) {
+fun BottomAgreed(modifier: Modifier = Modifier, toNextStep: () -> Unit) {
     Column(
         modifier = modifier
             .clip(shape = RoundedCornerShape(topStart = 30.dp, topEnd = 30.dp))
@@ -148,9 +145,7 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.weight(1f))
 
         OutlinedButton(
-            onClick = {
-
-            },
+            onClick = { toNextStep() },
             colors = ButtonDefaults.outlinedButtonColors(
                 backgroundColor = Color.White,
                 contentColor = Color.Black,
@@ -181,7 +176,7 @@ fun BottomAgreed(modifier: Modifier = Modifier) {
 )
 @Composable
 fun PreviewSignUpScreen() {
-    SignUpScreen {
+    SignUpAgreedScreen({}) {
 
     }
 }
