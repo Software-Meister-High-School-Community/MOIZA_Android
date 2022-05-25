@@ -158,13 +158,14 @@ fun SignUpInputStudentVerificationCode(
     verificationCode: String,
     onVerificationCodeChanged: (String) -> Unit
 ) {
-    Body3(text = stringResource(id = R.string.verification_code))
+    SubTitle4(text = stringResource(id = R.string.verification_code))
 
     Spacer(modifier = Modifier.height(15.dp))
 
     MoizaTextField(value = verificationCode, onValueChange = { onVerificationCodeChanged(it) })
 
 }
+
 @Composable
 fun SignUpInputStudentSchoolEmail(
     userId: String,
@@ -172,7 +173,7 @@ fun SignUpInputStudentSchoolEmail(
     school: Schools?
 ) {
 
-    Body3(text = stringResource(id = R.string.school_email))
+    SubTitle4(text = stringResource(id = R.string.school_email))
 
     Spacer(modifier = Modifier.height(15.dp))
 
@@ -209,7 +210,7 @@ fun SignUpInputStudentSelectSchool(
     school: Schools?,
     onSchoolChanged: (Schools) -> Unit
 ) {
-    Body3(text = stringResource(id = R.string.select_school))
+    SubTitle4(text = stringResource(id = R.string.select_school))
 
     Spacer(modifier = Modifier.height(15.dp))
 
@@ -219,12 +220,13 @@ fun SignUpInputStudentSelectSchool(
         selectedSchool = school?.schoolName ?: ""
     )
 }
+
 @Composable
 fun SignUpInputStudentBirthDay(
     birthDay: Int?,
     onBirthDayChanged: (Int) -> Unit
 ) {
-    Body3(text = stringResource(id = R.string.yyyyddmm))
+    SubTitle4(text = stringResource(id = R.string.yyyyddmm))
 
     Spacer(modifier = Modifier.height(15.dp))
 
@@ -235,13 +237,14 @@ fun SignUpInputStudentBirthDay(
     )
 
 }
+
 @Composable
 fun SignUpInputStudentGraduateCheckBox(
     isGraduated: Boolean?,
     doOnGraduateStudentClick: (Boolean) -> Unit,
     doOnNotGraduateStudentClick: (Boolean) -> Unit
 ) {
-    Body3(text = stringResource(id = R.string.sortation))
+    SubTitle4(text = stringResource(id = R.string.sortation))
 
     Spacer(modifier = Modifier.height(15.dp))
 
@@ -269,7 +272,7 @@ fun SignUpInputStudentName(
     isMale: Boolean,
     onSexChanged: (Boolean) -> Unit
 ) {
-    Body3(text = stringResource(id = R.string.name))
+    SubTitle4(text = stringResource(id = R.string.name))
 
     Spacer(modifier = Modifier.height(15.dp))
 
@@ -303,7 +306,7 @@ fun SignUpInputStudentName(
             Body3(
                 text = stringResource(id = R.string.male), modifier = Modifier
                     .fillMaxSize()
-                    .wrapContentSize(Center)
+                    .wrapContentSize(Center), color = if (isMale) Color.White else Color.Black
             )
         }
 
@@ -325,7 +328,8 @@ fun SignUpInputStudentName(
             Body3(
                 text = stringResource(id = R.string.female), modifier = Modifier
                     .fillMaxSize()
-                    .wrapContentSize(Center)
+                    .wrapContentSize(Center),
+                color = if (isMale) Color.Black else Color.White
             )
         }
     }
