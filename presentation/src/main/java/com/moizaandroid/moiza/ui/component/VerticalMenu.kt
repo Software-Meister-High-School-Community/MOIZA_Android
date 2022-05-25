@@ -21,6 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.moizaandroid.moiza.R
+import com.moizaandroid.moiza.ui.register.Schools
 import com.moizaandroid.moiza.ui.theme.Body3
 import com.moizaandroid.moiza.ui.theme.Gray300
 import com.moizaandroid.moiza.ui.theme.Gray500
@@ -29,14 +30,16 @@ import com.moizaandroid.moiza.ui.theme.Orange
 @Composable
 fun MoizaVerticalMenus(
     modifier: Modifier = Modifier,
-    onMenuClicked: ((String) -> Unit)?,
-    menus: List<String>
+    onMenuClicked: ((Schools) -> Unit)?,
+    selectedSchool: String,
+    menus: List<Schools>
 ) {
     Column {
         for (element in menus) {
             MoizaVerticalMenu(
                 modifier = modifier.padding(bottom = 5.dp),
-                menu = element,
+                school = element,
+                selectedSchool = selectedSchool,
                 onMenuClicked = onMenuClicked
             )
         }
@@ -46,12 +49,12 @@ fun MoizaVerticalMenus(
 @Composable
 fun MoizaVerticalMenu(
     modifier: Modifier = Modifier,
-    menu: String,
-    onMenuClicked: ((String) -> Unit)?
+    school: Schools,
+    selectedSchool: String,
+    onMenuClicked: ((Schools) -> Unit)?
 ) {
-    var clicked by remember { mutableStateOf(false) }
-
-    if (clicked) {
+    val menu = school.schoolName
+    if (selectedSchool == menu) {
         Box(
             modifier = modifier
                 .fillMaxWidth()
@@ -63,9 +66,8 @@ fun MoizaVerticalMenu(
                     width = 1.dp
                 )
                 .clickable {
-                    clicked = !clicked
                     if (onMenuClicked != null) {
-                        onMenuClicked(menu)
+                        onMenuClicked(school)
                     }
                 }
         ) {
@@ -103,9 +105,8 @@ fun MoizaVerticalMenu(
                     width = 1.dp
                 )
                 .clickable {
-                    clicked = !clicked
                     if (onMenuClicked != null) {
-                        onMenuClicked(menu)
+                        onMenuClicked(school)
                     }
                 }
         ) {
@@ -126,7 +127,8 @@ fun MoizaVerticalMenu(
 @Composable
 fun PreviewMoizaVerticalMenu() {
     MoizaVerticalMenus(
-        menus = listOf("대덕소프트웨어마이스터고등학교", "광주소프트웨어마이스터고등학교", "대덕소프트웨어마이스터고등학교"),
-        onMenuClicked = { it }
+        menus = listOf(Schools.DSM, Schools.MIRIN),
+        onMenuClicked = { it },
+        selectedSchool = "null"
     )
 }
