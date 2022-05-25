@@ -1,7 +1,7 @@
 package com.moizaandroid.moiza.ui.register
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
@@ -16,7 +16,7 @@ import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +40,9 @@ class SignUpActivity : AppCompatActivity() {
 
 @OptIn(ExperimentalAnimationApi::class)
 fun NavGraphBuilder.authenticationGraph(navController: NavController, onFinish: () -> Unit) {
+    val animationOffset = 1500
+    val durationMillis = 150
+
     navigation(
         startDestination = NavGroup.SignUpStep.AGREED,
         route = NavGroup.SignUpStep.title
@@ -52,15 +55,15 @@ fun NavGraphBuilder.authenticationGraph(navController: NavController, onFinish: 
         }
         composable(route = NavGroup.SignUpStep.INPUT_STUDENT_INFO, enterTransition = {
             if (this.initialState.destination.route.equals(NavGroup.SignUpStep.AGREED)) slideInHorizontally(
-                initialOffsetX = { 1500 },
-                animationSpec = tween(250)
+                initialOffsetX = { animationOffset },
+                animationSpec = tween(durationMillis)
             )
-            else slideInHorizontally(initialOffsetX = { -1500 }, animationSpec = tween(250))
+            else slideInHorizontally(initialOffsetX = { -animationOffset }, animationSpec = tween(durationMillis))
 
         }, exitTransition = {
             if (this.targetState.destination.route.equals(NavGroup.SignUpStep.SET_SIGN_IN))
-                slideOutHorizontally(targetOffsetX = { -1500 }, animationSpec = tween(250))
-            else slideOutHorizontally(targetOffsetX = { 1500 }, animationSpec = tween(250))
+                slideOutHorizontally(targetOffsetX = { -animationOffset }, animationSpec = tween(durationMillis))
+            else slideOutHorizontally(targetOffsetX = { animationOffset }, animationSpec = tween(durationMillis))
         }) {
             SignUpInputStudentScreen(
                 toPrevious = { navController.popBackStack() },
@@ -70,8 +73,8 @@ fun NavGraphBuilder.authenticationGraph(navController: NavController, onFinish: 
 
         composable(route = NavGroup.SignUpStep.SET_SIGN_IN, exitTransition = {
             if (this.targetState.destination.route.equals(NavGroup.SignUpStep.INPUT_STUDENT_INFO))
-                slideOutHorizontally(targetOffsetX = { -1500 }, animationSpec = tween(250))
-            else slideOutHorizontally(targetOffsetX = { 1500 }, animationSpec = tween(250))
+                slideOutHorizontally(targetOffsetX = { -animationOffset }, animationSpec = tween(durationMillis))
+            else slideOutHorizontally(targetOffsetX = { animationOffset }, animationSpec = tween(durationMillis))
         }) {
             SignUpSetSign(
                 isBackBtnClick = { navController.popBackStack() }
