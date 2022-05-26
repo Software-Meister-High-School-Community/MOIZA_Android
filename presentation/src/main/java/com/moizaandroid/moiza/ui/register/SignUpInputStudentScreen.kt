@@ -228,8 +228,8 @@ fun SignUpInputStudentBirthDay(
     val mDatePickerDialog = DatePickerDialog(
         mContext,
         { _: DatePicker, mYear: Int, mMonth: Int, mDayOfMonth: Int ->
-            val mDate = "$mYear${mMonth+1}$mDayOfMonth"
-            onBirthDayChanged(mDate.toInt())
+            val month = String.format("%04d%02d%02d", mYear, mMonth+1, mDayOfMonth)
+            onBirthDayChanged(month.toInt())
         }, mYear, mMonth, mDay
     )
 
