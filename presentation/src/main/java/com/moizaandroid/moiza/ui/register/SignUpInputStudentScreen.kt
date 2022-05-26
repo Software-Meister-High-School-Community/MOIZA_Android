@@ -1,5 +1,7 @@
 package com.moizaandroid.moiza.ui.register
 
+import android.app.DatePickerDialog
+import android.widget.DatePicker
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,6 +12,7 @@ import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -20,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.component.*
 import com.moizaandroid.moiza.ui.theme.*
+import java.util.*
 
 @Composable
 fun SignUpInputStudentScreen(
@@ -126,27 +130,11 @@ fun SignUpInputStudentScreen(
 
             Spacer(Modifier.height(75.dp))
 
-            Button(
+            NextStepButton(
                 onClick = toNextStep,
-                modifier = Modifier
-                    .size(88.dp, 36.dp)
-                    .align(End),
-                shape = RoundedCornerShape(25.dp),
-                colors = ButtonDefaults.buttonColors(
-                    contentColor = Color.White,
-                    backgroundColor = Blue
-                )
-            ) {
-                Text(
-                    text = stringResource(id = R.string.next_step),
-                    style = TextStyle(
-                        fontFamily = roboto,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
-                        color = Color.White
-                    )
-                )
-            }
+                modifier = Modifier.align(End),
+                text = stringResource(id = R.string.next_step)
+            )
 
             Spacer(modifier = Modifier.height(50.dp))
         }
@@ -193,15 +181,11 @@ fun SignUpInputStudentSchoolEmail(
 
         Spacer(modifier = Modifier.weight(0.5f))
 
-        OutlinedButton(
-            onClick = { /*TODO*/ }, colors = ButtonDefaults.buttonColors(
-                backgroundColor = Gray200,
-                contentColor = Gray600
-            ),
+        GrayButton(
+            onClick = {},
+            text = "인증 요청",
             modifier = Modifier.fillMaxHeight()
-        ) {
-            Body3(text = stringResource(id = R.string.request_verity))
-        }
+        )
     }
 }
 
@@ -226,16 +210,37 @@ fun SignUpInputStudentBirthDay(
     birthDay: Int?,
     onBirthDayChanged: (Int) -> Unit
 ) {
+
+    val mContext = LocalContext.current
+
+    val mYear: Int
+    val mMonth: Int
+    val mDay: Int
+
+    val mCalendar = Calendar.getInstance()
+
+    mYear = mCalendar.get(Calendar.YEAR)
+    mMonth = mCalendar.get(Calendar.MONTH)
+    mDay = mCalendar.get(Calendar.DAY_OF_MONTH)
+
+    mCalendar.time = Date()
+
+    val mDatePickerDialog = DatePickerDialog(
+        mContext,
+        { _: DatePicker, mYear: Int, mMonth: Int, mDayOfMonth: Int ->
+            val mDate = "$mYear${mMonth+1}$mDayOfMonth"
+            onBirthDayChanged(mDate.toInt())
+        }, mYear, mMonth, mDay
+    )
+
     SubTitle4(text = stringResource(id = R.string.yyyyddmm))
 
     Spacer(modifier = Modifier.height(15.dp))
 
-    MoizaTextField(
-        value = birthDay?.toString() ?: "",
-        onValueChange = { onBirthDayChanged(it.toInt()) },
-        keyboardType = KeyboardType.Number
+    TextFieldButton(
+        onClick = { mDatePickerDialog.show() },
+        text = "${birthDay ?: ""}"
     )
-
 }
 
 @Composable
