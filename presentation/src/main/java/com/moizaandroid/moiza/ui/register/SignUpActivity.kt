@@ -15,6 +15,7 @@ import androidx.navigation.navigation
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.moizaandroid.moiza.utils.NavGroup
 
 class SignUpActivity : ComponentActivity() {
 
@@ -76,8 +77,9 @@ fun NavGraphBuilder.authenticationGraph(navController: NavController, onFinish: 
                 slideOutHorizontally(targetOffsetX = { -animationOffset }, animationSpec = tween(durationMillis))
             else slideOutHorizontally(targetOffsetX = { animationOffset }, animationSpec = tween(durationMillis))
         }) {
-            SignUpSetSign(
-                isBackBtnClick = { navController.popBackStack() }
+            SignUpSignInSettings(
+                toPrevious = { navController.popBackStack() },
+                finishSignUp = onFinish
             )
 
         }
