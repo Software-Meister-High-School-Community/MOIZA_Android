@@ -15,6 +15,7 @@ import androidx.navigation.navigation
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.moizaandroid.moiza.utils.NavGroup
 
 class SignUpActivity : ComponentActivity() {
 
