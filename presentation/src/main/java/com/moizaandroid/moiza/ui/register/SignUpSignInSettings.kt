@@ -109,6 +109,7 @@ fun SignUpSignInSettingsInputPassword(
     checkPassword: String,
     onCheckPasswordChanged: (String) -> Unit
 ) {
+
     Body3(text = stringResource(id = R.string.password))
 
     Spacer(modifier = Modifier.height(15.dp))
