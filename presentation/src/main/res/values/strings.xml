@@ -49,8 +49,10 @@
 
     <string name="input_close">내용 초기화</string>
 
+    <string name="password">비밀번호</string>
     <string name="password_visible">비밀번호 보기</string>
     <string name="password_invisible">비밀번호 숨기기</string>
+    <string name="password_check">비밀번호 확인</string>
 
     <string name="sortation">구분</string>
 
@@ -66,6 +68,12 @@
     <string name="verification_code">인증번호</string>
 
     <string name="next_step">다음 단계</string>
+
+    <string name="password_condition">8~16자 영문 대소문자, 숫자, 특수문자를 모두 조합하여 구성해주세요.</string>
+    <string name="error_check_password">비밀번호가 일치하지 않습니다. 다시 한번 입력해주세요.</string>
+    <string name="error_password_format">비밀번호 조건에 맞지 않습니다.</string>
+
+    <string name="finish_sign_up">가입 완료</string>
 
     <!--    <string name="front">Front-End</string>-->
     <!--    <string name="back">Back-End</string>-->
