@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,7 +38,9 @@ fun MoizaTextField(
     isPassword: Boolean = false,
     keyboardType: KeyboardType = KeyboardType.Text,
     imeAction: ImeAction = ImeAction.Default,
-    onClick: (() -> Unit)? = null
+    onClick: (() -> Unit)? = null,
+    hint: String? = null,
+    description: String? = null
 ) {
     val interactionSource = remember { MutableInteractionSource() }
 
@@ -89,7 +93,14 @@ fun MoizaTextField(
                         fontFamily = roboto,
                         fontWeight = FontWeight.Normal,
                         color = Gray500
-                    )
+                    ),
+                    decorationBox = { innerTextField ->
+                        if (value.isEmpty() && hint != null) {
+                            Body3(text = hint, color = Gray400)
+                        }
+
+                        innerTextField()
+                    },
                 )
                 if (isPassword) {
                     Image(
@@ -114,16 +125,21 @@ fun MoizaTextField(
                 modifier = Modifier.padding(start = 3.dp, top = 6.dp)
             )
         }
+
+        if (description != null) {
+            Lore1(text = description, modifier = Modifier.padding(start = 3.dp, top = 6.dp))
+        }
     }
 
 }
 
 @Preview
 @Composable
-fun DefaultPreview() {
+fun PreviewMoizaTextField() {
     var value by remember { mutableStateOf(String()) }
     var value2 by remember { mutableStateOf(String()) }
     var value3 by remember { mutableStateOf(String()) }
+    var value4 by remember { mutableStateOf(String()) }
 
     Column(
         modifier = Modifier.padding(horizontal = 20.dp)
@@ -150,6 +166,16 @@ fun DefaultPreview() {
             value = value3,
             onValueChange = { value3 = it },
             error = "특수문자는 사용할 수 없습니다!"
+        )
+
+        Spacer(modifier = Modifier.height(15.dp))
+
+        // description text field
+        MoizaTextField(
+            value = value4,
+            onValueChange = { value4 = it },
+            description = "비밀번호는 4자리 이상 입력해주세요.",
+            hint = "비밀번호"
         )
     }
 }
