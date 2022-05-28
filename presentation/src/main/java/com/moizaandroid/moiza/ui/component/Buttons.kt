@@ -11,11 +11,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.theme.*
 
 @Composable
@@ -75,7 +78,6 @@ fun GrayButton(
             contentColor = Gray600,
             disabledContentColor = Gray300,
             disabledBackgroundColor = Color(0xFFF8F8F8)
-
         )
     ) {
         Body3(text = text)
@@ -146,12 +148,30 @@ fun TextFieldButton(
 )
 @Composable
 fun PreviewAgreedButton() {
-    Column() {
+    Column {
         AgreedButton("인증하기")
 
         Spacer(modifier = Modifier.height(20.dp))
 
         YellowButton(text = "로그인", satisfy = true, onClick = {})
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        GrayButton(
+            onClick = {},
+            text = "아이디 중복확인"
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        NextStepButton(
+            onClick = {},
+            text = "다음 단계"
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        TextFieldButton(modifier = Modifier.fillMaxWidth(), text = "2005", onClick = {})
     }
 
 }
