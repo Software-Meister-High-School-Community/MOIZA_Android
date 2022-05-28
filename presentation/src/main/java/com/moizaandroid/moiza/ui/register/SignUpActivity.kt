@@ -15,7 +15,7 @@ import androidx.navigation.navigation
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
-import com.moizaandroid.moiza.utils.NavGroup
+import com.moizaandroid.moiza.utils.NavDestination
 
 class SignUpActivity : ComponentActivity() {
 
@@ -32,7 +32,7 @@ class SignUpActivity : ComponentActivity() {
         val navController: NavHostController = rememberAnimatedNavController()
         AnimatedNavHost(
             navController = navController,
-            startDestination = NavGroup.SignUpStep.title
+            startDestination = NavDestination.SignUpStep.title
         ) {
             authenticationGraph(navController = navController, onFinish = onFinish)
         }
@@ -45,35 +45,35 @@ fun NavGraphBuilder.authenticationGraph(navController: NavController, onFinish: 
     val durationMillis = 150
 
     navigation(
-        startDestination = NavGroup.SignUpStep.AGREED,
-        route = NavGroup.SignUpStep.title
+        startDestination = NavDestination.SignUpStep.AGREED,
+        route = NavDestination.SignUpStep.title
     ) {
-        composable(route = NavGroup.SignUpStep.AGREED, enterTransition = null) {
+        composable(route = NavDestination.SignUpStep.AGREED, enterTransition = null) {
             SignUpAgreedScreen(
                 toPrevious = onFinish,
-                toNextStep = { navController.navigate(route = NavGroup.SignUpStep.INPUT_STUDENT_INFO) }
+                toNextStep = { navController.navigate(route = NavDestination.SignUpStep.INPUT_STUDENT_INFO) }
             )
         }
-        composable(route = NavGroup.SignUpStep.INPUT_STUDENT_INFO, enterTransition = {
-            if (this.initialState.destination.route.equals(NavGroup.SignUpStep.AGREED)) slideInHorizontally(
+        composable(route = NavDestination.SignUpStep.INPUT_STUDENT_INFO, enterTransition = {
+            if (this.initialState.destination.route.equals(NavDestination.SignUpStep.AGREED)) slideInHorizontally(
                 initialOffsetX = { animationOffset },
                 animationSpec = tween(durationMillis)
             )
             else slideInHorizontally(initialOffsetX = { -animationOffset }, animationSpec = tween(durationMillis))
 
         }, exitTransition = {
-            if (this.targetState.destination.route.equals(NavGroup.SignUpStep.SET_SIGN_IN))
+            if (this.targetState.destination.route.equals(NavDestination.SignUpStep.SET_SIGN_IN))
                 slideOutHorizontally(targetOffsetX = { -animationOffset }, animationSpec = tween(durationMillis))
             else slideOutHorizontally(targetOffsetX = { animationOffset }, animationSpec = tween(durationMillis))
         }) {
             SignUpInputStudentScreen(
                 toPrevious = { navController.popBackStack() },
-                toNextStep = { navController.navigate(route = NavGroup.SignUpStep.SET_SIGN_IN) }
+                toNextStep = { navController.navigate(route = NavDestination.SignUpStep.SET_SIGN_IN) }
             )
         }
 
-        composable(route = NavGroup.SignUpStep.SET_SIGN_IN, exitTransition = {
-            if (this.targetState.destination.route.equals(NavGroup.SignUpStep.INPUT_STUDENT_INFO))
+        composable(route = NavDestination.SignUpStep.SET_SIGN_IN, exitTransition = {
+            if (this.targetState.destination.route.equals(NavDestination.SignUpStep.INPUT_STUDENT_INFO))
                 slideOutHorizontally(targetOffsetX = { -animationOffset }, animationSpec = tween(durationMillis))
             else slideOutHorizontally(targetOffsetX = { animationOffset }, animationSpec = tween(durationMillis))
         }) {
