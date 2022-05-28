@@ -6,22 +6,16 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.Center
-import androidx.compose.ui.Alignment.Companion.CenterEnd
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.register.Schools
+import com.moizaandroid.moiza.ui.register.School
 import com.moizaandroid.moiza.ui.theme.Body3
 import com.moizaandroid.moiza.ui.theme.Gray300
 import com.moizaandroid.moiza.ui.theme.Gray500
@@ -30,9 +24,9 @@ import com.moizaandroid.moiza.ui.theme.Orange
 @Composable
 fun MoizaVerticalMenus(
     modifier: Modifier = Modifier,
-    onMenuClicked: ((Schools) -> Unit)?,
+    onMenuClicked: ((School) -> Unit)?,
     selectedSchool: String,
-    menus: List<Schools>
+    menus: List<School>
 ) {
     Column {
         for (element in menus) {
@@ -49,9 +43,9 @@ fun MoizaVerticalMenus(
 @Composable
 fun MoizaVerticalMenu(
     modifier: Modifier = Modifier,
-    school: Schools,
+    school: School,
     selectedSchool: String,
-    onMenuClicked: ((Schools) -> Unit)?
+    onMenuClicked: ((School) -> Unit)?
 ) {
     val menu = school.schoolName
     if (selectedSchool == menu) {
@@ -127,7 +121,7 @@ fun MoizaVerticalMenu(
 @Composable
 fun PreviewMoizaVerticalMenu() {
     MoizaVerticalMenus(
-        menus = listOf(Schools.DSM, Schools.MIRIN),
+        menus = listOf(School.DSM, School.MIRIN),
         onMenuClicked = { it },
         selectedSchool = "null"
     )
