@@ -11,6 +11,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.moizaandroid.moiza.R
+import com.moizaandroid.moiza.extensions.isPasswordFormat
 import com.moizaandroid.moiza.ui.component.*
 import com.moizaandroid.moiza.ui.theme.Body3
 import com.moizaandroid.moiza.ui.theme.Lore1
@@ -108,9 +109,6 @@ fun SignUpSignInSettingsInputPassword(
     checkPassword: String,
     onCheckPasswordChanged: (String) -> Unit
 ) {
-    fun isPasswordFormat(password: String): Boolean {
-        return password.matches("^(?=.*[a-zA-Z0-9])(?=.*[a-zA-Z!@#\$%^&*])(?=.*[0-9!@#\$%^&*]).{6,15}\$".toRegex())
-    }
 
     Body3(text = stringResource(id = R.string.password))
 

@@ -5,10 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.OutlinedButton
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -69,16 +66,18 @@ fun YellowButton(
 fun GrayButton(
     onClick: () -> Unit,
     text: String,
-    modifier: Modifier = Modifier
-
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true
 ) {
     OutlinedButton(
         modifier = modifier,
         onClick = onClick,
+        enabled = enabled,
         colors = ButtonDefaults.buttonColors(
             backgroundColor = Gray200,
             contentColor = Gray600,
-            disabledContentColor = Gray300
+            disabledContentColor = Gray300,
+            disabledBackgroundColor = Color(0xFFF8F8F8)
         )
     ) {
         Body3(text = text)
@@ -89,17 +88,21 @@ fun GrayButton(
 fun NextStepButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    text: String
+    text: String,
+    buttonColor: ButtonColors = ButtonDefaults.buttonColors(
+        contentColor = Color.White,
+        backgroundColor = Blue,
+        disabledBackgroundColor = HalfBlue,
+        disabledContentColor = Gray300
+    ),
+    enabled: Boolean = true
 ) {
     Button(
         onClick = onClick,
-        modifier = modifier
-            .size(88.dp, 36.dp),
+        modifier = modifier.height(36.dp).padding(start = 16.dp, end = 16.dp),
         shape = RoundedCornerShape(25.dp),
-        colors = ButtonDefaults.buttonColors(
-            contentColor = Color.White,
-            backgroundColor = Blue
-        )
+        colors = buttonColor,
+        enabled = enabled
     ) {
         Text(
             text = text,
