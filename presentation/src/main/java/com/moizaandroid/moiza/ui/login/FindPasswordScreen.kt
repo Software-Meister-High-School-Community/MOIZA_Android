@@ -140,8 +140,8 @@ fun FindPasswordResetPassword(
             Spacer(modifier = Modifier.height(40.dp))
 
             MoizaTextField(
-                value = password ?: "",
-                onValueChange = { password = it },
+                value = checkPassword ?: "",
+                onValueChange = { checkPassword = it },
                 isPassword = true,
                 error = if (password != checkPassword) stringResource(
                     id = R.string.error_password_format

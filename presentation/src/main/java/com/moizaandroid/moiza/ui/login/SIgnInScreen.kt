@@ -10,6 +10,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -34,7 +35,7 @@ fun SignInScreen(
     ) {
         var loginBtnState by rememberSaveable { mutableStateOf(false) }
 
-        AppBar(text = "로그인", onBackButtonClick = onBackButtonClick)
+        AppBar(text = stringResource(id = R.string.sign_in), onBackButtonClick = onBackButtonClick)
         Spacer(modifier = Modifier.size(56.dp))
 
         SignInScreenLogo()
@@ -50,7 +51,7 @@ fun SignInScreen(
         Spacer(modifier = Modifier.size(45.dp))
 
         YellowButton(
-            text = "로그인",
+            text = stringResource(id = R.string.sign_in),
             satisfy = loginBtnState,
             onClick = onLoginButtonClick,
             modifier = Modifier.padding(horizontal = 20.dp)
@@ -79,7 +80,7 @@ fun SignInScreenBottomMenu(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Body4(text = "회원가입", color = Gray400, modifier = Modifier.clickable { onSignUpClick() })
+        Body4(text = stringResource(id = R.string.sign_up), color = Gray400, modifier = Modifier.clickable { onSignUpClick() })
 
         Spacer(modifier = Modifier.size(16.dp))
 
@@ -92,7 +93,7 @@ fun SignInScreenBottomMenu(
 
         Spacer(modifier = Modifier.size(16.dp))
 
-        Body4(text = "아이디 찾기", color = Gray400, modifier = Modifier.clickable { onFindIdClick() })
+        Body4(text = stringResource(id = R.string.find_id), color = Gray400, modifier = Modifier.clickable { onFindIdClick() })
 
         Spacer(modifier = Modifier.size(16.dp))
 
@@ -106,7 +107,7 @@ fun SignInScreenBottomMenu(
         Spacer(modifier = Modifier.size(16.dp))
 
         Body4(
-            text = "비밀번호 찾기",
+            text = stringResource(id = R.string.find_password),
             color = Gray400,
             modifier = Modifier.clickable { onFindPasswordClick() })
     }
@@ -118,12 +119,12 @@ fun SignInScreenCheckBox() {
         Spacer(modifier = Modifier.size(20.dp))
 
         var autoLoginState by remember { mutableStateOf(false) }
-        MoizaCheckBox(text = "자동 로그인", checked = autoLoginState, onCheckedChange = { autoLoginState = it })
+        MoizaCheckBox(text = stringResource(id = R.string.auto_sign_in), checked = autoLoginState, onCheckedChange = { autoLoginState = it })
 
         Spacer(modifier = Modifier.size(30.dp))
 
         var saveAccountState by remember { mutableStateOf(false) }
-        MoizaCheckBox(text = "아이디 저장", checked = saveAccountState, onCheckedChange = { saveAccountState = it })
+        MoizaCheckBox(text = stringResource(id = R.string.save_id), checked = saveAccountState, onCheckedChange = { saveAccountState = it })
     }
 }
 
@@ -136,7 +137,7 @@ fun SignInScreenLogo() {
     ) {
         Image(
             painter = painterResource(id = R.drawable.ic_moiza_logo),
-            contentDescription = "logo",
+            contentDescription = null,
             modifier = Modifier.size(40.dp, 29.dp)
         )
 
@@ -144,7 +145,7 @@ fun SignInScreenLogo() {
 
         Image(
             painter = painterResource(id = R.drawable.ic_moiza_text),
-            contentDescription = "moiza text"
+            contentDescription = null
         )
     }
 }
@@ -154,8 +155,8 @@ fun SignInScreenEditText(
     buttonOn: () -> Unit,
     buttonOff: () -> Unit
 ) {
-    var id by remember { mutableStateOf("") }
-    var pw by remember { mutableStateOf("") }
+    var id by remember { mutableStateOf(String()) }
+    var pw by remember { mutableStateOf(String()) }
 
     if (id.length >= 6 && pw.length >= 6) buttonOn()
     else buttonOff()

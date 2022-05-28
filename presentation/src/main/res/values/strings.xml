@@ -16,6 +16,11 @@
     <string name="sign_in">로그인</string>
     <string name="sign_up">회원가입</string>
 
+
+    <!--    checkbox-->
+    <string name="auto_sign_in">자동 로그인</string>
+    <string name="save_id">아이디 저장</string>
+
     <string name="popular_content">인기 게시물</string>
 
     <string name="logo">로고</string>
