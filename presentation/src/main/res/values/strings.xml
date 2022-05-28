@@ -54,6 +54,8 @@
     <string name="password_invisible">비밀번호 숨기기</string>
     <string name="password_check">비밀번호 확인</string>
 
+    <string name="to_sign_in">로그인 하기</string>
+
     <string name="sortation">구분</string>
 
     <string name="graduate">졸업생</string>
@@ -73,7 +75,15 @@
     <string name="error_check_password">비밀번호가 일치하지 않습니다. 다시 한번 입력해주세요.</string>
     <string name="error_password_format">비밀번호 조건에 맞지 않습니다.</string>
 
+
+    <string name="find_id">아이디 찾기</string>
+    <string name="find_password">비밀번호 찾기</string>
+    <string name="success_find_password">비밀번호 재등록이 완료되었습니다.</string>
+
+
     <string name="finish_sign_up">가입 완료</string>
+
+    <string name="input_id">아이디를 입력해주세요.</string>
 
     <!--    <string name="front">Front-End</string>-->
     <!--    <string name="back">Back-End</string>-->
