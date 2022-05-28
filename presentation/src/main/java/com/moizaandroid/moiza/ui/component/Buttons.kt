@@ -55,7 +55,11 @@ fun YellowButton(
             .fillMaxWidth()
             .clip(RoundedCornerShape(5.dp))
             .background(if (satisfy) Orange else HalfOrange)
-            .clickable(onClick = onClick),
+            .clickable(
+                onClick = {
+                    if(satisfy) onClick()
+                }
+            ),
         contentAlignment = Alignment.Center
     ) {
         Text(text = text, style = body3)
@@ -99,7 +103,9 @@ fun NextStepButton(
 ) {
     Button(
         onClick = onClick,
-        modifier = modifier.height(36.dp).padding(start = 16.dp, end = 16.dp),
+        modifier = modifier
+            .height(36.dp)
+            .padding(start = 16.dp, end = 16.dp),
         shape = RoundedCornerShape(25.dp),
         colors = buttonColor,
         enabled = enabled
