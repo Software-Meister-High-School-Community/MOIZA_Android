@@ -81,24 +81,18 @@
     <string name="error_password_format">비밀번호 조건에 맞지 않습니다.</string>
 
 
+    <string name="id">아이디</string>
     <string name="find_id">아이디 찾기</string>
     <string name="find_password">비밀번호 찾기</string>
+    <string name="check_id_overlap">아이디 중복확인</string>
+    <string name="reset_password">비밀번호 재등록</string>
     <string name="success_find_password">비밀번호 재등록이 완료되었습니다.</string>
-
 
     <string name="finish_sign_up">가입 완료</string>
 
     <string name="input_id">아이디를 입력해주세요.</string>
-
-    <!--    <string name="front">Front-End</string>-->
-    <!--    <string name="back">Back-End</string>-->
-    <!--    <string name="iOS">iOS</string>-->
-    <!--    <string name="android">Android</string>-->
-    <!--    <string name="design">Design</string>-->
-    <!--    <string name="game">Game</string>-->
-    <!--    <string name="security">Security</string>-->
-    <!--    <string name="embedded">Embedded</string>-->
-    <!--    <string name="ai">AI</string>-->
+    <string name="verification_email">이메일로 인증</string>
+    <string name="send_verification_code">인증번호 청송</string>
 
     <!--    school-->
     <string name="dsm">대덕소프트웨어마이스터고등학교</string>
@@ -106,4 +100,8 @@
     <string name="gsm">광주소프트웨어마이스터고등학교</string>
     <string name="bsm">부산소프트웨어마이스터고등학교</string>
     <string name="mirim">미림여가정보과학고등학교</string>
+    
+    <!--    agreed-->
+    <string name="agreed_all">전체 약관 동의</string>
+    <string name=""
 </resources>

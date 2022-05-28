@@ -124,7 +124,7 @@ fun FindPasswordResetPassword(
         ) {
             Spacer(modifier = Modifier.height(84.dp))
 
-            SubTitle1(text = "비밀번호 재등록")
+            SubTitle1(text = stringResource(id = R.string.reset_password))
 
             Spacer(modifier = Modifier.height(70.dp))
 
