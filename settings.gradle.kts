@@ -17,3 +17,7 @@ include (":presentation")
 
 include(":domain")
 include(":data")
+include(":local")
+include(":remote")
+include(":di")
+include(":moiza-design")
