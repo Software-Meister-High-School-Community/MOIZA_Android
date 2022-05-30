@@ -92,11 +92,11 @@ fun SignUpSignInSettingsInputUserId(
     Row(
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Body3(text = "아이디")
+        Body3(text = stringResource(id = R.string.id))
 
         Spacer(modifier = Modifier.weight(1f))
 
-        GrayButton(onClick = { /*TODO*/ }, text = "아이디 중복확인")
+        GrayButton(onClick = { /*TODO*/ }, text = stringResource(id = R.string.check_id_overlap))
     }
 
     MoizaTextField(value = userId ?: "", onValueChange = onUserIdChanged)

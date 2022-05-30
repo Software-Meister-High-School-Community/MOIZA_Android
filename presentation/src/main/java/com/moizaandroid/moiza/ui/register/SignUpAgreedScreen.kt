@@ -82,7 +82,7 @@ fun BottomAgreed(modifier: Modifier = Modifier, toNextStep: () -> Unit) {
         var agree4 by remember { mutableStateOf(false) }
 
         MoizaCheckBox(
-            text = "전체 약관 동의",
+            text = stringResource(id = R.string.agreed_all),
             checked = (agree1 && agree2 && agree3 && agree4),
             modifier = Modifier.padding(vertical = 22.dp),
             backgroundColor = Gray200,

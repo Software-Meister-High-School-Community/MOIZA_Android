@@ -62,11 +62,11 @@ fun NavGraphBuilder.authenticationGraph(
     ) {
         composable(route = NavDestination.SignInStep.SIGN_IN, enterTransition = null) {
             SignInScreen(
-                onBackButtonClick = { onFinish() },
-                onLoginButtonClick = { /*TODO*/ },
-                onSignUpClick = { onSignUpClick() },
-                onFindIdClick = { navController.navigate(route = NavDestination.SignInStep.FIND_USER_ID_INPUT_EMAIL) },
-                onFindPasswordClick = { navController.navigate(route = NavDestination.SignInStep.FIND_PASSWORD_INPUT_ID) }
+                toPrevious = { onFinish() },
+                doSignIn = { /*TODO*/ },
+                toSignUp = { onSignUpClick() },
+                toFindId = { navController.navigate(route = NavDestination.SignInStep.FIND_USER_ID_INPUT_EMAIL) },
+                toFindPassword = { navController.navigate(route = NavDestination.SignInStep.FIND_PASSWORD_INPUT_ID) }
             )
         }
 

@@ -9,8 +9,10 @@ import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.component.AppBar
 import com.moizaandroid.moiza.ui.component.GrayButton
 import com.moizaandroid.moiza.ui.component.MoizaTextField
@@ -27,7 +29,7 @@ fun FindUserIdEmailScreen(
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        AppBar(text = "아이디 찾기") {
+        AppBar(text = stringResource(id = R.string.find_id)) {
             toPrevious()
         }
 
@@ -36,7 +38,7 @@ fun FindUserIdEmailScreen(
         ) {
             Spacer(modifier = Modifier.height(36.dp))
 
-            SubTitle3(text = "이메일로 인증")
+            SubTitle3(text = stringResource(id = R.string.verification_email))
 
             Spacer(modifier = Modifier.height(30.dp))
 
@@ -46,7 +48,7 @@ fun FindUserIdEmailScreen(
 
             NextStepButton(
                 onClick = { toNextStep() },
-                text = "다음 단계",
+                text = stringResource(id = R.string.next_step),
                 modifier = Modifier.align(End),
                 enabled = true
             )
@@ -60,12 +62,11 @@ fun FindUserIdVerificationCode(
     toNextStep: () -> Unit
 ) {
     var verificationCode by remember { mutableStateOf<String?>(null) }
-    val enabledNextStep by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        AppBar(text = "아이디 찾기") {
+        AppBar(text = stringResource(id = R.string.find_id)) {
             toPrevious()
         }
 
@@ -74,7 +75,7 @@ fun FindUserIdVerificationCode(
         ) {
             Spacer(modifier = Modifier.height(36.dp))
 
-            SubTitle3(text = "이메일로 인증")
+            SubTitle3(text = stringResource(id = R.string.verification_email))
 
             Spacer(modifier = Modifier.height(30.dp))
 
@@ -89,7 +90,7 @@ fun FindUserIdVerificationCode(
 
                 GrayButton(
                     onClick = { /*TODO*/ },
-                    text = "인증번호 발송",
+                    text = stringResource(id = R.string.send_verification_code),
                     enabled = !verificationCode.isNullOrEmpty(),
                     modifier = Modifier
                         .padding(start = 7.dp)
@@ -101,9 +102,9 @@ fun FindUserIdVerificationCode(
 
             NextStepButton(
                 onClick = { toNextStep() },
-                text = "다음 단계",
+                text = stringResource(id = R.string.next_step),
                 modifier = Modifier.align(End),
-                enabled = true // enabledNextStep
+                enabled = true // TODO("enabledNextStep")
             )
         }
     }
@@ -118,7 +119,7 @@ fun FindUserIdCheck(
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        AppBar(text = "아이디 찾기") {
+        AppBar(text = stringResource(id = R.string.find_id)) {
             toPrevious()
         }
 
@@ -153,7 +154,7 @@ fun FindUserIdCheck(
         ) {
             NextStepButton(
                 onClick = { toFindPassword() },
-                text = "비밀번호 찾기",
+                text = stringResource(id = R.string.find_password),
                 buttonColor = ButtonDefaults.buttonColors(
                     contentColor = Color.White,
                     backgroundColor = Orange,
@@ -162,7 +163,7 @@ fun FindUserIdCheck(
 
             Spacer(modifier = Modifier.width(20.dp))
 
-            NextStepButton(onClick = { toSignIn() }, text = "로그인 하기")
+            NextStepButton(onClick = { toSignIn() }, text = stringResource(id = R.string.to_sign_in))
         }
 
     }

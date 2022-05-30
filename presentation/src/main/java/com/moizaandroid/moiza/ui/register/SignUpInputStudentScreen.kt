@@ -5,10 +5,6 @@ import android.widget.DatePicker
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.OutlinedButton
-import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
@@ -17,12 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.ui.component.*
 import com.moizaandroid.moiza.ui.theme.*
@@ -43,7 +35,7 @@ fun SignUpInputStudentScreen(
 
     var birthDay by remember { mutableStateOf<Int?>(null) }
 
-    var school by remember { mutableStateOf<Schools?>(null) }
+    var school by remember { mutableStateOf<School?>(null) }
 
     var userId by remember { mutableStateOf(String()) }
 
@@ -161,7 +153,7 @@ fun SignUpInputStudentVerificationCode(
 fun SignUpInputStudentSchoolEmail(
     userId: String,
     onUserIdChanged: (String) -> Unit,
-    school: Schools?
+    school: School?
 ) {
 
     SubTitle4(text = stringResource(id = R.string.school_email))
@@ -186,7 +178,7 @@ fun SignUpInputStudentSchoolEmail(
 
         GrayButton(
             onClick = {},
-            text = "인증 요청",
+            text = stringResource(id = R.string.request_verity),
             modifier = Modifier.fillMaxHeight()
         )
     }
@@ -194,8 +186,8 @@ fun SignUpInputStudentSchoolEmail(
 
 @Composable
 fun SignUpInputStudentSelectSchool(
-    school: Schools?,
-    onSchoolChanged: (Schools) -> Unit
+    school: School?,
+    onSchoolChanged: (School) -> Unit
 ) {
     SubTitle4(text = stringResource(id = R.string.select_school))
 
@@ -203,7 +195,7 @@ fun SignUpInputStudentSelectSchool(
 
     MoizaVerticalMenus(
         onMenuClicked = { onSchoolChanged(it) },
-        menus = Schools.values().toList(),
+        menus = School.values().toList(),
         selectedSchool = school?.schoolName ?: ""
     )
 }
