@@ -16,6 +16,7 @@ import androidx.navigation.navigation
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.moizaandroid.moiza.ui.main.MainActivity
 import com.moizaandroid.moiza.ui.register.SignUpActivity
 import com.moizaandroid.moiza.utils.NavDestination
 
@@ -25,14 +26,15 @@ class SignInActivity : ComponentActivity() {
         setContent {
             SignInScreen(
                 onFinish = { finish() },
-                onSignUpClick = { startActivity(Intent(this, SignUpActivity::class.java)) }
+                onSignUpClick = { startActivity(Intent(this, SignUpActivity::class.java)) },
+                doSignIn = { startActivity(Intent(this, MainActivity::class.java)) }
             )
         }
     }
 
     @OptIn(ExperimentalAnimationApi::class)
     @Composable
-    fun SignInScreen(onFinish: () -> Unit, onSignUpClick: () -> Unit) {
+    fun SignInScreen(onFinish: () -> Unit, onSignUpClick: () -> Unit, doSignIn: () -> Unit) {
         val navController: NavHostController = rememberAnimatedNavController()
         AnimatedNavHost(
             navController = navController,
@@ -41,7 +43,8 @@ class SignInActivity : ComponentActivity() {
             authenticationGraph(
                 navController = navController,
                 onFinish = onFinish,
-                onSignUpClick = onSignUpClick
+                onSignUpClick = onSignUpClick,
+                doSignIn = doSignIn
             )
         }
     }
@@ -51,7 +54,8 @@ class SignInActivity : ComponentActivity() {
 fun NavGraphBuilder.authenticationGraph(
     navController: NavController,
     onFinish: () -> Unit,
-    onSignUpClick: () -> Unit
+    onSignUpClick: () -> Unit,
+    doSignIn: () -> Unit
 ) {
     val animationOffset = 1500
     val durationMillis = 250
@@ -63,7 +67,7 @@ fun NavGraphBuilder.authenticationGraph(
         composable(route = NavDestination.SignInStep.SIGN_IN, enterTransition = null) {
             SignInScreen(
                 toPrevious = { onFinish() },
-                doSignIn = { /*TODO*/ },
+                doSignIn = doSignIn,
                 toSignUp = { onSignUpClick() },
                 toFindId = { navController.navigate(route = NavDestination.SignInStep.FIND_USER_ID_INPUT_EMAIL) },
                 toFindPassword = { navController.navigate(route = NavDestination.SignInStep.FIND_PASSWORD_INPUT_ID) }
