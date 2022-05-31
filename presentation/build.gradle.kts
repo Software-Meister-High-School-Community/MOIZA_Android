@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk = Versions.COMPILE_SDK_VERSION
+    compileSdk = ProjectProperties.COMPILE_SDK_VERSION
 
     defaultConfig {
-        applicationId = "com.moizaandroid.moiza"
-        minSdk = Versions.MIN_SDK_VERSION
-        targetSdk = Versions.TARGET_SDK_VERSION
+        applicationId = ProjectProperties.APPLICATION_ID
+        minSdk = ProjectProperties.MIN_SDK_VERSION
+        targetSdk = ProjectProperties.TARGET_SDK_VERSION
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -32,11 +32,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = Versions.JAVA_VERSION
-        targetCompatibility = Versions.JAVA_VERSION
+        sourceCompatibility = ProjectProperties.JAVA_VERSION
+        targetCompatibility = ProjectProperties.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = Versions.JAVA_VERSION.toString()
+        jvmTarget = ProjectProperties.JAVA_VERSION.toString()
     }
     buildFeatures {
         dataBinding = true
@@ -44,7 +44,7 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion = Versions.COMPOSE
-        kotlinCompilerVersion = Versions.KOTLIN_VERSION
+        kotlinCompilerVersion = ProjectProperties.KOTLIN_VERSION
     }
     packagingOptions {
         resources {
@@ -57,15 +57,16 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":data"))
 
-    implementation(Dependency.AndroidX.CORE_KTX)
-    implementation(Dependency.AndroidX.APP_COMPAT)
-    implementation(Dependency.AndroidX.CORE_KTX)
-    implementation(Dependency.AndroidX.FRAGMENT_KTX)
-    implementation(Dependency.AndroidX.CONSTRAINT_LAYOUT)
-    implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL_KTX)
+    implementation(Dependency.Ui.CORE_KTX)
+    implementation(Dependency.Ui.APP_COMPAT)
+    implementation(Dependency.Ui.CORE_KTX)
+    implementation(Dependency.Ui.FRAGMENT_KTX)
+    implementation(Dependency.Ui.CONSTRAINT_LAYOUT)
 
-    implementation(Dependency.AndroidX.ROOM_KTX)
-    kapt(Dependency.AndroidX.ROOM_COMPILER)
+    implementation(Dependency.LifeCycle.LIFECYCLE_VIEWMODEL_KTX)
+
+    implementation(Dependency.Room.ROOM_KTX)
+    kapt(Dependency.Room.ROOM_COMPILER)
 
     implementation(Dependency.Kotlin.COROUTINES_CORE)
     implementation(Dependency.Kotlin.COROUTINES_ANDROID)

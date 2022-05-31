@@ -1,20 +1,20 @@
 object Dependency {
 
     object GradlePlugin {
-        const val GRADLE_ANDROID = "com.android.tools.build:gradle:${Versions.GRADLE_ANDROID}"
-        const val GRADLE_KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.GRADLE_KOTLIN}"
+        const val GRADLE_ANDROID = "com.android.tools.build:gradle:${ProjectProperties.GRADLE_ANDROID}"
+        const val GRADLE_KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${ProjectProperties.GRADLE_KOTLIN}"
         const val GRADLE_HILT = "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}"
     }
 
     object Kotlin {
-        const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KOTLIN_VERSION}"
+        const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${ProjectProperties.KOTLIN_VERSION}"
         const val COROUTINES_CORE =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.KOTLINX_COROUTINES}"
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${ProjectProperties.KOTLINX_COROUTINES}"
         const val COROUTINES_ANDROID =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.KOTLINX_COROUTINES}"
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${ProjectProperties.KOTLINX_COROUTINES}"
     }
 
-    object AndroidX {
+    object Ui {
         const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
 
         const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
@@ -22,12 +22,16 @@ object Dependency {
 
         const val ACTIVITY_KTX = "androidx.activity:activity-ktx:${Versions.ACTIVITY_KTX}"
         const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.FRAGMENT_KTX}"
-
+    }
+    
+    object LifeCycle {
         const val LIFECYCLE_VIEWMODEL_KTX =
             "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_KTX}"
         const val LIFECYCLE_LIVEDATA_KTX =
             "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.LIFECYCLE_KTX}"
+    }
 
+    object Room {
         const val ROOM_RUNTIME = "androidx.room:room-runtime:${Versions.ROOM}"
         const val ROOM_KTX = "androidx.room:room-ktx:${Versions.ROOM}"
         const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"
