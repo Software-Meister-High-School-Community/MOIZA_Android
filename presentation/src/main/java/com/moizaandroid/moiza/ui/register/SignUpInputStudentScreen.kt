@@ -15,9 +15,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.moiza_design.component.*
+import com.moiza_design.theme.*
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.component.*
-import com.moizaandroid.moiza.ui.theme.*
 import java.util.*
 
 @Composable

@@ -55,8 +55,6 @@
     <string name="input_close">내용 초기화</string>
 
     <string name="password">비밀번호</string>
-    <string name="password_visible">비밀번호 보기</string>
-    <string name="password_invisible">비밀번호 숨기기</string>
     <string name="password_check">비밀번호 확인</string>
 
     <string name="to_sign_in">로그인 하기</string>

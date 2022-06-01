@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.di
+package com.moizaandroid.moiza
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -14,12 +14,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.moiza_design.theme.*
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.component.Agreed
-import com.moizaandroid.moiza.ui.component.AppBar
-import com.moizaandroid.moiza.ui.component.MoizaCheckBox
-import com.moizaandroid.moiza.ui.component.StepsProgressBar
-import com.moizaandroid.moiza.ui.theme.*
+import com.moiza_design.component.Agreed
+import com.moiza_design.component.AppBar
+import com.moiza_design.component.MoizaCheckBox
+import com.moiza_design.component.StepsProgressBar
 
 @Composable
 fun SignUpAgreedScreen(

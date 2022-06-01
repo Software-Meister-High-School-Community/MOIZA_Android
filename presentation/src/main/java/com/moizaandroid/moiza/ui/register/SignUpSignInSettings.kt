@@ -10,12 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.moiza_design.component.*
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.extensions.isPasswordFormat
-import com.moizaandroid.moiza.ui.component.*
-import com.moizaandroid.moiza.ui.theme.Body3
-import com.moizaandroid.moiza.ui.theme.Lore1
-import com.moizaandroid.moiza.ui.theme.SubTitle1
+import com.moiza_design.theme.Body3
+import com.moiza_design.theme.Lore1
+import com.moiza_design.theme.SubTitle1
 
 @Composable
 fun SignUpSignInSettings(
