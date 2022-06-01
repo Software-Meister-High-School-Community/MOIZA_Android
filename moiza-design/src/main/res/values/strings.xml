@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password_visible">비밀번호 보기</string>
+    <string name="password_invisible">비밀번호 숨기기</string>
+</resources>

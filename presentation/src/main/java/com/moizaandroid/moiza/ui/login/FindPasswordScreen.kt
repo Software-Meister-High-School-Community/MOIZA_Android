@@ -10,11 +10,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.moiza_design.theme.Blue
+import com.moiza_design.theme.Body1
+import com.moiza_design.theme.SubTitle1
+import com.moiza_design.theme.SubTitle3
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.component.AppBar
-import com.moizaandroid.moiza.ui.component.MoizaTextField
-import com.moizaandroid.moiza.ui.component.NextStepButton
-import com.moizaandroid.moiza.ui.theme.*
+import com.moiza_design.component.AppBar
+import com.moiza_design.component.MoizaTextField
+import com.moiza_design.component.NextStepButton
 
 @Composable
 fun FindPasswordInputId(
@@ -46,7 +49,7 @@ fun FindPasswordInputId(
             NextStepButton(
                 onClick = { toNextStep() },
                 text = stringResource(id = R.string.next_step),
-                modifier = Modifier.align(Alignment.End),
+                modifier = Modifier.align(End),
                 enabled = !(password.isNullOrBlank())
             )
         }

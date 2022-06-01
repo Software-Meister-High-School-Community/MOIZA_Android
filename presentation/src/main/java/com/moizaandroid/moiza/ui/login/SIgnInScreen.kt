@@ -9,14 +9,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import com.moizaandroid.moiza.ui.component.AppBar
+import com.moiza_design.component.AppBar
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.moiza_design.theme.Body4
+import com.moiza_design.theme.Gray400
+import com.moiza_design.theme.MoizaTheme
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.component.MoizaCheckBox
-import com.moizaandroid.moiza.ui.component.MoizaTextField
-import com.moizaandroid.moiza.ui.component.YellowButton
-import com.moizaandroid.moiza.ui.theme.*
+import com.moiza_design.component.MoizaCheckBox
+import com.moiza_design.component.MoizaTextField
+import com.moiza_design.component.YellowButton
 
 @Composable
 fun SignInScreen(
