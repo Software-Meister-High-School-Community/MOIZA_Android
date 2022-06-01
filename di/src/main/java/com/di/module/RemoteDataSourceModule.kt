@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.di.module
+package com.di.module
 
 abstract class RemoteDataSourceModule {
 }

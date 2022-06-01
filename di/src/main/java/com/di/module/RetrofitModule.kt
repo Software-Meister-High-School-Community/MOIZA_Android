@@ -1,7 +1,6 @@
-package com.moizaandroid.moiza.di.module
+package com.di.module
 
 import android.util.Log
-import com.moizaandroid.moiza.utils.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,6 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 @Module
 @InstallIn(SingletonComponent::class)
 object RetrofitModule {
+
+    private val BASE_URL = ""
 
     @Provides
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor =
