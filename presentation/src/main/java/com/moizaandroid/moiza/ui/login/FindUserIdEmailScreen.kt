@@ -12,12 +12,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.moiza_design.theme.*
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.component.AppBar
-import com.moizaandroid.moiza.ui.component.GrayButton
-import com.moizaandroid.moiza.ui.component.MoizaTextField
-import com.moizaandroid.moiza.ui.component.NextStepButton
-import com.moizaandroid.moiza.ui.theme.*
+import com.moiza_design.component.AppBar
+import com.moiza_design.component.GrayButton
+import com.moiza_design.component.MoizaTextField
+import com.moiza_design.component.NextStepButton
 
 @Composable
 fun FindUserIdEmailScreen(
