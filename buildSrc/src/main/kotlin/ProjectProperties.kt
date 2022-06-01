@@ -1,6 +1,9 @@
 import org.gradle.api.JavaVersion
 
 object ProjectProperties{
+    const val VERSION_CODE = 1
+    const val VERSION_NAME = "1.0"
+
     const val APPLICATION_ID = "com.moizaandroid.moiza"
 
     const val GRADLE_ANDROID = "7.0.4"
