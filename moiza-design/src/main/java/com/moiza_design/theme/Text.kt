@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.theme
+package com.moiza_design.theme
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -13,8 +13,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
-import com.moizaandroid.moiza.R
-
+import com.palette.moiza_design.R
 
 val notoSansFamily = FontFamily(
     Font(R.font.noto_sans_kr_black, FontWeight.Black),

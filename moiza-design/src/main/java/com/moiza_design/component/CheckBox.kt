@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component
+package com.moiza_design.component
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.MutableTransitionState
@@ -22,9 +22,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.moizaandroid.moiza.ui.theme.Gray300
-import com.moizaandroid.moiza.ui.theme.Orange
-import com.moizaandroid.moiza.ui.theme.roboto
+import com.moiza_design.theme.Gray300
+import com.moiza_design.theme.Orange
+import com.moiza_design.theme.roboto
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -40,12 +40,6 @@ fun MoizaCheckBox(
 ) {
 
     val interactionSources = remember { MutableInteractionSource() }
-
-    val state = remember {
-        MutableTransitionState(false).apply {
-            targetState = true
-        }
-    }
 
     Row(
         modifier = modifier

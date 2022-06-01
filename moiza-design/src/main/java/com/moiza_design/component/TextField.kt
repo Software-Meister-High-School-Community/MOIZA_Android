@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component
+package com.moiza_design.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -9,8 +9,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,8 +24,9 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.theme.*
+import com.moiza_design.icon.MoizaIcons
+import com.moiza_design.theme.*
+import com.palette.moiza_design.R
 
 @Composable
 fun MoizaTextField(
@@ -109,8 +108,8 @@ fun MoizaTextField(
                                 interactionSource = interactionSource,
                                 indication = null
                             ) { passwordVisible = !passwordVisible },
-                        painter = if (passwordVisible) painterResource(id = R.drawable.ic_pw_visible) else painterResource(
-                            id = R.drawable.ic_pw_invisible
+                        painter = if (passwordVisible) painterResource(id = MoizaIcons.PasswordVisible) else painterResource(
+                            id = MoizaIcons.PasswordInvisible
                         ),
                         contentDescription = stringResource(if (passwordVisible) R.string.password_visible else R.string.password_invisible),
                         alpha = if (value.isNotEmpty()) 1f else 0f

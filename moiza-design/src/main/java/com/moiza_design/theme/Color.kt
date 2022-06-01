@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.theme
+package com.moiza_design.theme
 
 import androidx.compose.ui.graphics.Color
 

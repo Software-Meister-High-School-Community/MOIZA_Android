@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component
+package com.moiza_design.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -16,10 +16,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.theme.Body3
-import com.moizaandroid.moiza.ui.theme.Gray200
-import com.moizaandroid.moiza.ui.theme.Gray300
+import com.moiza_design.icon.MoizaIcons
+import com.moiza_design.theme.Body3
+import com.moiza_design.theme.Gray300
 
 @Composable
 fun AppBar(
@@ -64,7 +63,7 @@ fun AppBar(
 
             if (isSignUp) {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_moiza_logo),
+                    painter = painterResource(id = MoizaIcons.MoizaLogo),
                     contentDescription = "moiza logo",
                     modifier = Modifier
                         .align(Alignment.CenterEnd)

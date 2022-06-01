@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.register
+package com.moiza_design.component
 
 enum class School(val schoolName: String, val schoolEmail: String) {
     DSM(schoolName = "대덕소프트웨어마이스터고등학교", schoolEmail = "dsm.hs.kr"),

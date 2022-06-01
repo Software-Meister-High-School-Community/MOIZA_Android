@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component
+package com.moiza_design.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -14,12 +14,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.register.School
-import com.moizaandroid.moiza.ui.theme.Body3
-import com.moizaandroid.moiza.ui.theme.Gray300
-import com.moizaandroid.moiza.ui.theme.Gray500
-import com.moizaandroid.moiza.ui.theme.Orange
+import com.moiza_design.icon.MoizaIcons
+import com.moiza_design.theme.Body3
+import com.moiza_design.theme.Gray300
+import com.moiza_design.theme.Gray500
+import com.moiza_design.theme.Orange
 
 @Composable
 fun MoizaVerticalMenus(
@@ -75,7 +74,7 @@ fun MoizaVerticalMenu(
             )
 
             Image(
-                painter = painterResource(id = R.drawable.ic_checked),
+                painter = painterResource(id = MoizaIcons.Checked),
                 contentDescription = "checked icon",
                 modifier = Modifier
                     .fillMaxSize()

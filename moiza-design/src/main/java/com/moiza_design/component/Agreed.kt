@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.component
+package com.moiza_design.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -12,9 +12,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
-import com.moizaandroid.moiza.ui.theme.Body3
-import com.moizaandroid.moiza.ui.theme.Gray200
-import com.moizaandroid.moiza.ui.theme.Gray400
+import com.moiza_design.theme.Body3
+import com.moiza_design.theme.Gray200
+import com.moiza_design.theme.Gray400
 
 @Composable
 fun Agreed(
