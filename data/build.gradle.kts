@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(BuildPlugins.ANDROID_LIBRARY_PLUGIN)
+    id(BuildPlugins.KOTLIN_ANDROID_PLUGIN)
 }
 
 android {
@@ -24,16 +24,18 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = ProjectProperties.JAVA_VERSION
+        targetCompatibility = ProjectProperties.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = ProjectProperties.JAVA_VERSION.toString()
     }
 }
 
 dependencies {
     implementation(project(":domain"))
+    implementation(project(":local"))
+    implementation(project(":remote"))
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.4.1")

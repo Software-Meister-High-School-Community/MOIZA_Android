@@ -22,6 +22,9 @@ object Dependency {
 
         const val ACTIVITY_KTX = "androidx.activity:activity-ktx:${Versions.ACTIVITY_KTX}"
         const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.FRAGMENT_KTX}"
+
+        const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
+
     }
     
     object LifeCycle {
@@ -37,12 +40,7 @@ object Dependency {
         const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"
     }
 
-    object Google {
-        const val HILT_ANDROID = "com.google.dagger:hilt-android:${Versions.HILT}"
-        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
-
-        const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
-
+    object Compose {
         const val COMPOSE_UI = "androidx.compose.ui:ui:${Versions.COMPOSE}"
         const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.COMPOSE}"
         const val COMPOSE_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE}"
@@ -51,6 +49,11 @@ object Dependency {
         const val COMPOSE_UI_TOOL = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
         const val COMPOSE_NAV = "androidx.navigation:navigation-compose:${Versions.NAV}"
         const val COMPOSE_ANI_NAV = "com.google.accompanist:accompanist-navigation-animation:${Versions.ANI_NAV}"
+    }
+
+    object Hilt {
+        const val HILT_ANDROID = "com.google.dagger:hilt-android:${Versions.HILT}"
+        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
     }
 
     object Libraries {

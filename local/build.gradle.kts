@@ -1,14 +1,14 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(BuildPlugins.ANDROID_LIBRARY_PLUGIN)
+    id(BuildPlugins.KOTLIN_ANDROID_PLUGIN)
 }
 
 android {
-    compileSdk = 32
+    compileSdk = ProjectProperties.COMPILE_SDK_VERSION
 
     defaultConfig {
-        minSdk = 29
-        targetSdk = 32
+        minSdk = ProjectProperties.MIN_SDK_VERSION
+        targetSdk = ProjectProperties.TARGET_SDK_VERSION
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -24,11 +24,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = ProjectProperties.JAVA_VERSION
+        targetCompatibility = ProjectProperties.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = ProjectProperties.JAVA_VERSION.toString()
     }
 }
 
