@@ -57,7 +57,6 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":moiza-design"))
 
-    implementation(Dependency.Ui.CORE_KTX)
     implementation(Dependency.Ui.APP_COMPAT)
     implementation(Dependency.Ui.CORE_KTX)
     implementation(Dependency.Ui.FRAGMENT_KTX)
