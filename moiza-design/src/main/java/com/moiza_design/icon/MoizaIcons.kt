@@ -9,4 +9,5 @@ object MoizaIcons {
     val MoizaLogo = R.drawable.ic_moiza_logo
     val PasswordVisible = R.drawable.ic_pw_visible
     val PasswordInvisible = R.drawable.ic_pw_invisible
+    val Camera = R.drawable.ic_all_camera
 }
