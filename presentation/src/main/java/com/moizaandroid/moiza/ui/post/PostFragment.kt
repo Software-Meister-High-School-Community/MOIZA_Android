@@ -1,11 +1,13 @@
 package com.moizaandroid.moiza.ui.post
 
+import android.content.Intent
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.databinding.FragmentPostBinding
 import com.moizaandroid.moiza.ui.base.BaseFragment
+import com.moizaandroid.moiza.ui.post.crerate.CreatePostActivity
 import com.moizaandroid.moiza.viewmodel.MainViewModel
 
 class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post),
@@ -24,6 +26,7 @@ class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post),
             allPostBtn.setOnClickListener(this@PostFragment)
             questionPostBtn.setOnClickListener(this@PostFragment)
             normalPostBtn.setOnClickListener(this@PostFragment)
+            postBtn.setOnClickListener(this@PostFragment)
         }
     }
 
@@ -46,6 +49,10 @@ class PostFragment : BaseFragment<FragmentPostBinding>(R.layout.fragment_post),
         binding.allPostBtn.isChecked = binding.allPostBtn.id == v!!.id
         binding.questionPostBtn.isChecked = binding.questionPostBtn.id == v.id
         binding.normalPostBtn.isChecked = binding.normalPostBtn.id == v.id
+
+        when(v.id) {
+            R.id.postBtn -> startActivity(Intent(context, CreatePostActivity::class.java))
+        }
     }
 
 }
