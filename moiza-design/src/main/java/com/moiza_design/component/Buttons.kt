@@ -13,9 +13,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.moiza_design.theme.*
@@ -71,12 +73,14 @@ fun GrayButton(
     onClick: () -> Unit,
     text: String,
     modifier: Modifier = Modifier,
-    enabled: Boolean = true
+    enabled: Boolean = true,
+    corner_radius: Dp = 0.dp
 ) {
     OutlinedButton(
         modifier = modifier,
         onClick = onClick,
         enabled = enabled,
+        shape = RoundedCornerShape(corner_radius),
         colors = ButtonDefaults.buttonColors(
             backgroundColor = Gray200,
             contentColor = Gray600,
@@ -181,7 +185,9 @@ fun NumberButton(
 
         Divider(
             color = Gray400,
-            modifier = Modifier.width(1.dp).height(13.dp)
+            modifier = Modifier
+                .width(1.dp)
+                .height(13.dp)
         )
 
         Spacer(modifier = Modifier.width(10.dp))

@@ -23,3 +23,5 @@ val Dark300 = Color(0xFF2C2C36)
 val Dark400 = Color(0xFF999999)
 val Dark500 = Color(0xFFE0E0E0)
 val Dark600 = Color(0xFFFFFFFF)
+
+val HalfDark = Color(0x80000000)
