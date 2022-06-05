@@ -62,6 +62,7 @@ dependencies {
     implementation(Dependency.Ui.FRAGMENT_KTX)
     implementation(Dependency.Ui.CONSTRAINT_LAYOUT)
     implementation(Dependency.Ui.MATERIAL)
+    implementation(Dependency.Ui.DYNAMIC_TOAST)
 
     implementation(Dependency.LifeCycle.LIFECYCLE_VIEWMODEL_KTX)
 
@@ -92,6 +93,7 @@ dependencies {
     implementation(Dependency.Compose.COMPOSE_UI)
     implementation(Dependency.Compose.COMPOSE_NAV)
     implementation(Dependency.Compose.COMPOSE_ANI_NAV)
+    implementation(Dependency.Compose.COMPOSE_LANDSCAPIST)
 
     androidTestImplementation(Dependency.Compose.COMPOSE_TEST)
     debugImplementation(Dependency.Compose.COMPOSE_UI_TOOL)
