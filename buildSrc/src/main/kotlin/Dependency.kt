@@ -25,6 +25,8 @@ object Dependency {
 
         const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
 
+        const val DYNAMIC_TOAST = "com.pranavpandey.android:dynamic-toasts:${Versions.DYNAMIC_TOAST}"
+
     }
     
     object LifeCycle {
@@ -49,6 +51,7 @@ object Dependency {
         const val COMPOSE_UI_TOOL = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
         const val COMPOSE_NAV = "androidx.navigation:navigation-compose:${Versions.NAV}"
         const val COMPOSE_ANI_NAV = "com.google.accompanist:accompanist-navigation-animation:${Versions.ANI_NAV}"
+        const val COMPOSE_LANDSCAPIST = "com.github.skydoves:landscapist-glide:${Versions.LANDSCAPIST}"
     }
 
     object Hilt {

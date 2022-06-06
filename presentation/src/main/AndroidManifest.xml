@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.moizaandroid.moiza" >
+    package="com.moizaandroid.moiza">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,18 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MOIZA"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.post.crerate.CreatePostActivity"
+            android:exported="false" />
         <activity
             android:name="com.moizaandroid.moiza.ui.register.SignUpActivity"
             android:exported="false" />
         <activity
-            android:label="@string/title_activity_sign_in_activity"
-            android:theme="@style/Theme.MOIZA"
             android:name="com.moizaandroid.moiza.ui.login.SignInActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/title_activity_sign_in_activity"
+            android:theme="@style/Theme.MOIZA" />
         <activity
             android:name="com.moizaandroid.moiza.ui.splash.SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
