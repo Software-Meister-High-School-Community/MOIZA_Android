@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -31,6 +32,7 @@ import androidx.compose.ui.unit.sp
 import com.moiza_design.component.*
 import com.moiza_design.icon.MoizaIcons
 import com.moiza_design.theme.*
+import com.moizaandroid.moiza.R
 import com.moizaandroid.moiza.utils.parseBitmap
 import com.pranavpandey.android.dynamic.toasts.DynamicToast
 import com.skydoves.landscapist.glide.GlideImage
@@ -55,14 +57,14 @@ fun CreatePostScreen(
             .verticalScroll(verticalScroll)
             .background(Gray200)
     ) {
-        AppBar(text = "게시물 작성") {
+        AppBar(text = stringResource(id = R.string.create_post)) {
             onPrevious()
         }
 
         Spacer(modifier = Modifier.height(10.dp))
 
         NumberButton(
-            text = "임시저장된 글", number = 3, onClick = { /*TODO*/ }, modifier = Modifier
+            text = stringResource(id = R.string.temp_save_post), number = 3, onClick = { /*TODO*/ }, modifier = Modifier
                 .align(Alignment.End)
                 .padding(end = 16.dp)
         )
@@ -184,7 +186,7 @@ fun CreatePostScreenPostContent(
             ),
             decorationBox = { innerTextField ->
                 if (title == null) {
-                    SubTitle3(text = "제목을 작성해주세요.", color = Gray400)
+                    SubTitle3(text = stringResource(id = R.string.input_title), color = Gray400)
                 }
                 innerTextField()
             },
@@ -207,7 +209,7 @@ fun CreatePostScreenPostContent(
             ),
             decorationBox = { innerTextField ->
                 if (content == null) {
-                    Body3(text = "본문을 작성해주세요.", color = Gray400)
+                    Body3(text = stringResource(id = R.string.input_content), color = Gray400)
                 }
                 innerTextField()
             },
@@ -229,7 +231,7 @@ fun CreatePostScreenPostContent(
 
                 Spacer(modifier = Modifier.width(8.dp))
 
-                Body4(text = "사진 추가", color = Gray500)
+                Body4(text = stringResource(id = R.string.add_photo), color = Gray500)
 
                 Spacer(modifier = Modifier.weight(1f))
 
@@ -343,19 +345,19 @@ fun CreatePostScreenSortation(
     ) {
         Spacer(modifier = Modifier.height(18.dp))
 
-        Body1(text = "구분")
+        Body1(text = stringResource(id = R.string.sortation))
 
         Spacer(modifier = Modifier.height(15.dp))
 
         MoizaCheckBox(
-            text = "질문",
+            text = stringResource(id = R.string.question),
             checked = typeQuestion == true,
             onCheckedChange = { onTypeQuestionChanged(true) })
 
         Spacer(modifier = Modifier.height(18.dp))
 
         MoizaCheckBox(
-            text = "일반",
+            text = stringResource(id = R.string.normal),
             checked = typeQuestion == false,
             onCheckedChange = { onTypeQuestionChanged(false) })
 
