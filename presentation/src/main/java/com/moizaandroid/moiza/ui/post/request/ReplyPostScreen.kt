@@ -82,11 +82,11 @@ fun ReplayPostScreen(
         ) {
             GrayButton(onClick = {
                 DynamicToast.makeSuccess(context, "작성 중인 게시글을 임시로 저장하였습니다.").show()
-            }, text = "임시저장", corner_radius = 25.dp)
+            }, text = stringResource(id = R.string.temp_save_post), corner_radius = 25.dp)
 
             NextStepButton(
                 onClick = onCreatePost,
-                text = "등록하기",
+                text = stringResource(id = R.string.registering),
                 enabled = title != null && content != null
             )
         }
@@ -128,7 +128,7 @@ fun ReplayPostScreenPostContent(
             ),
             decorationBox = { innerTextField ->
                 if (title == null) {
-                    SubTitle3(text = "제목을 작성해주세요.", color = Gray400)
+                    SubTitle3(text = stringResource(id = R.string.input_title), color = Gray400)
                 }
                 innerTextField()
             },
@@ -136,6 +136,8 @@ fun ReplayPostScreenPostContent(
 
         Divider(color = Gray400, modifier = Modifier.fillMaxWidth(), thickness = 0.5.dp)
 
+        val contentHint = "답변 시 이런 점을 주의해 주세요!\n\n 답변이 등록되면 수정/삭제가 불가합니다.\n 사진 첨부는 4장까지 가능합니다."
+        
         BasicTextField(
             value = content ?: "",
             onValueChange = { onContentChanged(it) },
@@ -151,10 +153,7 @@ fun ReplayPostScreenPostContent(
             ),
             decorationBox = { innerTextField ->
                 if (content == null) {
-                    Body3(text = "답변 시 이런 점을 주의해 주세요!\n" +
-                            "\n" +
-                            "답변이 등록되면 수정/삭제가 불가합니다.\n" +
-                            "사진 첨부는 4장까지 가능합니다.", color = Gray400)
+                    Body3(text = contentHint, color = Gray400)
                 }
                 innerTextField()
             },
@@ -176,7 +175,7 @@ fun ReplayPostScreenPostContent(
 
                 Spacer(modifier = Modifier.width(8.dp))
 
-                Body4(text = "사진 추가", color = Gray500)
+                Body4(text = stringResource(id = R.string.add_photo), color = Gray500)
 
                 Spacer(modifier = Modifier.weight(1f))
 

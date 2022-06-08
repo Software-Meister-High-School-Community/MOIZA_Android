@@ -26,6 +26,10 @@
     <string name="create_post">게시물 작성</string>
     <string name="temp_save_post">임시저장된 글</string>
 
+    <string name="temp_post">임시 저장</string>
+
+    <string name="save_temp_post">작성 중인 게시글을 임시로 저장하였습니다.</string>
+
     <string name="write_request_post">답변 작성</string>
 
     <string name="logo">로고</string>
@@ -96,7 +100,9 @@
     <string name="reset_password">비밀번호 재등록</string>
     <string name="success_find_password">비밀번호 재등록이 완료되었습니다.</string>
 
-    <string name="finish_sign_up">가입 완료</string>
+    <string name="registering">등록하기</string>
+
+기   <string name="finish_sign_up">가입 완료</string>
 
     <string name="input_id">아이디를 입력해주세요.</string>
     <string name="verification_email">이메일로 인증</string>
