@@ -37,11 +37,12 @@ import com.moizaandroid.moiza.ui.post.crerate.DisclosureScope
 import com.moizaandroid.moiza.utils.parseBitmap
 import com.pranavpandey.android.dynamic.toasts.DynamicToast
 import com.skydoves.landscapist.glide.GlideImage
+import dagger.hilt.android.qualifiers.ApplicationContext
 
 @Composable
 fun ReplayPostScreen(
     onPrevious: () -> Unit,
-    onCreatePost: () -> Unit
+    onCreatePost: () -> Unit,
 ) {
 
     val verticalScroll = rememberScrollState()
@@ -76,12 +77,14 @@ fun ReplayPostScreen(
 
         Spacer(modifier = Modifier.height(45.dp))
 
+        val text = stringResource(id = R.string.save_post)
+
         Row(
             modifier = Modifier.align(Alignment.End),
             verticalAlignment = Alignment.CenterVertically
         ) {
             GrayButton(onClick = {
-                DynamicToast.makeSuccess(context, "작성 중인 게시글을 임시로 저장하였습니다.").show()
+                DynamicToast.makeSuccess(context,text ).show()
             }, text = stringResource(id = R.string.temp_save_post), corner_radius = 25.dp)
 
             NextStepButton(
@@ -185,16 +188,18 @@ fun ReplayPostScreenPostContent(
 
         Spacer(modifier = Modifier.height(23.dp))
 
+        val errorFetchPhotoText = stringResource(id = R.string.add_photo)
+
         val takePhotoFromAlbumLauncher =
             rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
                     result.data?.data?.let { uri ->
                         addPhotos(uri)
                     } ?: run {
-                        DynamicToast.makeError(context, "사진을 가져오는데 실패했습니다.").show()
+                        DynamicToast.makeError(context, errorFetchPhotoText).show()
                     }
                 } else if (result.resultCode != Activity.RESULT_CANCELED) {
-                    DynamicToast.makeError(context, "사진을 가져오는데 실패했습니다.").show()
+                    DynamicToast.makeError(context, errorFetchPhotoText).show()
                 }
             }
 
@@ -212,6 +217,8 @@ fun ReplayPostScreenPostContent(
                 putExtra(Intent.EXTRA_ALLOW_MULTIPLE, false)
             }
 
+        val fetchPhotoLimitErrorText = "사진을 4장 이상 등록할 수 없습니다."
+
         LazyRow(
             horizontalArrangement = Arrangement.spacedBy(7.dp),
             modifier = Modifier
@@ -228,9 +235,7 @@ fun ReplayPostScreenPostContent(
                             if (photos.size < 4) {
                                 takePhotoFromAlbumLauncher.launch(takePhotoFromAlbumIntent)
                             } else {
-                                DynamicToast
-                                    .makeError(context, "사진을 4장 이상 등록할 수 없습니다.")
-                                    .show()
+                                DynamicToast.makeError(context, fetchPhotoLimitErrorText).show()
                             }
                         },
                     contentAlignment = Alignment.Center
