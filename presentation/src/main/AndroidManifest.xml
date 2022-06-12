@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MOIZA"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.post.request.ReplyPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.post.crerate.CreatePostActivity"
             android:exported="false" />
         <activity

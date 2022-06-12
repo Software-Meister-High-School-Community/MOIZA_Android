@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.ui.post.crerate
+package com.moizaandroid.moiza.ui.post.request
 
 import android.app.Activity
 import android.content.Context
@@ -33,22 +33,22 @@ import com.moiza_design.component.*
 import com.moiza_design.icon.MoizaIcons
 import com.moiza_design.theme.*
 import com.moizaandroid.moiza.R
+import com.moizaandroid.moiza.ui.post.crerate.DisclosureScope
 import com.moizaandroid.moiza.utils.parseBitmap
 import com.pranavpandey.android.dynamic.toasts.DynamicToast
 import com.skydoves.landscapist.glide.GlideImage
+import dagger.hilt.android.qualifiers.ApplicationContext
 
 @Composable
-fun CreatePostScreen(
+fun ReplayPostScreen(
     onPrevious: () -> Unit,
-    onCreatePost: () -> Unit
+    onCreatePost: () -> Unit,
 ) {
 
     val verticalScroll = rememberScrollState()
     var title by remember { mutableStateOf<String?>(null) }
     var content by remember { mutableStateOf<String?>(null) }
     val photos = remember { mutableStateListOf<Bitmap>() }
-    var typeQuestion by remember { mutableStateOf<Boolean?>(null) }
-    var disclosureScope by remember { mutableStateOf<DisclosureScope?>(null) }
     val context = LocalContext.current
 
     Column(
@@ -57,21 +57,13 @@ fun CreatePostScreen(
             .verticalScroll(verticalScroll)
             .background(Gray200)
     ) {
-        AppBar(text = stringResource(id = R.string.create_post)) {
+        AppBar(text = stringResource(id = R.string.write_request_post)) {
             onPrevious()
         }
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        NumberButton(
-            text = stringResource(id = R.string.temp_save_post), number = 3, onClick = { /*TODO*/ }, modifier = Modifier
-                .align(Alignment.End)
-                .padding(end = 16.dp)
-        )
-
-        Spacer(modifier = Modifier.height(10.dp))
-
-        CreatePostScreenPostContent(
+        ReplayPostScreenPostContent(
             title = title,
             onTitleChanged = { title = it },
             content = content,
@@ -82,34 +74,23 @@ fun CreatePostScreen(
             context = context
         )
 
-        Spacer(modifier = Modifier.height(15.dp))
-
-        CreatePostScreenSortation(
-            typeQuestion = typeQuestion,
-            onTypeQuestionChanged = { typeQuestion = it }
-        )
-
-        Spacer(modifier = Modifier.height(15.dp))
-
-        CreatePostScreenDisclosureScope(
-            disclosureScope = disclosureScope,
-            onDisclosureScopeChanged = { disclosureScope = it }
-        )
 
         Spacer(modifier = Modifier.height(45.dp))
+
+        val text = stringResource(id = R.string.save_post)
 
         Row(
             modifier = Modifier.align(Alignment.End),
             verticalAlignment = Alignment.CenterVertically
         ) {
             GrayButton(onClick = {
-                DynamicToast.makeSuccess(context, "작성 중인 게시글을 임시로 저장하였습니다.").show()
-            }, text = "임시저장", corner_radius = 25.dp)
+                DynamicToast.makeSuccess(context,text ).show()
+            }, text = stringResource(id = R.string.temp_save_post), corner_radius = 25.dp)
 
             NextStepButton(
                 onClick = onCreatePost,
-                text = "등록하기",
-                enabled = title != null && content != null && typeQuestion != null && disclosureScope != null
+                text = stringResource(id = R.string.registering),
+                enabled = title != null && content != null
             )
         }
 
@@ -118,43 +99,7 @@ fun CreatePostScreen(
 }
 
 @Composable
-fun CreatePostScreenDisclosureScope(
-    disclosureScope: DisclosureScope?,
-    onDisclosureScopeChanged: (DisclosureScope) -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(
-                color = Color.White,
-                shape = RoundedCornerShape(10.dp)
-            )
-            .padding(horizontal = 16.dp),
-        verticalArrangement = spacedBy(18.dp)
-    ) {
-        Body1(text = "공개 설정", modifier = Modifier.padding(top = 18.dp))
-
-        MoizaCheckBox(
-            text = DisclosureScope.ALL.title,
-            checked = disclosureScope == DisclosureScope.ALL,
-            onCheckedChange = { onDisclosureScopeChanged(DisclosureScope.ALL) })
-
-        MoizaCheckBox(
-            text = DisclosureScope.UNGRADUATE.title,
-            checked = disclosureScope == DisclosureScope.UNGRADUATE,
-            onCheckedChange = { onDisclosureScopeChanged(DisclosureScope.UNGRADUATE) })
-
-        MoizaCheckBox(
-            text = DisclosureScope.GRADUATE.title,
-            checked = disclosureScope == DisclosureScope.GRADUATE,
-            onCheckedChange = { onDisclosureScopeChanged(DisclosureScope.GRADUATE) },
-            modifier = Modifier.padding(bottom = 16.dp)
-        )
-    }
-}
-
-@Composable
-fun CreatePostScreenPostContent(
+fun ReplayPostScreenPostContent(
     title: String?,
     onTitleChanged: (String) -> Unit,
     content: String?,
@@ -194,6 +139,8 @@ fun CreatePostScreenPostContent(
 
         Divider(color = Gray400, modifier = Modifier.fillMaxWidth(), thickness = 0.5.dp)
 
+        val contentHint = "답변 시 이런 점을 주의해 주세요!\n\n 답변이 등록되면 수정/삭제가 불가합니다.\n 사진 첨부는 4장까지 가능합니다."
+        
         BasicTextField(
             value = content ?: "",
             onValueChange = { onContentChanged(it) },
@@ -209,7 +156,7 @@ fun CreatePostScreenPostContent(
             ),
             decorationBox = { innerTextField ->
                 if (content == null) {
-                    Body3(text = stringResource(id = R.string.input_content), color = Gray400)
+                    Body3(text = contentHint, color = Gray400)
                 }
                 innerTextField()
             },
@@ -241,16 +188,18 @@ fun CreatePostScreenPostContent(
 
         Spacer(modifier = Modifier.height(23.dp))
 
+        val errorFetchPhotoText = stringResource(id = R.string.add_photo)
+
         val takePhotoFromAlbumLauncher =
             rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
                     result.data?.data?.let { uri ->
                         addPhotos(uri)
                     } ?: run {
-                        DynamicToast.makeError(context, "사진을 가져오는데 실패했습니다.").show()
+                        DynamicToast.makeError(context, errorFetchPhotoText).show()
                     }
                 } else if (result.resultCode != Activity.RESULT_CANCELED) {
-                    DynamicToast.makeError(context, "사진을 가져오는데 실패했습니다.").show()
+                    DynamicToast.makeError(context, errorFetchPhotoText).show()
                 }
             }
 
@@ -268,6 +217,8 @@ fun CreatePostScreenPostContent(
                 putExtra(Intent.EXTRA_ALLOW_MULTIPLE, false)
             }
 
+        val fetchPhotoLimitErrorText = "사진을 4장 이상 등록할 수 없습니다."
+
         LazyRow(
             horizontalArrangement = Arrangement.spacedBy(7.dp),
             modifier = Modifier
@@ -284,9 +235,7 @@ fun CreatePostScreenPostContent(
                             if (photos.size < 4) {
                                 takePhotoFromAlbumLauncher.launch(takePhotoFromAlbumIntent)
                             } else {
-                                DynamicToast
-                                    .makeError(context, "사진을 4장 이상 등록할 수 없습니다.")
-                                    .show()
+                                DynamicToast.makeError(context, fetchPhotoLimitErrorText).show()
                             }
                         },
                     contentAlignment = Alignment.Center
@@ -329,44 +278,8 @@ fun CreatePostScreenPostContent(
     }
 }
 
-@Composable
-fun CreatePostScreenSortation(
-    typeQuestion: Boolean?,
-    onTypeQuestionChanged: (Boolean) -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(
-                color = Color.White,
-                shape = RoundedCornerShape(10.dp)
-            )
-            .padding(horizontal = 16.dp)
-    ) {
-        Spacer(modifier = Modifier.height(18.dp))
-
-        Body1(text = stringResource(id = R.string.sortation))
-
-        Spacer(modifier = Modifier.height(15.dp))
-
-        MoizaCheckBox(
-            text = stringResource(id = R.string.question),
-            checked = typeQuestion == true,
-            onCheckedChange = { onTypeQuestionChanged(true) })
-
-        Spacer(modifier = Modifier.height(18.dp))
-
-        MoizaCheckBox(
-            text = stringResource(id = R.string.normal),
-            checked = typeQuestion == false,
-            onCheckedChange = { onTypeQuestionChanged(false) })
-
-        Spacer(modifier = Modifier.height(18.dp))
-    }
-}
-
 @Preview(showBackground = true, heightDp = 1500)
 @Composable
 fun PreviewCreatePostScreen() {
-    CreatePostScreen({}) {}
+    ReplayPostScreen({}) {}
 }
