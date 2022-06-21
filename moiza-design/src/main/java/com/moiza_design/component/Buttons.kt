@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -21,7 +20,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.moiza_design.theme.*
-import com.moizaandroid.moiza.ui.theme.*
 
 @Composable
 fun AgreedButton(
@@ -45,10 +43,12 @@ fun AgreedButton(
 }
 
 @Composable
-fun YellowButton(
+fun RoundButton(
     text: String,
-    satisfy: Boolean,
+    enabled: Boolean,
     onClick: () -> Unit,
+    enabledColor: Color = Orange,
+    disabledColor: Color = HalfOrange,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -56,15 +56,15 @@ fun YellowButton(
             .height(50.dp)
             .fillMaxWidth()
             .clip(RoundedCornerShape(5.dp))
-            .background(if (satisfy) Orange else HalfOrange)
+            .background(if (enabled) enabledColor else disabledColor)
             .clickable(
                 onClick = {
-                    if (satisfy) onClick()
+                    if (enabled) onClick()
                 }
             ),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = text, style = body3)
+        Body3(text = text, fontWeight = FontWeight.Bold)
     }
 }
 
@@ -207,7 +207,7 @@ fun PreviewAgreedButton() {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        YellowButton(text = "로그인", satisfy = true, onClick = {})
+        RoundButton(text = "로그인", enabled = true, onClick = {})
 
         Spacer(modifier = Modifier.height(20.dp))
 
