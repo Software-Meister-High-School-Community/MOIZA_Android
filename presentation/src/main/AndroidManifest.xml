@@ -28,7 +28,7 @@
             android:label="@string/title_activity_sign_in_activity"
             android:theme="@style/Theme.MOIZA" />
         <activity
-            android:name="com.moizaandroid.moiza.ui.splash.SplashActivity"
+            android:name="com.moizaandroid.moiza.ui.splash.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
