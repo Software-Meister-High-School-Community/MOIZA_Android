@@ -18,6 +18,8 @@ object Versions {
     const val RETROFIT = "2.7.1"
     const val OKHTTP = "3.14.9"
 
+    const val SPLASH_SCREEN_VERSION = "1.0.0-beta01"
+
     const val JUNIT = "4.13.2"
     const val MOCKITO = "4.2.0"
     const val ANDROID_JUNIT = "1.1.2"
