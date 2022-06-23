@@ -29,6 +29,7 @@
             android:theme="@style/Theme.MOIZA" />
         <activity
             android:name="com.moizaandroid.moiza.ui.splash.IntroActivity"
+            android:theme="@style/Theme.App.SplashScreenTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

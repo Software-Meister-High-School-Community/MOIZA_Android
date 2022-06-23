@@ -47,7 +47,9 @@ fun RoundButton(
     text: String,
     enabled: Boolean,
     onClick: () -> Unit,
+    fontWeight: FontWeight = FontWeight.Bold,
     enabledColor: Color = Orange,
+    textColor: Color = Black,
     disabledColor: Color = HalfOrange,
     modifier: Modifier = Modifier
 ) {
@@ -64,7 +66,7 @@ fun RoundButton(
             ),
         contentAlignment = Alignment.Center
     ) {
-        Body3(text = text, fontWeight = FontWeight.Bold)
+        Body3(text = text, fontWeight = fontWeight, color = textColor)
     }
 }
 
@@ -196,6 +198,19 @@ fun NumberButton(
     }
 }
 
+@Composable
+fun MoizaOutlineButton(
+    modifeir: Modifier = Modifier,
+    textColor: Color = Color.Unspecified,
+    fontWeight: FontWeight = FontWeight.Bold,
+    text: String,
+    onClick: () -> Unit
+) {
+    OutlinedButton(modifier = modifeir, onClick = onClick, shape = RoundedCornerShape(6.dp)) {
+        Body3(text = text, fontWeight = fontWeight, color = textColor)
+    }
+}
+
 @Preview(
     showBackground = true,
     showSystemUi = true
@@ -230,6 +245,10 @@ fun PreviewAgreedButton() {
         Spacer(modifier = Modifier.height(20.dp))
 
         NumberButton(text = "임시저장된 글", number = 10, onClick = {  })
+        
+        MoizaOutlineButton(text = "로그인", modifeir = Modifier.fillMaxWidth().height(44.dp), textColor = Gray500) {
+            
+        }
     }
 
 }
