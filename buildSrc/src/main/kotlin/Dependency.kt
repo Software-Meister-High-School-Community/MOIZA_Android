@@ -15,6 +15,8 @@ object Dependency {
     }
 
     object Ui {
+        const val SPLASH_SCREEN_API = "androidx.core:core-splashscreen:${Versions.SPLASH_SCREEN_VERSION}"
+
         const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
 
         const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"

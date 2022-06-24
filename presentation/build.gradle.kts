@@ -63,6 +63,7 @@ dependencies {
     implementation(Dependency.Ui.CONSTRAINT_LAYOUT)
     implementation(Dependency.Ui.MATERIAL)
     implementation(Dependency.Ui.DYNAMIC_TOAST)
+    implementation(Dependency.Ui.SPLASH_SCREEN_API)
 
     implementation(Dependency.LifeCycle.LIFECYCLE_VIEWMODEL_KTX)
 

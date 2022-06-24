@@ -7,13 +7,13 @@
 
         <variable
             name="activity"
-            type="com.moizaandroid.moiza.ui.splash.SplashActivity" />
+            type="com.moizaandroid.moiza.ui.splash.IntroActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.splash.SplashActivity">
+        tools:context=".ui.splash.IntroActivity">
 
         <ImageView
             android:id="@+id/splashIvLogo"

@@ -18,7 +18,7 @@ import com.moiza_design.theme.MoizaTheme
 import com.moizaandroid.moiza.R
 import com.moiza_design.component.MoizaCheckBox
 import com.moiza_design.component.MoizaTextField
-import com.moiza_design.component.YellowButton
+import com.moiza_design.component.RoundButton
 
 @Composable
 fun SignInScreen(
@@ -69,9 +69,9 @@ fun SignInScreen(
 
         Spacer(modifier = Modifier.height(45.dp))
 
-        YellowButton(
+        RoundButton(
             text = stringResource(id = R.string.sign_in),
-            satisfy = userId.length > 5 && password.length > 5,
+            enabled = userId.length > 5 && password.length > 5,
             onClick = doSignIn,
         )
 
