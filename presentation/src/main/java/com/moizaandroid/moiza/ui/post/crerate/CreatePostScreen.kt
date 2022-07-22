@@ -33,7 +33,7 @@ import com.moiza_design.component.*
 import com.moiza_design.icon.MoizaIcons
 import com.moiza_design.theme.*
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.utils.parseBitmap
+import com.moizaandroid.moiza.extensions.parseBitmap
 import com.pranavpandey.android.dynamic.toasts.DynamicToast
 import com.skydoves.landscapist.glide.GlideImage
 
