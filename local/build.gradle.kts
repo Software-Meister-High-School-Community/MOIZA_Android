@@ -35,6 +35,7 @@ dependencies {
 
     implementation(Dependency.Room.ROOM_RUNTIME)
     implementation(Dependency.Room.ROOM_KTX)
+    implementation("androidx.test.ext:junit-ktx:1.1.3")
     kapt(Dependency.Room.ROOM_COMPILER)
 
     implementation(Dependency.DataStore.DATASTORE_PREF)

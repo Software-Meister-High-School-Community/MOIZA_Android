@@ -40,6 +40,7 @@ dependencies {
     implementation(project(":domain"))
 
     implementation(Dependency.Moshi.MOSHI)
+    implementation("androidx.test.ext:junit-ktx:1.1.3")
     kapt(Dependency.Moshi.MOSHI_COMPILER)
 
     implementation(Dependency.Hilt.HILT_ANDROID)
