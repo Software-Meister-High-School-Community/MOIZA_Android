@@ -9,6 +9,7 @@ buildscript {
         classpath (Dependency.GradlePlugin.GRADLE_KOTLIN)
         classpath (Dependency.GradlePlugin.GRADLE_HILT)
     }
+
 }
 
 tasks.register("clean", Delete::class) {
