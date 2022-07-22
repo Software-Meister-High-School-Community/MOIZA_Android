@@ -10,7 +10,6 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.Arrangement.spacedBy
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -33,11 +32,9 @@ import com.moiza_design.component.*
 import com.moiza_design.icon.MoizaIcons
 import com.moiza_design.theme.*
 import com.moizaandroid.moiza.R
-import com.moizaandroid.moiza.ui.post.crerate.DisclosureScope
-import com.moizaandroid.moiza.utils.parseBitmap
+import com.moizaandroid.moiza.extensions.parseBitmap
 import com.pranavpandey.android.dynamic.toasts.DynamicToast
 import com.skydoves.landscapist.glide.GlideImage
-import dagger.hilt.android.qualifiers.ApplicationContext
 
 @Composable
 fun ReplayPostScreen(

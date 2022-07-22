@@ -34,10 +34,20 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.5.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(Dependency.Ui.CORE_KTX)
+    implementation(Dependency.Ui.APP_COMPAT)
+    implementation(Dependency.Ui.MATERIAL)
+    implementation(Dependency.Ui.CONSTRAINT_LAYOUT)
+
+    implementation(Dependency.Hilt.HILT_ANDROID)
+    implementation(Dependency.Hilt.HILT_ANDROID_COMPILER)
+
+    implementation(Dependency.Kotlin.COROUTINES_CORE)
+    implementation(Dependency.Kotlin.COROUTINES_ANDROID)
+
+    testImplementation(Dependency.AndroidTest.ANDROID_JUNIT)
+    androidTestImplementation(Dependency.AndroidTest.ESPRESSO_CORE)
+
+    androidTestImplementation(Dependency.UnitTest.JUNIT)
+    androidTestImplementation(Dependency.UnitTest.MOCKITO)
 }
