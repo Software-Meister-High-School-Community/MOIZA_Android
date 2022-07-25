@@ -1,6 +1,8 @@
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY_PLUGIN)
     id(BuildPlugins.KOTLIN_ANDROID_PLUGIN)
+    id(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.DAGGER_HILT_PLUGIN)
 }
 
 android {
@@ -23,10 +25,12 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = ProjectProperties.JAVA_VERSION
         targetCompatibility = ProjectProperties.JAVA_VERSION
     }
+
     kotlinOptions {
         jvmTarget = ProjectProperties.JAVA_VERSION.toString()
     }
@@ -34,13 +38,23 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-    implementation(project(":local"))
-    implementation(project(":remote"))
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.5.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(Dependency.Moshi.MOSHI)
+    implementation("androidx.test.ext:junit-ktx:1.1.3")
+    kapt(Dependency.Moshi.MOSHI_COMPILER)
+
+    implementation(Dependency.Hilt.HILT_ANDROID)
+    kapt(Dependency.Hilt.HILT_ANDROID_COMPILER)
+
+    implementation(Dependency.Retrofit.RETROFIT)
+    implementation(Dependency.Retrofit.RETROFIT_CONVERTER_GSON)
+
+    implementation(Dependency.Room.ROOM_KTX)
+    kapt(Dependency.Room.ROOM_COMPILER)
+
+    implementation(Dependency.DataStore.DATASTORE_PREF)
+    implementation(Dependency.DataStore.DATASTORE_PREF_CORE)
+
+    implementation(Dependency.Kotlin.COROUTINES_CORE)
+    implementation(Dependency.Kotlin.COROUTINES_ANDROID)
 }

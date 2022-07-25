@@ -1,4 +1,4 @@
-package com.moizaandroid.moiza.utils
+package com.moizaandroid.moiza.extensions
 
 import android.content.Context
 import android.graphics.Bitmap

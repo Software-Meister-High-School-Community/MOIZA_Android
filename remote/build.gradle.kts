@@ -1,6 +1,7 @@
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY_PLUGIN)
     id(BuildPlugins.KOTLIN_ANDROID_PLUGIN)
+    id(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -23,21 +24,33 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = ProjectProperties.JAVA_VERSION
         targetCompatibility = ProjectProperties.JAVA_VERSION
     }
+
     kotlinOptions {
         jvmTarget = ProjectProperties.JAVA_VERSION.toString()
     }
 }
 
 dependencies {
+    implementation(project(":data"))
+    implementation(project(":domain"))
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.6.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(Dependency.Kotlin.COROUTINES_CORE)
+    implementation(Dependency.Kotlin.COROUTINES_ANDROID)
+
+    implementation(Dependency.Hilt.HILT_ANDROID)
+    kapt(Dependency.Hilt.HILT_ANDROID_COMPILER)
+
+    implementation(Dependency.Retrofit.RETROFIT)
+    implementation(Dependency.Retrofit.RETROFIT_CONVERTER_GSON)
+
+    testImplementation(Dependency.UnitTest.JUNIT)
+    testImplementation(Dependency.UnitTest.MOCKITO)
+
+    androidTestImplementation(Dependency.AndroidTest.ANDROID_JUNIT)
+    androidTestImplementation(Dependency.AndroidTest.ESPRESSO_CORE)
 }

@@ -44,6 +44,11 @@ object Dependency {
         const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"
     }
 
+    object DataStore {
+        const val DATASTORE_PREF = "androidx.datastore:datastore-preferences:${Versions.DATASTORE}"
+        const val DATASTORE_PREF_CORE = "androidx.datastore:datastore-preferences-core:${Versions.DATASTORE}"
+    }
+
     object Compose {
         const val COMPOSE_UI = "androidx.compose.ui:ui:${Versions.COMPOSE}"
         const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.COMPOSE}"
@@ -61,15 +66,21 @@ object Dependency {
         const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
     }
 
-    object Libraries {
-        const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
-        const val RETROFIT_CONVERTER_GSON =
-            "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
+    object Moshi {
+        const val MOSHI = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}"
+        const val MOSHI_COMPILER = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.MOSHI}"
+    }
+
+    object OkHttp {
         const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
         const val OKHTTP_LOGGING_INTERCEPTOR =
             "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
-        const val MOSHI = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}"
-        const val MOSHI_COMPILER = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.MOSHI}"
+    }
+
+    object Retrofit {
+        const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
+        const val RETROFIT_CONVERTER_GSON =
+            "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
     }
 
     object UnitTest {
