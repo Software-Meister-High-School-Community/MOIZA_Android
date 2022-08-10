@@ -17,6 +17,12 @@ sealed class NavDestination(val title: String) {
         const val FIND_PASSWORD_VERTIFICATION_CODE = "인증번호 확인"
         const val FIND_PASSWORD_RESET_PASSWORD = "비밀번호 재입력"
         const val FIND_PASSWORD_FINISH_RESET = "비밀번호 재등록 완료"
+    }
 
+    object BottomNav: NavDestination("BottomNav") {
+        const val HOME = "홈"
+        const val BOARD = "게시글"
+        const val NOTIFICATION = "알림"
+        const val PROFILE = "프로필"
     }
 }
