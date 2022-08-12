@@ -13,4 +13,8 @@ object MoizaIcons {
     val CreateImage = R.drawable.ic_create_image
     val WhitePlus = R.drawable.ic_plus_white
     val WhiteClose = R.drawable.ic_close_white
+    val home = R.drawable.ic_home
+    val board = R.drawable.ic_board
+    val notification = R.drawable.ic_notification
+    val profile = R.drawable.ic_profile
 }
